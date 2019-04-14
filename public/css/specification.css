@@ -1,0 +1,102 @@
+.header-overlay{
+	height: auto;
+	width: 99.1vw;
+	position: absolute;
+	bottom: 2.2vh;
+	left: 0;
+	background: rgba(34,33,33,0.65);
+	opacity: 0.80;
+  z-index: 3;
+  color: white;
+}
+
+.header-content{
+	z-index: 2;
+	margin-top:0;
+	padding: 0 5rem;
+  text-align: left;
+
+}
+
+.header-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+
+}
+.header-content p{
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+	margin-top: 10px;
+}
+.spec-overlay{
+	height: 49.7vh;
+	width: 50vw;
+	position: absolute;
+	bottom: 2vh;
+	left: 0;
+	background: rgba(34,33,33,0.65);
+	opacity: 0.80;
+  z-index: 3;
+  color: white;
+}
+
+.spec-content{
+	z-index: 2;
+	margin-top:0;
+	padding: 0 5rem;
+  text-align: left;
+
+}
+
+.spec-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+
+}
+.spec-content p{
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+	margin-top: 10px;
+}
+.spec2-overlay{
+	height: 49.7vh;
+	width: 49vw;
+	position: absolute;
+	bottom: 2vh;
+	left: 50vw;
+	background: rgba(34,33,33,0.65);
+	opacity: 0.80;
+  z-index: 3;
+  color: white;
+}
+
+.spec2-content{
+	z-index: 2;
+	margin-top:0;
+	padding: 0 5rem;
+  text-align: left;
+
+}
+
+.spec2-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+
+}
+.spec2-content p{
+	font-size: 1.5rem;
+	display: block;
+	padding-bottom: 2rem;
+	margin-top: 10px;
+}
+.footer{
+  text-transform: uppercase;
+	font-weight:700;
+	font-size: .9rem;
+	letter-spacing: .1rem;
+	background:rgba(1,1,1,1)!important;
+  margin-top: -2vh;
+
+}

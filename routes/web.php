@@ -1,0 +1,25 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'HomeController@index')->name('home.index');
+
+Auth::routes();
+
+Route::get('/admin', 'adminController@index')->name('admin.dashboard');
+Route::get('/admin/viewbikes', 'adminController@viewbikes')->name('admin.viewbikes');
+
+Route::get('/admin/addbike', 'adminController@addbike')->name('admin.addbike');
+Route::post('/admin/addbike', 'bikesController@storebike')->name('admin.storebike');
+
+Route::get('/admin/editbike/{id}','adminController@editbike')->name('admin.editbike');
+Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.updatebike');
