@@ -15,6 +15,12 @@
 			<td>Engine Displacement(cc)</td>
 			<td>Engine Max Power</td>
 			<td>Engine Max Torque</td>
+			<td>Carburettor</td>
+			<td>Compression</td>
+			<td>Bore x Stroke</td>
+			<td>Engine Oil Capacity</td>
+			<td>Kill Switch</td>
+			<td>Chassis Type</td>
 			<td>No. of Gears</td>
 			<td>Suspension Front</td>
 			<td>Suspension Rear</td>
@@ -25,6 +31,7 @@
 			<td>Fuel Capacity</td>
 			<td>ELectrical System</td>
 			<td>Head Lamp</td>
+			<td>Passlight</td>
 			<td>Dimention Length</td>
 			<td>Dimention Ground Clearence</td>
 			<td>Dimention Height</td>
@@ -50,6 +57,12 @@
 			<td><?php echo e($data->edisplacement); ?></td>
 			<td><?php echo e($data->emaxpower); ?></td>
 			<td><?php echo e($data->emaxtorque); ?></td>
+			<td><?php echo e($data->carburettor); ?></td>
+			<td><?php echo e($data->compression); ?></td>
+			<td><?php echo e($data->borestroke); ?></td>
+			<td><?php echo e($data->eoilcap); ?></td>
+			<td><?php echo e($data->killswitch); ?></td>
+			<td><?php echo e($data->chassistype); ?></td>
 			<td><?php echo e($data->noofgears); ?></td>
 			<td><?php echo e($data->sfront); ?></td>
 			<td><?php echo e($data->srear); ?></td>
@@ -60,6 +73,7 @@
 			<td><?php echo e($data->fuelcap); ?></td>
 			<td><?php echo e($data->esystem); ?></td>
 			<td><?php echo e($data->headlamp); ?></td>
+			<td><?php echo e($data->passlight); ?></td>
 			<td><?php echo e($data->dlength); ?></td>
 			<td><?php echo e($data->dgroundclear); ?></td>
 			<td><?php echo e($data->dheight); ?></td>

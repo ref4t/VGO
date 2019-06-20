@@ -17,6 +17,12 @@
 			<td>Engine Displacement(cc)</td>
 			<td>Engine Max Power</td>
 			<td>Engine Max Torque</td>
+			<td>Carburettor</td>
+			<td>Compression</td>
+			<td>Bore x Stroke</td>
+			<td>Engine Oil Capacity</td>
+			<td>Kill Switch</td>
+			<td>Chassis Type</td>
 			<td>No. of Gears</td>
 			<td>Suspension Front</td>
 			<td>Suspension Rear</td>
@@ -27,6 +33,7 @@
 			<td>Fuel Capacity</td>
 			<td>ELectrical System</td>
 			<td>Head Lamp</td>
+			<td>Passlight</td>
 			<td>Dimention Length</td>
 			<td>Dimention Ground Clearence</td>
 			<td>Dimention Height</td>
@@ -52,6 +59,12 @@
 			<td>{{$data->edisplacement}}</td>
 			<td>{{$data->emaxpower}}</td>
 			<td>{{$data->emaxtorque}}</td>
+			<td>{{$data->carburettor}}</td>
+			<td>{{$data->compression}}</td>
+			<td>{{$data->borestroke}}</td>
+			<td>{{$data->eoilcap}}</td>
+			<td>{{$data->killswitch}}</td>
+			<td>{{$data->chassistype}}</td>
 			<td>{{$data->noofgears}}</td>
 			<td>{{$data->sfront}}</td>
 			<td>{{$data->srear}}</td>
@@ -62,6 +75,7 @@
 			<td>{{$data->fuelcap}}</td>
 			<td>{{$data->esystem}}</td>
 			<td>{{$data->headlamp}}</td>
+			<td>{{$data->passlight}}</td>
 			<td>{{$data->dlength}}</td>
 			<td>{{$data->dgroundclear}}</td>
 			<td>{{$data->dheight}}</td>

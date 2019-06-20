@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Bikes;
+use App\bikes;
 
 class bikesController extends Controller
 {
@@ -22,10 +22,17 @@ class bikesController extends Controller
 			$data->name=$request->name;
 			$data->brand=$request->brand;
 			$data->price=$request->price;
+			$data->status=$request->status;
 			$data->etype=$request->etype;
 			$data->edisplacement=$request->edisplacement;
 			$data->emaxpower=$request->emaxpower;
 			$data->emaxtorque=$request->emaxtorque;
+			$data->carburettor=$request->carburettor;
+			$data->compression=$request->compression;
+			$data->borestroke=$request->borestroke;
+			$data->eoilcap=$request->eoilcap;
+			$data->killswitch=$request->killswitch;
+			$data->chassistype=$request->chassistype;
 			$data->noofgears=$request->noofgears;
 			$data->sfront=$request->sfront;
 			$data->srear=$request->srear;
@@ -36,6 +43,7 @@ class bikesController extends Controller
 			$data->fuelcap=$request->fuelcap;
 			$data->esystem=$request->esystem;
 			$data->headlamp=$request->headlamp;
+			$data->passlight=$request->passlight;
 			$data->dlength=$request->dlength;
 			$data->dgroundclear=$request->dgroundclear;
 			$data->dheight=$request->dheight;
@@ -52,6 +60,18 @@ class bikesController extends Controller
 		$data->save();
 
     	return redirect()->route('admin.viewbikes');
+    }
+
+    public function specification(Request $request,$name){
+
+  		$data= bikes::where('name',$name)->get();
+
+  		return $data;
+    }
+
+    public function brands(Request $request, $brand){
+    	$data = bikes::where('brand',$brand)->get();
+    	return view('bikearena.brands')->with('data',$data);
     }
     
 }

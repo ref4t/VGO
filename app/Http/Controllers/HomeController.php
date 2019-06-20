@@ -16,4 +16,8 @@ class HomeController extends Controller
         
         
     }
+
+    public function vgo(){
+    	return view('promote');
+    }
 }

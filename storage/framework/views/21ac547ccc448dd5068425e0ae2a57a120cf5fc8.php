@@ -1,6 +1,7 @@
 <!--
     Developed by - Zahid Hossain
     Date - 15/03/2019
+    rifat
  -->
 
 
@@ -28,7 +29,7 @@
 
 <body>
   <!--NAV BAR -->
-<?php include "includes/navbar.blade.php" ?>
+<?php echo $__env->make('includes.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 <!--Video Section-->
@@ -62,160 +63,66 @@
 
 <div class="container">
 
+<!-- most popular -->
+ 
   <section id="arrival">
-    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-fire-alt"></i> New Arrival</h2>
-
+    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-motorcycle"></i> Most Popular</h2>
+ 
     <div class="row">
     <!-- card view -->
-
-          
+ 
+         <?php $__currentLoopData = $mostpopular; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $popular): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-sm-4">
-
+ 
             <div class="card">
-
+ 
               <div class="card-img">
                   <img class="card-img-top" src="<?php echo e(asset('img/bike1.jpg')); ?>" alt="image">
-
+ 
                   <div class="overlay">
                           <div class="text">
-                              
+                             
                               <table>
                                   <tr>
-                                    <td>Engine</td>
-                                    <td>1200css</td>
+                                    <td>Bike</td>
+                                    <td>Info</td>
                                   </tr>
                                   <tr>
-                                    <td>Width</td>
-                                    <td>500mm</td>
+                                    <td>Name</td>
+                                    <td><?php echo e($popular->name); ?></td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Manufacturer</td>
+                                    <td><?php echo e($popular->brand); ?></td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Displacement (cc)</td>
+                                    <td><?php echo e($popular->edisplacement); ?></td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Price</td>
+                                    <td><?php echo e($popular->price); ?></td>
                                   </tr>
                                 </table>
-
+ 
                           </div>
                   </div>
-
+ 
               </div>
-
+ 
                 <div class="card-body">
                   <h4 class="card-title">John Doe</h4>
                   <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
+                  <a href="/bikearena/specification/<?php echo e($popular->name); ?>" class="btn btn-primary btn1">See Profile</a>    
                 </div>
-
+ 
             </div>
-
+ 
         </div>
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-              <div class="card-img">
-                  <img class="card-img-top" src="<?php echo e(asset('img/bike1.jpg')); ?>" alt="image">
-
-                  <div class="overlay">
-                          <div class="text">
-                              
-                              <table>
-                                  <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                </table>
-
-                          </div>
-                  </div>
-
-              </div>
-
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-              <div class="card-img">
-                  <img class="card-img-top" src="<?php echo e(asset('img/bike1.jpg')); ?>" alt="image">
-
-                  <div class="overlay">
-                          <div class="text">
-                              
-                              <table>
-                                  <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                </table>
-
-                          </div>
-                  </div>
-
-              </div>
-
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-                </div>
-
-            </div>
-
-        </div>
-
+ 
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
-
+ 
   </section>
 
 

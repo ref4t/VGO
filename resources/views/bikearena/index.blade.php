@@ -29,7 +29,7 @@
 
 <body>
   <!--NAV BAR -->
-<?php include "includes/navbar.blade.php" ?>
+@include('includes.navbar')
 
 
 <!--Video Section-->
@@ -63,160 +63,66 @@
 
 <div class="container">
 
+<!-- most popular -->
+ 
   <section id="arrival">
-    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-fire-alt"></i> New Arrival</h2>
-
+    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-motorcycle"></i> Most Popular</h2>
+ 
     <div class="row">
     <!-- card view -->
-
-          
+ 
+         @foreach($mostpopular as $popular)
         <div class="col-sm-4">
-
+ 
             <div class="card">
-
+ 
               <div class="card-img">
                   <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
+ 
                   <div class="overlay">
                           <div class="text">
-                              
+                             
                               <table>
                                   <tr>
-                                    <td>Engine</td>
-                                    <td>1200css</td>
+                                    <td>Bike</td>
+                                    <td>Info</td>
                                   </tr>
                                   <tr>
-                                    <td>Width</td>
-                                    <td>500mm</td>
+                                    <td>Name</td>
+                                    <td>{{$popular->name}}</td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Manufacturer</td>
+                                    <td>{{$popular->brand}}</td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Displacement (cc)</td>
+                                    <td>{{$popular->edisplacement}}</td>
                                   </tr>
                                   <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
+                                    <td>Price</td>
+                                    <td>{{$popular->price}}</td>
                                   </tr>
                                 </table>
-
+ 
                           </div>
                   </div>
-
+ 
               </div>
-
+ 
                 <div class="card-body">
                   <h4 class="card-title">John Doe</h4>
                   <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
+                  <a href="/bikearena/specification/{{$popular->name}}" class="btn btn-primary btn1">See Profile</a>    
                 </div>
-
+ 
             </div>
-
+ 
         </div>
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-              <div class="card-img">
-                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-                  <div class="overlay">
-                          <div class="text">
-                              
-                              <table>
-                                  <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                </table>
-
-                          </div>
-                  </div>
-
-              </div>
-
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="col-sm-4">
-
-            <div class="card">
-
-              <div class="card-img">
-                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-                  <div class="overlay">
-                          <div class="text">
-                              
-                              <table>
-                                  <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                </table>
-
-                          </div>
-                  </div>
-
-              </div>
-
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-                </div>
-
-            </div>
-
-        </div>
-
+ 
+    @endforeach
     </div>
-
+ 
   </section>
 
 

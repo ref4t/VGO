@@ -23,3 +23,11 @@ Route::post('/admin/addbike', 'bikesController@storebike')->name('admin.storebik
 
 Route::get('/admin/editbike/{id}','adminController@editbike')->name('admin.editbike');
 Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.updatebike');
+
+
+Route::get('/vgo','HomeController@vgo')->name('index.vgo');
+
+Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
+
+
+Route::get('/{brand}','bikesController@brands')->name('bikearena.brands');
