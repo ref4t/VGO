@@ -24,12 +24,17 @@ Route::post('/admin/addbike', 'bikesController@storebike')->name('admin.storebik
 Route::get('/admin/editbike/{id}','adminController@editbike')->name('admin.editbike');
 Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.updatebike');
 
-Route::get('/', function () {
-    return view('bikeArena.index');
-});
+//Route::get('/', function () {
+//    return view('bikeArena.index');
+//});
 Route::get('/vgo','HomeController@vgo')->name('index.vgo');
 
-//Route::get('/bikearena','FrontEnd\BikeArenaController@index')->name('bikearena.index');
+Route::get('bike-Arena','FrontEnd\BikeArenaController@index')->name('bikearena.index');
+Route::get('bike-Arena/contact','FrontEnd\BikeArenaController@contact')->name('bikearena.contact');
+Route::get('bike-Arena/blog','FrontEnd\BikeArenaController@blog')->name('bikearena.blog');
+Route::get('bike-Arena/about-us','FrontEnd\BikeArenaController@about')->name('bikearena.about');
+//Route::get('bike-Arena/contact','FrontEnd\BikeArenaController@contact')->name('bikearena.contact');
+
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
