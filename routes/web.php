@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home.index');
+//Route::get('/', 'HomeController@index')->name('home.index');
 
 Auth::routes();
 
@@ -24,14 +24,16 @@ Route::post('/admin/addbike', 'bikesController@storebike')->name('admin.storebik
 Route::get('/admin/editbike/{id}','adminController@editbike')->name('admin.editbike');
 Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.updatebike');
 
-
+Route::get('/', function () {
+    return view('bikeArena.index');
+});
 Route::get('/vgo','HomeController@vgo')->name('index.vgo');
 
-Route::get('/bikearena','FrontEnd\BikeArena@index')->name('bikearena.index');
+//Route::get('/bikearena','FrontEnd\BikeArenaController@index')->name('bikearena.index');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 //Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 
 
-Route::get('/{brand}','bikesController@brands')->name('bikearena.brands');
+//Route::get('/{brand}','bikesController@brands')->name('bikearena.brands');
