@@ -1,26 +1,28 @@
+<head>
+    <link rel="stylesheet" href="{!! asset('css/navbar.css') !!}">
+</head>
 
- <link rel="stylesheet" href="{{ URL::asset('css/bikearenanavbar.css') }}">
-<div id="navbar">
-  <a href="#">Home</a>
-  <a href="/bajaj">Brands</a>
-  <a href="#contact">Contact</a>
+
+    <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+            VgoBD
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
+        <a href="" target="_blank">Services</a>
+        <a href="" target="_blank">Bike Arena</a>
+        <a href="" target="_blank">About</a>
+        <a href="" target="_blank">Contact</a>
+        <a href="" target="_blank">Login</a>
+    </div>
 </div>
-<script type="text/javascript">
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
-//console.log('hello');
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>

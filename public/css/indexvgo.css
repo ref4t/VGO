@@ -13,7 +13,9 @@ body {
   background-image: url("../img/background.jpg");
 
 }
-
+.container {
+    max-width: 100em;
+}
 .storebike{
   width: 99.88%;
   max-width: 99.88%;
@@ -115,7 +117,7 @@ body {
 .showcase .item:before {
   position: absolute;
   left: 2%;
-  right: 2%%;
+  right: 2%;
   width: 96%;
   height: 270px;
   background-position: center ;
@@ -243,7 +245,7 @@ body {
 }
 .info-form p{
   text-align: center;
-  color: #black;
+  color: black;
 }
 .info-form .btninfo {
     width: 100%;
@@ -285,7 +287,7 @@ body {
 }
 .top-banner{
   background-image: url("../img/store.png");
-  height: 600px;
+  height: 70em;
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover;

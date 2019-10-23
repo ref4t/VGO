@@ -27,7 +27,11 @@ Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.update
 
 Route::get('/vgo','HomeController@vgo')->name('index.vgo');
 
-Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
+Route::get('/bikearena','FrontEnd\BikeArena@index')->name('bikearena.index');
+//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
+//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
+//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
+//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
 
 
 Route::get('/{brand}','bikesController@brands')->name('bikearena.brands');

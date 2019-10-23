@@ -122,6 +122,8 @@ nav.mobile li {
 #arrival{
   margin-top: 8em;
   margin-bottom: 3em;
+  width: 121%;
+  margin-left: -10em;
 }
  
 .arrival-img{

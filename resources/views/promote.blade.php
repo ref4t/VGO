@@ -6,13 +6,13 @@
   <title> Bike Arena - Intro line goes here </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ URL::asset('css/bikearena.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/specification.css') }}"> 
-  <link rel="stylesheet" href="{{ URL::asset('css/indexvgo.css') }}"> 
+  <link rel="stylesheet" href="{{ URL::asset('css/specification.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/navbar.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/slide_image.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/fixed.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('css/swiper.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/indexvgo.css') }}">
   <link rel="script" href="{{ URL::to('js/script.js') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
@@ -24,20 +24,7 @@
 
 <body>
   <section class="top-nav">
-        <div>
-          <img src="img/logo.jpg" alt="VGO" style="height:5vh;">
-        </div>
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-          <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-          <li>One</li>
-          <li>Two</li>
-          <li>Three</li>
-          <li>Four</li>
-          <li>Five</li>
-        </ul>
+        @include('includes.navbar')
   </section>
 
 
@@ -371,7 +358,7 @@
           <div class="col-sm-6 secondCard">
 
 
-                <div class="col">
+
 
 
                           <div class="info" style="margin-bottom: 40px">
@@ -387,8 +374,8 @@
                           </div>
 
                   
-                </div>
-                <div class="col">
+
+
 
 
                           <div class="info">
@@ -401,7 +388,7 @@
                                 <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
                               </div>
 
-                          </div>
+
 
                   
                 </div>
@@ -422,7 +409,7 @@
 	<div class="container">
 		<div class="row">
 
-			 <div class="col-sm-6">
+			 <div class="col-sm-8">
                           <div class="info">
 
                                 <div class="info-img">
@@ -436,7 +423,7 @@
                           </div>
                 </div>
 
-                 <div class="col-sm-6">
+                 <div class="col-sm-4">
 
 
                           <div class="info">
@@ -482,10 +469,11 @@
             , effect: ''
             , autoplay: true
             , speed: 7000
+            , height: 20
         });
 </script>
 
-</script>
+
 
  </body>
 </html>

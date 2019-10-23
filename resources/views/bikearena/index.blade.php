@@ -1,550 +1,1602 @@
-<!--
-    Developed by - Zahid Hossain
-    Date - 15/03/2019
-    rifat
- -->
-
-
 <!doctype html>
-<html>
-<head>
-  <meta charset="wtf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Bike Arena - Intro line goes here </title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ URL::asset('css/bikearena.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/navbar.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/slide_image.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/fixed.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('css/swiper.min.css') }}">
-  <link rel="script" href="{{ URL::to('js/script.js') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-  <!-- Script Source Files -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <!--NAV BAR -->
-@include('includes.navbar')
-
-
-<!--Video Section-->
-<div class="header" style="height:100vh">
-  <div class="video-header wrap">
-  	<div class="fullscreen-video-wrap">
-      <section class="section">
-        <video class="bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto">
-          <source src="video/bg-video.mp4" type="video/mp4">
-        </video>
-      </section>
-    </div>
-    <!-- Video OverLay-->
-  	<div class="header-overlay">
-  		<div class="header-content">
-  			<h1 style="font-size: 47px;color: #faf00b;;text-shadow: 4px 2px 2px blue;">KTM Duke 125</h1>
-  			<p style="font-size: 27px;color: #fcf9f9;text-shadow: 4px 2px 2px blue;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit hic eaque rerum cupiditate officiis recusandae iusto quaerat architecto odio illum.
-          <br>
-        </p>
-        <button class="btn btn-primary"><span>Know More </span></button>
-        <p style="text-align: center;margin-top: 100px"><a href="#arrival"><i class='fas fa-arrow-alt-circle-down ' style='font-size:48px;color:#ffff'></i></a></p>
-
-  		</div>
-  	</div>
-    <!--End of OverLay-->
-  </div>
-</div>
-
-
-<!--End of Video Section-->
-
-<div class="container">
-
-<!-- most popular -->
- 
-  <section id="arrival">
-    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-motorcycle"></i> Most Popular</h2>
- 
-    <div class="row">
-    <!-- card view -->
- 
-         @foreach($mostpopular as $popular)
-        <div class="col-sm-4">
- 
-            <div class="card">
- 
-              <div class="card-img">
-                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
- 
-                  <div class="overlay">
-                          <div class="text">
-                             
-                              <table>
-                                  <tr>
-                                    <td>Bike</td>
-                                    <td>Info</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Name</td>
-                                    <td>{{$popular->name}}</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Manufacturer</td>
-                                    <td>{{$popular->brand}}</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Displacement (cc)</td>
-                                    <td>{{$popular->edisplacement}}</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Price</td>
-                                    <td>{{$popular->price}}</td>
-                                  </tr>
-                                </table>
- 
-                          </div>
-                  </div>
- 
-              </div>
- 
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="/bikearena/specification/{{$popular->name}}" class="btn btn-primary btn1">See Profile</a>    
-                </div>
- 
-            </div>
- 
-        </div>
- 
-    @endforeach
-    </div>
- 
-  </section>
-
-
-
-<!-- most popular -->
-
-  <section id="arrival">
-    <h2 style="text-align: left;margin-bottom: 2em;"><i class="fas fa-motorcycle"></i> Most Popular</h2>
-
-    <div class="row">
-    <!-- card view -->
-
-
-        <div class="swiper-container">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide row" data-swiper-autoplay="20">
-
-                        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-
-				        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-
-				        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-                        
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Oswan - eCommerce HTML5 Template</title>
+        <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+		
+		<!-- all css here -->
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
+        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header start -->
+            <header>
+                <div class="header-area transparent-bar ptb-55">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-4">
+                                <div class="logo-small-device">
+                                    <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8">
+                                <div class="header-contact-menu-wrapper pl-45">
+                                    <div class="header-contact">
+                                        <p>WANT TO TALK WITH US  +01254 265 987</p>
+                                    </div>
+                                    <div class="menu-wrapper text-center">
+                                        <button class="menu-toggle">
+                                            <img class="s-open" alt="" src="bikearena/img/icon-img/menu.png">
+                                            <img class="s-close" alt="" src="bikearena/img/icon-img/menu-close.png">
+                                        </button>
+                                        <div class="main-menu">
+                                            <nav>
+                                                <ul>
+                                                    <li><a href="index.html">home</a></li>
+                                                    <li class="active"><a href="about-us.html">about us </a></li>
+                                                    <li><a href="#">shop</a>
+                                                        <ul>
+                                                            <li><a href="shop.html">shop</a></li>
+                                                            <li><a href="product-details.html">product details</a></li>
+                                                            <li><a href="checkout.html">checkout</a></li>
+                                                            <li><a href="wishlist.html">wishlist</a></li>
+                                                            <li><a href="cart.html">cart</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">pages</a>
+                                                        <ul>
+                                                            <li><a href="about-us.html">about us</a></li>
+                                                            <li><a href="cart.html">cart page</a></li>
+                                                            <li><a href="checkout.html">checkout</a></li>
+                                                            <li><a href="wishlist.html">wishlist</a></li>
+                                                            <li><a href="login-register.html">login</a></li>
+                                                            <li><a href="contact.html">contact</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">blog</a>
+                                                        <ul>
+                                                            <li><a href="blog.html">blog</a></li>
+                                                            <li><a href="blog-details.html">blog details</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="contact.html">contact us</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header-cart cart-small-device">
+                                    <button class="icon-cart">
+                                        <i class="ti-shopping-cart"></i>
+                                        <span class="count-style">02</span>
+                                        <span class="count-price-add">$295.95</span>
+                                    </button>
+                                    <div class="shopping-cart-content">
+                                        <ul>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-1.jpg"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                                    <span>Price: $275</span>
+                                                    <span>Qty: 01</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                                </div>
+                                            </li>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-2.jpg"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h3><a href="#">Demonissi Gori</a></h3>
+                                                    <span>Price: $275</span>
+                                                    <span class="qty">Qty: 01</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                                </div>
+                                            </li>
+                                            <li class="single-shopping-cart">
+                                                <div class="shopping-cart-img">
+                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-3.jpg"></a>
+                                                </div>
+                                                <div class="shopping-cart-title">
+                                                    <h3><a href="#">Demonissi Gori</a></h3>
+                                                    <span>Price: $275</span>
+                                                    <span class="qty">Qty: 01</span>
+                                                </div>
+                                                <div class="shopping-cart-delete">
+                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="shopping-cart-total">
+                                            <h4>total: <span>$550.00</span></h4>
+                                        </div>
+                                        <div class="shopping-cart-btn">
+                                            <a class="btn-style cr-btn" href="#">checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-area col-12">
+                                <div class="mobile-menu">
+                                    <nav id="mobile-menu-active">
+                                        <ul class="menu-overflow">
+                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="#">pages</a>
+                                                <ul>
+                                                    <li><a href="about-us.html">about us</a></li>
+                                                    <li><a href="cart.html">cart page</a></li>
+                                                    <li><a href="checkout.html">checkout</a></li>
+                                                    <li><a href="wishlist.html">wishlist</a></li>
+                                                    <li><a href="login-register.html">login</a></li>
+                                                    <li><a href="contact.html">contact</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">shop</a>
+                                                <ul>
+                                                    <li><a href="shop.html">shop</a></li>
+                                                    <li><a href="product-details.html">product details</a></li>
+                                                    <li><a href="checkout.html">checkout</a></li>
+                                                    <li><a href="wishlist.html">wishlist</a></li>
+                                                    <li><a href="cart.html">cart</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">BLOG</a>
+                                                <ul>
+                                                    <li><a href="blog.html">blog page</a></li>
+                                                    <li><a href="blog-details.html">blog details</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="contact.html"> Contact us</a></li>
+                                        </ul>
+                                    </nav>							
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="swiper-slide row" data-swiper-autoplay="20">
-
-                        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-
-				        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-
-				        <div class="col-sm-4">
-
-				            <div class="card">
-
-				              <div class="card-img">
-				                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-				                  <div class="overlay">
-				                          <div class="text">
-				                              
-				                              <table>
-				                                  <tr>
-				                                    <th>Company</th>
-				                                    <th>Contact</th>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Yoshi Tannamuri</td>
-				                                    <td>Canada</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                  <tr>
-				                                    <td>Giovanni Rovelli</td>
-				                                    <td>Italy</td>
-				                                  </tr>
-				                                </table>
-
-				                          </div>
-				                  </div>
-
-				              </div>
-
-				                <div class="card-body">
-				                  <h4 class="card-title">John Doe</h4>
-				                  <p class="card-text">$500</p>
-				                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
-				                </div>
-
-				            </div>
-
-				        </div>
-                        
+                    <div class="header-cart-wrapper">
+                        <div class="header-cart">
+                            <button class="icon-cart">
+                                <i class="ti-shopping-cart"></i>
+                                <span class="count-style">02</span>
+                                <span class="count-price-add">$295.95</span>
+                            </button>
+                            <div class="shopping-cart-content">
+                                <ul>
+                                    <li class="single-shopping-cart">
+                                        <div class="shopping-cart-img">
+                                            <a href="#"><img alt="" src="bikearea/img/cart/cart-1.jpg"></a>
+                                        </div>
+                                        <div class="shopping-cart-title">
+                                            <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                            <span>Price: $275</span>
+                                            <span>Qty: 01</span>
+                                        </div>
+                                        <div class="shopping-cart-delete">
+                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="single-shopping-cart">
+                                        <div class="shopping-cart-img">
+                                            <a href="#"><img alt="" src="bikearena/img/cart/cart-2.jpg"></a>
+                                        </div>
+                                        <div class="shopping-cart-title">
+                                            <h3><a href="#">Demonissi Gori</a></h3>
+                                            <span>Price: $275</span>
+                                            <span class="qty">Qty: 01</span>
+                                        </div>
+                                        <div class="shopping-cart-delete">
+                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="single-shopping-cart">
+                                        <div class="shopping-cart-img">
+                                            <a href="#"><img alt="" src="bikearena/img/cart/cart-3.jpg"></a>
+                                        </div>
+                                        <div class="shopping-cart-title">
+                                            <h3><a href="#">Demonissi Gori</a></h3>
+                                            <span>Price: $275</span>
+                                            <span class="qty">Qty: 01</span>
+                                        </div>
+                                        <div class="shopping-cart-delete">
+                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="shopping-cart-total">
+                                    <h4>total: <span>$550.00</span></h4>
+                                </div>
+                                <div class="shopping-cart-btn">
+                                    <a class="btn-style cr-btn" href="#">checkout</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-                <!-- swipper wrapper end-->
-            </div>
-
-
-
-    </div>
-
-  </section>
-
-
-  <!-- new arraival -->
-
-    <section id="arrival">
-    <h2 style="text-align: center;margin-bottom: 2em;"><i class="fas fa-motorcycle"></i> Most Popular</h2>
-
-    <div class="row">
-    <!-- card view -->
-
-          
-        <div class="col-sm-4">
-
-            <div class="card">
-
-              <div class="card-img">
-                  <img class="card-img-top" src="{{asset('img/bike1.jpg')}}" alt="image">
-
-                  <div class="overlay">
-                          <div class="text">
-                              
-                              <table>
-                                  <tr>
-                                    <th>Company</th>
-                                    <th>Contact</th>
-                                  </tr>
-                                  <tr>
-                                    <td>Yoshi Tannamuri</td>
-                                    <td>Canada</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Giovanni Rovelli</td>
-                                    <td>Italy</td>
-                                  </tr>
-                                </table>
-
-                          </div>
-                  </div>
-
-              </div>
-
-                <div class="card-body">
-                  <h4 class="card-title">John Doe</h4>
-                  <p class="card-text">$500</p>
-                  <a href="javascript:void(0)" class="btn btn-primary btn1">See Profile</a>    
+            </header>
+            <div class="slider-area">
+                <div class="slider-active owl-carousel">
+                    <div class="single-slider slider-1" style="background-image: url(assets/img/slider/slider-bg.jpg)">
+                        <div class="container">
+                            <div class="slider-content slider-animated-1">
+                                <div class="slider-img text-center">
+                                    <img class="animated" src="bikearena/img/slider/bike-1.png" alt="slider images">
+                                </div>
+                                <div class="slider-text-img">
+                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                </div>
+                                <h2 class="animated">MOTORCYCLE</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-1" style="background-image: url(assets/img/slider/slider-bg.jpg)">
+                        <div class="container">
+                            <div class="slider-content slider-animated-1">
+                                <div class="slider-img text-center">
+                                    <img class="animated" src="bikearena/img/slider/bike-2.png" alt="slider images">
+                                </div>
+                                <div class="slider-text-img">
+                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                </div>
+                                <h2 class="animated">MOTORCYCLE</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-1" style="background-image: url(assets/img/slider/slider-bg.jpg)">
+                        <div class="container">
+                            <div class="slider-content slider-animated-1">
+                                <div class="slider-img text-center">
+                                    <img class="animated" src="bikearena/img/slider/bike-1.png" alt="slider images">
+                                </div>
+                                <div class="slider-text-img">
+                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                </div>
+                                <h2 class="animated">MOTORCYCLE</h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="slider-social">
+                    <ul>
+                        <li class="facebook"><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
+                        <li class="pinterest"><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
+                    </ul>
+                </div>
+                <div class="language-currency-wrapper">
+                    <div class="language-currency">
+                        <div class="language">
+                            <select class="select-header orderby">
+                                <option value="">ENG</option>
+                                <option value="">BANGLA </option>
+                                <option value="">HINDI</option>
+                            </select>
+                        </div>
+                        <div class="currency">
+                            <select class="select-header orderby">
+                                <option value="">$USD</option>
+                                <option value="">US </option>
+                                <option value="">EURO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
-
+            <div class="overview-area pt-135">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="overview-content">
+                                <h1><span>OSWAN</span> WORLD MOST </h1>
+                                <h2>LATGEST <span>MOTORCYCLE STORE</span></h2>
+                                <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam </p>
+                                <div class="question-area">
+                                    <h4>HAVE ANY QUESTION? </h4>
+                                    <div class="question-contact">
+                                        <div class="question-icon">
+                                            <i class="icofont icofont-phone"></i>
+                                        </div>
+                                        <div class="question-content-number">
+                                            <h6> 01245 658 698</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="overview-img">
+                                <img class="tilter" src="bikearena/img/banner/banner-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-area pt-135 pb-120">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4">
+                            <div class="banner-wrapper mb-30">
+                                <a href="#"><img src="bikearena/img/banner/banner-1.jpg" alt="image"></a>
+                                <div class="banner-content">
+                                    <h2>BUY NEW BIKE</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="banner-wrapper mb-30">
+                                <a href="#"><img src="bikearena/img/banner/banner-2.jpg" alt="image"></a>
+                                <div class="banner-content">
+                                    <h2>SELL YOUR BIKE</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="banner-wrapper mb-30">
+                                <a href="#"><img src="bikearena/img/banner/banner-3.jpg" alt="image"></a>
+                                <div class="banner-content">
+                                    <h2>FIND SPARE PARTS</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-area pb-190">
+                <div class="container">
+                    <div class="section-title text-center mb-50">
+                        <h2>CHOOSE YOUR BIKE</h2>
+                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle</p>
+                    </div>
+                    <div class="product-tab-list text-center mb-80 nav product-menu-mrg" role="tablist">
+                        <a class="active" href="#home1" data-toggle="tab" >
+                            <h4>NEW BIKES </h4>
+                        </a>
+                        <a href="#home2" data-toggle="tab">
+                            <h4> USED BIKES </h4>
+                        </a>
+                    </div>
+                    <div class="tab-content jump">
+                        <div class="tab-pane active" id="home1">
+                            <div class="product-slider-active owl-carousel">
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-1.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Gloriori GSX 250 R</a></h4>
+                                                    <span>6600 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-4.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>480 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Demonissi Gori</a></h4>
+                                                    <span>6700 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>200 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <span>5500 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>150 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <span>3300 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-3.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>150 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Matrio Max</a></h4>
+                                                    <span>4600 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-6.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Rigoniss Z 1000</a></h4>
+                                                    <span>8000 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <span>5500 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>350 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <span>3300 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="home2">
+                            <div class="product-slider-active owl-carousel">
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-6.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Gloriori GSX 250 R</a></h4>
+                                                    <span>6600 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>480 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Demonissi Gori</a></h4>
+                                                    <span>6700 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-4.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>200 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <span>5500 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-3.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>150 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <span>3300 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>150 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Matrio Max</a></h4>
+                                                    <span>4600 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-1.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Rigoniss Z 1000</a></h4>
+                                                    <span>8000 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-wrapper-bundle">
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>250 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <span>5500 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-wrapper mb-30">
+                                        <div class="product-img">
+                                            <a href="product-details.html">
+                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            </a>
+                                            <div class="product-item-dec">
+                                                <ul>
+                                                    <li>2018</li>
+                                                    <li>MANUAL</li>
+                                                    <li>PETROL</li>
+                                                    <li>350 CC</li>
+                                                </ul>
+                                            </div>
+                                            <div class="product-action">
+                                                <a class="action-plus-2" title="Add To Cart" href="#">
+                                                    <i class=" ti-shopping-cart"></i>
+                                                </a>
+                                                <a class="action-cart-2" title="Wishlist" href="#">
+                                                    <i class=" ti-heart"></i>
+                                                </a>
+                                                <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                    <i class=" ti-zoom-in"></i>
+                                                </a>
+                                            </div>
+                                            <div class="product-content-wrapper">
+                                                <div class="product-title-spreed">
+                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <span>3300 RPM</span>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span>$2549</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(bikearena/img/banner/banner-4.jpg)">
+                <div class="container-fluid">
+                    <div class="latest-product-slider owl-carousel">
+                        <div class="single-latest-product slider-animated-2">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-12 col-12">
+                                    <div class="latest-product-img">
+                                        <img class="animated" src="bikearena/img/banner/banner-2.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 col-12">
+                                    <div class="latest-product-content">
+                                        <h2 class="animated">LATEST OFFER <br>FOR POPULAR BIKES</h2>
+                                        <p class="animated"><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam </p>
+                                        <div class="latest-price">
+                                            <h3 class="animated">NOW AT <span>$1250</span></h3>
+                                            <span class="animated">35% DISCOUNT</span>
+                                        </div>
+                                        <div class="latext-btn">
+                                            <a class="animated" href="#">SELECT A BIKE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-latest-product slider-animated-2">
+                            <div class="row">
+                                <div class="col-lg-7 col-col-12 col-12">
+                                    <div class="latest-product-img">
+                                        <img class="animated" src="bikearena/img/banner/banner-3.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-col-12 col-12">
+                                    <div class="latest-product-content">
+                                        <h2 class="animated">LATEST OFFER <br>FOR POPULAR BIKES</h2>
+                                        <p class="animated"><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam </p>
+                                        <div class="latest-price">
+                                            <h3 class="animated">NOW AT <span>$1250</span></h3>
+                                            <span class="animated">35% DISCOUNT</span>
+                                        </div>
+                                        <div class="latext-btn">
+                                            <a class="animated" href="#">SELECT A BIKE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accessories-area pt-152 pb-130">
+                <div class="container-fluid">
+                    <div class="section-title section-fluid text-center mb-60">
+                        <h2>ACCESSORIES</h2>
+                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle</p>
+                    </div>
+                    <div class="accessories-wrapper">
+                        <div class="product-accessories-active owl-carousel">
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="#">
+                                        <img src="bikearena/img/product/product-7.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $120</span>
+                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-8.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $180</span>
+                                            <h4><a href="product-details.html">Reckles Jacket</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-9.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $25</span>
+                                            <h4><a href="product-details.html">Softy Original Glove</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-10.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $140</span>
+                                            <h4><a href="product-details.html">Flicky Traco Boot</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-11.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $150</span>
+                                            <h4><a href="product-details.html">Flicky Traco Boot</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-7.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $150</span>
+                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-8.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $160</span>
+                                            <h4><a href="product-details.html">Reckles Jacket</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-img">
+                                    <a href="product-details.html">
+                                        <img src="bikearena/img/product/product-9.jpg" alt="">
+                                    </a>
+                                    <div class="product-action">
+                                        <a class="action-plus-2" title="Add To Cart" href="#">
+                                            <i class=" ti-shopping-cart"></i>
+                                        </a>
+                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                            <i class=" ti-heart"></i>
+                                        </a>
+                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                            <i class=" ti-zoom-in"></i>
+                                        </a>
+                                    </div>
+                                    <div class="product-content-wrapper-2">
+                                        <div class="product-title-price-2 text-center">
+                                            <span>Price: $120</span>
+                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-area">
+                <div class="container">
+                    <div class="section-title-2 section-title-position">
+                        <h2>OUR CLIENTS REVIEW</h2>
+                    </div>
+                    <div class="testimonial-active owl-carousel">
+                        <div class="single-testimonial">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="testimonial-img pl-75">
+                                        <img alt="image" src="bikearena/img/team/testimonial-1.jpg">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-dec">
+                                            <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest  qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam quoten</p>
+                                        </div>
+                                        <div class="name-designation">
+                                            <h4>Rayed Ayash Hisham</h4>
+                                            <span>COO, ASEKHA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-12 col-12">
+                                    <div class="testimonial-img pl-75">
+                                        <img alt="image" src="bikearena/img/team/testimonial-2.png">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 col-12">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-dec">
+                                            <p><span>OSWAN</span> Lorem ipsum dolor sit amet, consectetur adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis dolor in reprehenderit.</p>
+                                        </div>
+                                        <div class="name-designation">
+                                            <h4>James Momen Nirob</h4>
+                                            <span>CEO, ASEKHA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-area pt-150 pb-110">
+                <div class="container">
+                    <div class="section-title text-center mb-60">
+                        <h2>BLOG POST</h2>
+                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-hm-wrapper mb-40">
+                                <div class="blog-img">
+                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-1.jpg" alt="image"></a>
+                                    <div class="blog-date">
+                                        <h4>24 February, 2018</h4>
+                                    </div>
+                                    <div class="blog-hm-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-hm-content">
+                                    <h3><a href="blog-details.html">Sports Motorbike for play in desert </a></h3>
+                                    <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-hm-wrapper mb-40">
+                                <div class="blog-img">
+                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-2.jpg" alt="image"></a>
+                                    <div class="blog-date">
+                                        <h4>22 February, 2018</h4>
+                                    </div>
+                                    <div class="blog-hm-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-hm-content">
+                                    <h3><a href="blog-details.html">Motorbike Racing at October</a></h3>
+                                    <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog-hm-wrapper mb-40">
+                                <div class="blog-img">
+                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-3.jpg" alt="image"></a>
+                                    <div class="blog-date">
+                                        <h4>20 February, 2018</h4>
+                                    </div>
+                                    <div class="blog-hm-social">
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="blog-hm-content">
+                                    <h3><a href="blog-details.html">Latest Motorbike Release this Year </a></h3>
+                                    <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter-area">
+                <div class="container">
+                    <div class="newsletter-wrapper-all theme-bg-2">
+                        <div class="row">
+                            <div class="col-lg-5 col-12 col-md-12">
+                                <div class="newsletter-img bg-img" style="background-image: url(assets/img/banner/newsletter-bg.png)">
+                                    <img alt="image" src="bikearena/img/team/newsletter-img.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-12 col-md-12">
+                                <div class="newsletter-wrapper text-center">
+                                    <div class="newsletter-title">
+                                        <h3>Subscribe our newsletter</h3>
+                                    </div>
+                                    <div id="mc_embed_signup" class="subscribe-form">
+                                        <form action="#" method="post" id="#" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll" class="mc-form">
+                                                <input type="email" value="" name="EMAIL" class="email" placeholder="Enter your email here..." required>
+                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-top pt-210 pb-98 theme-bg">
+                    <div class="container">
+                       <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="bikearena/img/logo/2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="footer-about">
+                                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                        <div class="footer-support">
+                                            <h5>FOR SUPPORT</h5>
+                                            <span> 01245 658 698 (Toll Free)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30 pl-60">
+                                    <div class="footer-widget-title">
+                                        <h3>QUICK LINK</h3>
+                                    </div>
+                                    <div class="quick-links">
+                                        <ul>
+                                            <li><a href="about-us.html">About us</a></li>
+                                            <li><a href="#">Service</a></li>
+                                            <li><a href="#">Inventory</a></li>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="blog-sidebar.html">Blog</a></li>
+                                            <li><a href="#">Conditions</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>LATEST TWEET</h3>
+                                    </div>
+                                    <div class="food-widget-content pr-30">
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+10 min ago</p>
+                                        </div>
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+10 min ago</p>
+                                        </div>
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+10 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>CONTACT INFO</h3>
+                                    </div>
+                                    <div class="food-info-wrapper">
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Address</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>276 Jhilli Nogor, 4th folor, Momen Tower, Main Town, New Yourk</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Phone</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>+090 12568 369 987</p>
+                                                <p>+090 12568 369 987</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Web</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <a href="#">info@oswanmega.com</a>
+                                                <a href="#">www.oswanmega.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom ptb-35 black-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-12">
+                                <div class="copyright">
+                                    <p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">Free themes Cloud</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="footer-payment-method">
+                                    <a href="#"><img alt="" src="bikearena/img/icon-img/payment.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icofont icofont-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="bikearena/img/quick-view/l1.jpg" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="modal2" role="tabpanel">
+                                            <img src="bikearena/img/quick-view/l2.jpg" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="modal3" role="tabpanel">
+                                            <img src="bikearena/img/quick-view/l3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="#modal1" data-toggle="tab" role="tab">
+                                        <img src="bikearena/img/quick-view/s1.jpg" alt="">
+                                    </a>
+                                    <a href="#modal2" data-toggle="tab" role="tab">
+                                        <img src="bikearena/img/quick-view/s2.jpg" alt="">
+                                    </a>
+                                    <a href="#modal3" data-toggle="tab" role="tab">
+                                        <img src="bikearena/img/quick-view/s3.jpg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Aerion Carbon Helmet</h3>
+                                    <div class="price">
+                                        <span class="new">$90.00</span>
+                                        <span class="old">$120.00  </span>
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                            <label>Size*</label>
+                                            <select class="select">
+                                                <option value="">- Please Select -</option>
+                                                <option value="">900</option>
+                                                <option value="">700</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-option-part">
+                                            <label>Color*</label>
+                                            <select class="select">
+                                                <option value="">- Please Select -</option>
+                                                <option value="">orange</option>
+                                                <option value="">pink</option>
+                                                <option value="">yellow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="cart-plus-minus">
+											<input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+										</div>
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style" href="#">add to cart</a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                            <a class="btn-hover" href="#"><i class="icofont icofont-heart-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
-    </div>
-
-  </section>
-
-</div>
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-<script type="text/javascript"></script>
-
-    <script src="{{ URL::asset('js/swiper.min.js') }}"></script>
-    <script src="{{ URL::asset('js/swiper.jquery.min.js') }}"></script>
-
-<script>
-        /*-----for swiper----*/
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination'
-            , paginationClickable: true
-            , spaceBetween: 30
-            , slidesPerView: 1
-            , effect: ''
-            , autoplay: true
-            , speed: 7000
-        });
-</script>
-
-</script>
-</body>
+        
+        
+        
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- all js here -->
+        <script src="bikearena/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="bikearena/js/popper.js"></script>
+        <script src="bikearena/js/bootstrap.min.js"></script>
+        <script src="bikearena/js/isotope.pkgd.min.js"></script>
+        <script src="bikearena/js/imagesloaded.pkgd.min.js"></script>
+        <script src="bikearena/js/jquery.counterup.min.js"></script>
+        <script src="bikearena/js/waypoints.min.js"></script>
+        
+        <script src="bikearena/js/owl.carousel.min.js"></script>
+        <script src="bikearena/js/plugins.js"></script>
+        <script src="bikearena/js/main.js"></script>
+    </body>
 </html>
