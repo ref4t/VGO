@@ -7,8 +7,8 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
-		
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(URL::asset('bikearena/img/favicon.png')); ?>">
+
 		<!-- all css here -->
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/animate.css')); ?>">
@@ -170,7 +170,7 @@
                                             </li>
                                             <li><a href="contact.html"> Contact us</a></li>
                                         </ul>
-                                    </nav>							
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -1418,15 +1418,15 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                     </div>
@@ -1575,17 +1575,17 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
 		<!-- all js here -->
         <script src="bikearena/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="bikearena/js/popper.js"></script>
@@ -1594,7 +1594,7 @@
         <script src="bikearena/js/imagesloaded.pkgd.min.js"></script>
         <script src="bikearena/js/jquery.counterup.min.js"></script>
         <script src="bikearena/js/waypoints.min.js"></script>
-        
+
         <script src="bikearena/js/owl.carousel.min.js"></script>
         <script src="bikearena/js/plugins.js"></script>
         <script src="bikearena/js/main.js"></script>

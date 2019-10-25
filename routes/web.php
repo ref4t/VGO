@@ -37,14 +37,3 @@ Route::get('bike-Arena/login-register','FrontEnd\BikeArenaController@loginregist
 Route::get('bike-Arena/product-details','FrontEnd\BikeArenaController@productdetails')->name('bikearena.product-details');
 Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikearena.shop');
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
-
-
-//Route::get('bike-Arena/contact','FrontEnd\BikeArenaController@contact')->name('bikearena.contact');
-
-//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
-//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
-//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
-//Route::get('/bikearena/specification/{name}','bikesController@specification')->name('bikearena.specification');
-
-
-//Route::get('/{brand}','bikesController@brands')->name('bikearena.brands');

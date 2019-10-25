@@ -7,7 +7,7 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(URL::asset('bikearena/img/favicon.png')); ?>">
 
 		<!-- all css here -->
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">

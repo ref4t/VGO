@@ -74,11 +74,6 @@
       <executable />
     </execution>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>asse</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -191,6 +186,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,7 +212,8 @@
       <option name="presentableId" value="Default" />
       <updated>1571959248054</updated>
       <workItem from="1571959431338" duration="348000" />
-      <workItem from="1571959979604" duration="5691000" />
+      <workItem from="1571959979604" duration="6018000" />
+      <workItem from="1572036078204" duration="8926000" />
     </task>
     <servers />
   </component>
