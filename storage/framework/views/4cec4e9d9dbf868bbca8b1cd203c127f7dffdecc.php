@@ -10,19 +10,18 @@
         <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
 
 		<!-- all css here -->
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/jquery-ui.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
-        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/animate.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/owl.carousel.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/chosen.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/meanmenu.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/themify-icons.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/icofont.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/font-awesome.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bundle.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/style.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/responsive.css')); ?>">
+        <script src="<?php echo e(URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js')); ?>"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -238,251 +237,160 @@
             <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg)">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
-                        <h2>blog details</h2>
+                        <h2>Cart page</h2>
                         <ul>
                             <li>
                                 <a href="#">home</a>
                             </li>
-                            <li>blog details</li>
+                            <li>Cart page</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="blog-area pt-120 pb-130">
+            <div class="product-cart-area pt-120 pb-130">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="product-sidebar-area pr-30">
-                                <div class="sidebar-widget pb-55">
-                                    <h3 class="sidebar-widget">Search Products</h3>
-                                    <div class="sidebar-search">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search Products...">
-                                            <button><i class="ti-search"></i></button>
-                                        </form>
-                                    </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="table-content table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="product-name">products</th>
+                                            <th class="product-price">products name</th>
+                                            <th class="product-name">price</th>
+                                            <th class="product-price">quantity</th>
+                                            <th class="product-quantity">total</th>
+                                            <th class="product-subtotal">delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">Gloriori GSX 250 R</a>
+                                            </td>
+                                            <td class="product-price"><span class="amount">$1128.00</span></td>
+                                            <td class="product-quantity">
+                                                <div class="quantity-range">
+                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">$1128.00</td>
+                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ti-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="assets/img/cart/5.jpg" alt=""></a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">Klager GSX 250 R</a>
+                                            </td>
+                                            <td class="product-price"><span class="amount">$1450.00</span></td>
+                                            <td class="product-quantity">
+                                                <div class="quantity-range">
+                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">$1450.00</td>
+                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ti-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="assets/img/cart/6.jpg" alt=""></a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">Matrio Max</a>
+                                            </td>
+                                            <td class="product-price"><span class="amount">$1300.00</span></td>
+                                            <td class="product-quantity">
+                                                <div class="quantity-range">
+                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">$1300.00</td>
+                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ti-trash"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="product-thumbnail">
+                                                <a href="#"><img src="assets/img/cart/7.jpg" alt=""></a>
+                                            </td>
+                                            <td class="product-name">
+                                                <a href="#">Demonissi Gori</a>
+                                            </td>
+                                            <td class="product-price"><span class="amount">$1190.00</span></td>
+                                            <td class="product-quantity">
+                                                <div class="quantity-range">
+                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">$1190.00</td>
+                                            <td class="product-cart-icon product-subtotal"><a href="#"><i class="ti-trash"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="cart-shiping-update">
+                                <div class="cart-shipping">
+                                    <a class="btn-style cr-btn" href="#">
+                                        <span>continue shopping</span>
+                                    </a>
                                 </div>
-                                <div class="sidebar-widget pb-50">
-                                    <h3 class="sidebar-widget">by categories</h3>
-                                    <div class="widget-categories">
-                                        <ul>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">Bags</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Jewelry</a></li>
-                                            <li><a href="#">Accessories</a></li>
-                                        </ul>
+                                <div class="update-checkout-cart">
+                                    <div class="update-cart">
+                                        <button class="btn-style cr-btn"><span>update</span></button>
                                     </div>
-                                </div>
-                                <div class="sidebar-widget mb-55">
-                                    <h3 class="sidebar-widget">by price</h3>
-                                    <div class="price_filter mr-60">
-                                        <div id="slider-range"></div>
-                                        <div class="price_slider_amount">
-                                            <div class="label-input">
-                                                <label>price : </label>
-                                                <input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-                                            </div>
-                                            <button type="button">Filter</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-40">
-                                    <h3 class="sidebar-widget">follow us </h3>
-                                    <div class="blog-social">
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="pinterest">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-pinterest"></i>
-                                                </a>
-                                            </li>
-                                            <li class="vimeo">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-vimeo"></i>
-                                                </a>
-                                            </li>
-                                            <li class="tumblr">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-tumblr"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-45">
-                                    <h3 class="sidebar-widget">product tags</h3>
-                                    <div class="product-tags">
-                                        <ul>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">Bag</a></li>
-                                            <li><a href="#">Women</a></li>
-                                            <li><a href="#">Tie</a></li>
-                                            <li><a href="#">Women</a></li>
-                                            <li><a href="#">Dress</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-55">
-                                    <h3 class="sidebar-widget">compare</h3>
-                                    <div class="product-compare">
-                                        <ul>
-                                            <li><a href="#">Gloriori GSX 250 R <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                            <li><a href="#">Klager GSX 250 R<span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                            <li><a href="#">Maxclon ZPE 54 <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="compare-text-btn">
-                                        <div class="compare-text">
-                                            <h5>Clear All</h5>
-                                        </div>
-                                        <div class="compare-btn">
-                                            <a href="#">Compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget">
-                                    <h3 class="sidebar-widget">related post</h3>
-                                    <div class="best-seller">
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-12.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 14, 2017</span>
-                                            </div>
-                                        </div>
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-13.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 25, 2017</span>
-                                            </div>
-                                        </div>
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-14.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 20, 2017</span>
-                                            </div>
-                                        </div>
+                                    <div class="update-cart">
+                                        <a class="btn-style cr-btn" href="#">
+                                            <span>checkout</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8">
-                            <div class="blog-details-wrapper res-mrg-top">
-                                <div class="blog-img mb-30">
-                                    <img src="assets/img/blog/blog-hm-4.jpg" alt="image">
-                                    <div class="blog-date">
-                                        <h4>24 February, 2018</h4>
-                                    </div>
-                                    <div class="blog-hm-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        </ul>
-                                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 col-sm-6">
+                            <div class="discount-code">
+                                <h4>enter your discount code</h4>
+                                <div class="coupon">
+                                    <input type="text">
+                                    <input class="cart-submit" type="submit" value="enter">
                                 </div>
-                                <h2>Sports Motorbike for play in desert </h2>
-                                <p>
-                                    <span>OSWAN</span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <blockquote>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod qui tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni, quis nostrud exercitation ullamco laboris nisi ut laboris elit aliquip.</p>
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <div class="blog-dec-tags-social">
-                                    <div class="blog-dec-tags">
-                                        <span>tags :</span>
-                                        <ul>
-                                            <li><a href="#">lifestyle</a></li>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">bike</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-dec-social">
-                                        <span>share :</span>
-                                        <ul>
-                                            <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                            <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="dec-next-previous-btn">
-                                    <a href="#">next</a>
-                                    <a href="#">previous</a>
-                                </div>
-                                <div class="blog-comment-wrapper">
-                                    <h4 class="blog-dec-title">comments : 02</h4>
-                                    <div class="single-comment-wrapper mt-35">
-                                        <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment1.png" alt="">
-                                        </div>
-                                        <div class="blog-comment-content">
-                                            <h4>Anthony Stephens</h4>
-                                            <span>October 14, 2018 </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam, </p>
-                                            <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-comment-wrapper mt-50 ml-125">
-                                        <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment2.png" alt="">
-                                        </div>
-                                        <div class="blog-comment-content">
-                                            <h4>Anthony Stephens</h4>
-                                            <span>October 14, 2018 </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua.  </p>
-                                            <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="blog-reply-wrapper mt-70">
-                                    <h4 class="blog-dec-title">post a comment</h4>
-                                    <form action="#">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="leave-form">
-                                                    <input type="text" placeholder="Full Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="leave-form">
-                                                    <input type="email" placeholder="Eail Address ">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="text-leave">
-                                                    <textarea placeholder="Massage"></textarea>
-                                                    <input type="submit" value="SEND MASSAGE">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-6">
+                            <div class="shop-total">
+                                <h3>cart total</h3>
+                                <ul>
+                                    <li>
+                                        sub total
+                                        <span>$909.00</span>
+                                    </li>
+                                    <li>
+                                        tax
+                                        <span>$9.00</span>
+                                    </li>
+                                    <li class="order-total">
+                                        shipping
+                                        <span>0</span>
+                                    </li>
+                                    <li>
+                                        order total
+                                        <span>$918.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cart-btn text-center mb-15">
+                                <a href="#">payment</a>
+                            </div>
+                            <div class="continue-shopping-btn text-center">
+                                <a href="#">continue shopping</a>
                             </div>
                         </div>
                     </div>
@@ -633,6 +541,10 @@
                 </div>
             </footer>
         </div>
+
+
+
+
 
 
 

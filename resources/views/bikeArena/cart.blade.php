@@ -7,21 +7,21 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
+
 		<!-- all css here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/chosen.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/icofont.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/bundle.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
+        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -169,7 +169,7 @@
                                             </li>
                                             <li><a href="contact.html"> Contact us</a></li>
                                         </ul>
-                                    </nav>                          
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -471,15 +471,15 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                     </div>
@@ -541,17 +541,17 @@
                 </div>
             </footer>
         </div>
-        
-        
-        
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
 		<!-- all js here -->
         <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="assets/js/popper.js"></script>
@@ -560,7 +560,7 @@
         <script src="assets/js/imagesloaded.pkgd.min.js"></script>
         <script src="assets/js/jquery.counterup.min.js"></script>
         <script src="assets/js/waypoints.min.js"></script>
-        
+
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>

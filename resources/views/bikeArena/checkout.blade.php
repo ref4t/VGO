@@ -7,21 +7,21 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
+
 		<!-- all css here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/chosen.min.css">
-        <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/icofont.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assets/css/bundle.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
+        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -169,7 +169,7 @@
                                             </li>
                                             <li><a href="contact.html"> Contact us</a></li>
                                         </ul>
-                                    </nav>                          
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -267,11 +267,11 @@
                                                 <label>Password  <span class="required">*</span></label>
                                                 <input type="text" />
                                             </p>
-                                            <p class="form-row">					
+                                            <p class="form-row">
                                                 <input type="submit" value="Login" />
                                                 <label>
                                                     <input type="checkbox" />
-                                                     Remember me 
+                                                     Remember me
                                                 </label>
                                             </p>
                                             <p class="lost-password">
@@ -280,7 +280,7 @@
                                         </form>
                                     </div>
                                 </div>
-                                <!-- ACCORDION END -->	
+                                <!-- ACCORDION END -->
                                 <!-- ACCORDION START -->
                                 <h3>Have a coupon? <span id="showcoupon">Click here to enter your code</span></h3>
                                 <div id="checkout_coupon" class="coupon-checkout-content">
@@ -293,14 +293,14 @@
                                         </form>
                                     </div>
                                 </div>
-                                <!-- ACCORDION END -->						
+                                <!-- ACCORDION END -->
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-12">
                             <form action="#">
-                                <div class="checkbox-form">						
+                                <div class="checkbox-form">
                                     <h3>Billing Details</h3>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -315,18 +315,18 @@
                                                   <option value="audi3">Bahrain</option>
                                                   <option value="audi4">Colombia</option>
                                                   <option value="audi5">Dominican Republic</option>
-                                                </select> 										
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>First Name <span class="required">*</span></label>										
+                                                <label>First Name <span class="required">*</span></label>
                                                 <input type="text" placeholder="" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>Last Name <span class="required">*</span></label>										
+                                                <label>Last Name <span class="required">*</span></label>
                                                 <input type="text" placeholder="" />
                                             </div>
                                         </div>
@@ -343,7 +343,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="checkout-form-list">									
+                                            <div class="checkout-form-list">
                                                 <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
                                             </div>
                                         </div>
@@ -355,39 +355,39 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>State / County <span class="required">*</span></label>										
+                                                <label>State / County <span class="required">*</span></label>
                                                 <input type="text" placeholder="" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>Postcode / Zip <span class="required">*</span></label>										
+                                                <label>Postcode / Zip <span class="required">*</span></label>
                                                 <input type="text" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>Email Address <span class="required">*</span></label>										
+                                                <label>Email Address <span class="required">*</span></label>
                                                 <input type="email" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="checkout-form-list">
-                                                <label>Phone  <span class="required">*</span></label>										
+                                                <label>Phone  <span class="required">*</span></label>
                                                 <input type="text" />
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="checkout-form-list create-acc">	
+                                            <div class="checkout-form-list create-acc">
                                                 <input id="cbox" type="checkbox" />
                                                 <label>Create an account?</label>
                                             </div>
                                             <div id="cbox_info" class="checkout-form-list create-account">
                                                 <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
                                                 <label>Account password  <span class="required">*</span></label>
-                                                <input type="password" placeholder="password" />	
+                                                <input type="password" placeholder="password" />
                                             </div>
-                                        </div>								
+                                        </div>
                                     </div>
                                     <div class="different-address">
                                         <div class="ship-different-title">
@@ -409,18 +409,18 @@
                                                       <option value="audi3">Bahrain</option>
                                                       <option value="audi4">Colombia</option>
                                                       <option value="audi5">Dominican Republic</option>
-                                                    </select> 										
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>First Name <span class="required">*</span></label>										
+                                                    <label>First Name <span class="required">*</span></label>
                                                     <input type="text" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>Last Name <span class="required">*</span></label>										
+                                                    <label>Last Name <span class="required">*</span></label>
                                                     <input type="text" placeholder="" />
                                                 </div>
                                             </div>
@@ -437,7 +437,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="checkout-form-list">									
+                                                <div class="checkout-form-list">
                                                     <input type="text" placeholder="Apartment, suite, unit etc. (optional)" />
                                                 </div>
                                             </div>
@@ -449,39 +449,39 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>State / County <span class="required">*</span></label>										
+                                                    <label>State / County <span class="required">*</span></label>
                                                     <input type="text" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>Postcode / Zip <span class="required">*</span></label>										
+                                                    <label>Postcode / Zip <span class="required">*</span></label>
                                                     <input type="text" placeholder="Postcode / Zip" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>Email Address <span class="required">*</span></label>										
+                                                    <label>Email Address <span class="required">*</span></label>
                                                     <input type="email" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
-                                                    <label>Phone  <span class="required">*</span></label>										
+                                                    <label>Phone  <span class="required">*</span></label>
                                                     <input type="text" placeholder="Postcode / Zip" />
                                                 </div>
-                                            </div>								
+                                            </div>
                                         </div>
                                         <div class="order-notes">
                                             <div class="checkout-form-list mrg-nn">
                                                 <label>Order Notes</label>
                                                 <textarea id="checkout-mess" cols="30" rows="10" placeholder="Notes about your order, e.g. special notes for delivery." ></textarea>
-                                            </div>									
+                                            </div>
                                         </div>
-                                    </div>													
+                                    </div>
                                 </div>
                             </form>
-                        </div>	
+                        </div>
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="your-order">
                                 <h3>Your order</h3>
@@ -491,7 +491,7 @@
                                             <tr>
                                                 <th class="product-name">Product</th>
                                                 <th class="product-total">Total</th>
-                                            </tr>							
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="cart_item">
@@ -520,7 +520,7 @@
                                                 <th>Order Total</th>
                                                 <td><strong><span class="amount">£215.00</span></strong>
                                                 </td>
-                                            </tr>								
+                                            </tr>
                                         </tfoot>
                                     </table>
                                 </div>
@@ -560,7 +560,7 @@
                                         </div>
                                         <div class="order-button-payment">
                                             <input type="submit" value="Place order" />
-                                        </div>								
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -568,7 +568,7 @@
                     </div>
                 </div>
             </div>
-            <!-- checkout-area end -->	
+            <!-- checkout-area end -->
             <div class="newsletter-area">
                 <div class="container">
                     <div class="newsletter-wrapper-all theme-bg-2">
@@ -644,15 +644,15 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                     </div>
@@ -714,17 +714,17 @@
                 </div>
             </footer>
         </div>
-        
-        
-        
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
+
+
+
+
+
 		<!-- all js here -->
         <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="assets/js/popper.js"></script>
@@ -733,7 +733,7 @@
         <script src="assets/js/imagesloaded.pkgd.min.js"></script>
         <script src="assets/js/jquery.counterup.min.js"></script>
         <script src="assets/js/waypoints.min.js"></script>
-        
+
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>

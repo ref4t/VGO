@@ -10,19 +10,19 @@
         <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
 
 		<!-- all css here -->
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/jquery-ui.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
-        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/animate.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/owl.carousel.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/chosen.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/jquery-ui.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/meanmenu.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/themify-icons.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/icofont.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/font-awesome.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bundle.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/style.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/responsive.css')); ?>">
+        <script src="<?php echo e(URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js')); ?>"></script>
     </head>
     <body>
         <div class="wrapper">

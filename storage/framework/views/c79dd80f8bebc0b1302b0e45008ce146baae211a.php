@@ -10,19 +10,18 @@
         <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
 
 		<!-- all css here -->
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/jquery-ui.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/font-awesome.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
-        <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/animate.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/owl.carousel.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/chosen.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/meanmenu.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/themify-icons.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/icofont.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/font-awesome.min.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bundle.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/style.css')); ?>">
+        <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/responsive.css')); ?>">
+        <script src="<?php echo e(URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js')); ?>"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -238,250 +237,195 @@
             <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg)">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
-                        <h2>blog details</h2>
+                        <h2>About Us</h2>
                         <ul>
                             <li>
                                 <a href="#">home</a>
                             </li>
-                            <li>blog details</li>
+                            <li>About Us</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="blog-area pt-120 pb-130">
+            <div class="about-us-area pt-125 pb-125">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="product-sidebar-area pr-30">
-                                <div class="sidebar-widget pb-55">
-                                    <h3 class="sidebar-widget">Search Products</h3>
-                                    <div class="sidebar-search">
-                                        <form action="#">
-                                            <input type="text" placeholder="Search Products...">
-                                            <button><i class="ti-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget pb-50">
-                                    <h3 class="sidebar-widget">by categories</h3>
-                                    <div class="widget-categories">
-                                        <ul>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">Bags</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="#">Jewelry</a></li>
-                                            <li><a href="#">Accessories</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-55">
-                                    <h3 class="sidebar-widget">by price</h3>
-                                    <div class="price_filter mr-60">
-                                        <div id="slider-range"></div>
-                                        <div class="price_slider_amount">
-                                            <div class="label-input">
-                                                <label>price : </label>
-                                                <input type="text" id="amount" name="price"  placeholder="Add Your Price" />
-                                            </div>
-                                            <button type="button">Filter</button>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="overview-content">
+                                <h1><span>OSWAN</span> WORLD MOST </h1>
+                                <h2>LATGEST <span>MOTORCYCLE STORE</span></h2>
+                                <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest            qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam </p>
+                                <div class="question-area">
+                                    <h4>HAVE ANY QUESTION? </h4>
+                                    <div class="question-contact">
+                                        <div class="question-icon">
+                                            <i class="icofont icofont-phone"></i>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-40">
-                                    <h3 class="sidebar-widget">follow us </h3>
-                                    <div class="blog-social">
-                                        <ul>
-                                            <li class="facebook">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="pinterest">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-pinterest"></i>
-                                                </a>
-                                            </li>
-                                            <li class="vimeo">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-vimeo"></i>
-                                                </a>
-                                            </li>
-                                            <li class="tumblr">
-                                                <a href="#">
-                                                    <i class="icofont icofont-social-tumblr"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-45">
-                                    <h3 class="sidebar-widget">product tags</h3>
-                                    <div class="product-tags">
-                                        <ul>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">Bag</a></li>
-                                            <li><a href="#">Women</a></li>
-                                            <li><a href="#">Tie</a></li>
-                                            <li><a href="#">Women</a></li>
-                                            <li><a href="#">Dress</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget mb-55">
-                                    <h3 class="sidebar-widget">compare</h3>
-                                    <div class="product-compare">
-                                        <ul>
-                                            <li><a href="#">Gloriori GSX 250 R <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                            <li><a href="#">Klager GSX 250 R<span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                            <li><a href="#">Maxclon ZPE 54 <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="compare-text-btn">
-                                        <div class="compare-text">
-                                            <h5>Clear All</h5>
-                                        </div>
-                                        <div class="compare-btn">
-                                            <a href="#">Compare</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sidebar-widget">
-                                    <h3 class="sidebar-widget">related post</h3>
-                                    <div class="best-seller">
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-12.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 14, 2017</span>
-                                            </div>
-                                        </div>
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-13.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 25, 2017</span>
-                                            </div>
-                                        </div>
-                                        <div class="single-best-seller">
-                                            <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-14.jpg" alt=""></a>
-                                            </div>
-                                            <div class="best-seller-text">
-                                                <h3><a href="#">Minimal White Shoes</a></h3>
-                                                <span>October 20, 2017</span>
-                                            </div>
+                                        <div class="question-content-number">
+                                            <h6> 01245 658 698</h6>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-8">
-                            <div class="blog-details-wrapper res-mrg-top">
-                                <div class="blog-img mb-30">
-                                    <img src="assets/img/blog/blog-hm-4.jpg" alt="image">
-                                    <div class="blog-date">
-                                        <h4>24 February, 2018</h4>
-                                    </div>
-                                    <div class="blog-hm-social">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                        </ul>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="overview-img">
+                                <img class="tilter" src="assets/img/banner/banner-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-area pb-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-services orange mb-30 text-center">
+                                <div class="services-icon">
+                                    <img alt="" src="assets/img/icon-img/3.png">
+                                </div>
+                                <div class="services-text">
+                                    <h5>FREE SHIPPING</h5>
+                                    <p>Free shipping on all order</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-services yellow mb-30 text-center">
+                                <div class="services-icon">
+                                    <img alt="" src="assets/img/icon-img/4.png">
+                                </div>
+                                <div class="services-text">
+                                    <h5>ONLINE SUPPORT</h5>
+                                    <p>Online support 24 hours a day</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-services purple mb-30 text-center">
+                                <div class="services-icon">
+                                    <img alt="" src="assets/img/icon-img/5.png">
+                                </div>
+                                <div class="services-text">
+                                    <h5>MONEY RETURN</h5>
+                                    <p>Back guarantee under 5 days</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="single-services sky mb-30 text-center">
+                                <div class="services-icon">
+                                    <img alt="" src="assets/img/icon-img/6.png">
+                                </div>
+                                <div class="services-text">
+                                    <h5>MEMBER DISCOUNT</h5>
+                                    <p>Onevery order over $150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-area">
+                <div class="container">
+                    <div class="section-title-2 section-title-position">
+                        <h2>OUR CLIENTS REVIEW</h2>
+                    </div>
+                    <div class="testimonial-active owl-carousel">
+                        <div class="single-testimonial">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="testimonial-img pl-75">
+                                        <img alt="image" src="assets/img/team/testimonial-1.jpg">
                                     </div>
                                 </div>
-                                <h2>Sports Motorbike for play in desert </h2>
-                                <p>
-                                    <span>OSWAN</span>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <blockquote>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod qui tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni, quis nostrud exercitation ullamco laboris nisi ut laboris elit aliquip.</p>
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <div class="blog-dec-tags-social">
-                                    <div class="blog-dec-tags">
-                                        <span>tags :</span>
-                                        <ul>
-                                            <li><a href="#">lifestyle</a></li>
-                                            <li><a href="#">Clothing</a></li>
-                                            <li><a href="#">bike</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-dec-social">
-                                        <span>share :</span>
-                                        <ul>
-                                            <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                            <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                            <li><a href="#"><i class="icofont icofont-social-pinterest"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="dec-next-previous-btn">
-                                    <a href="#">next</a>
-                                    <a href="#">previous</a>
-                                </div>
-                                <div class="blog-comment-wrapper">
-                                    <h4 class="blog-dec-title">comments : 02</h4>
-                                    <div class="single-comment-wrapper mt-35">
-                                        <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment1.png" alt="">
+                                <div class="col-lg-7">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-dec">
+                                            <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest  qulity of motorcycle also you can sell here your motorcycle it quo minus iduod maxie placeat facere possimus, omnis voluptas assumenda est, omnis dolor llendus. Temporibus autem quibusdam quoten</p>
                                         </div>
-                                        <div class="blog-comment-content">
-                                            <h4>Anthony Stephens</h4>
-                                            <span>October 14, 2018 </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam, </p>
-                                            <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="single-comment-wrapper mt-50 ml-125">
-                                        <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment2.png" alt="">
-                                        </div>
-                                        <div class="blog-comment-content">
-                                            <h4>Anthony Stephens</h4>
-                                            <span>October 14, 2018 </span>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua.  </p>
-                                            <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
-                                            </div>
+                                        <div class="name-designation">
+                                            <h4>Rayed Ayash Hisham</h4>
+                                            <span>COO, ASEKHA</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="blog-reply-wrapper mt-70">
-                                    <h4 class="blog-dec-title">post a comment</h4>
-                                    <form action="#">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="leave-form">
-                                                    <input type="text" placeholder="Full Name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="leave-form">
-                                                    <input type="email" placeholder="Eail Address ">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="text-leave">
-                                                    <textarea placeholder="Massage"></textarea>
-                                                    <input type="submit" value="SEND MASSAGE">
-                                                </div>
-                                            </div>
+                            </div>
+                        </div>
+                        <div class="single-testimonial">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-12 col-12">
+                                    <div class="testimonial-img pl-75">
+                                        <img alt="image" src="assets/img/team/testimonial-2.png">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 col-12">
+                                    <div class="testimonial-content">
+                                        <div class="testimonial-dec">
+                                            <p><span>OSWAN</span> Lorem ipsum dolor sit amet, consectetur adipisicing , sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo consequat. Duis dolor in reprehenderit.</p>
                                         </div>
-                                    </form>
+                                        <div class="name-designation">
+                                            <h4>James Momen Nirob</h4>
+                                            <span>CEO, ASEKHA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-area pt-120 pb-95">
+                <div class="container">
+                    <div class="section-title text-center mb-60">
+                        <h2>Team Member</h2>
+                        <p>
+                            <span>OSWAN</span>
+                            the most latgest bike store in the wold can serve you latest qulity of motorcycle also you can sell here your motorcycle
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="team-wrapper mb-30">
+                                <div class="team-img">
+                                    <img src="assets/img/team/1.jpg" alt="">
+                                </div>
+                                <div class="team-content">
+                                    <h4>Zoe Jones</h4>
+                                    <span>Founder </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="team-wrapper mb-30">
+                                <div class="team-img">
+                                    <img src="assets/img/team/2.jpg" alt="">
+                                </div>
+                                <div class="team-content">
+                                    <h4>Sienna Nguyen</h4>
+                                    <span>Manager </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="team-wrapper mb-30">
+                                <div class="team-img">
+                                    <img src="assets/img/team/3.jpg" alt="">
+                                </div>
+                                <div class="team-content">
+                                    <h4>Liam Ryan</h4>
+                                    <span>Director </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <div class="team-wrapper mb-30">
+                                <div class="team-img">
+                                    <img src="assets/img/team/4.jpg" alt="">
+                                </div>
+                                <div class="team-content">
+                                    <h4>Charlotte Taylor</h4>
+                                    <span>Chairmen </span>
                                 </div>
                             </div>
                         </div>
@@ -633,6 +577,7 @@
                 </div>
             </footer>
         </div>
+
 
 
 
