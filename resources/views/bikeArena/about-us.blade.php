@@ -31,8 +31,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-4">
                         <div class="logo-small-device">
-                            <a href="{{ route('bikearena.index') }}"><img alt=""
-                                                                          src="{{ URL::asset('bikearena/img/logo/logo.png') }}"></a>
+                            <a href="{{ route('bikearena.index') }}"><img alt="" src="{{ URL::asset('bikearena/img/logo/logo.png') }}"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-8 col-8">
@@ -42,10 +41,8 @@
                             </div>
                             <div class="menu-wrapper text-center">
                                 <button class="menu-toggle">
-                                    <img class="s-open" alt=""
-                                         src="{{ URL::asset('bikearena/img/icon-img/menu.png') }}">
-                                    <img class="s-close" alt=""
-                                         src="{{ URL::asset('bikearena/img/icon-img/menu-close.png') }}">
+                                    <img class="s-open" alt="" src="{{ URL::asset('bikearena/img/icon-img/menu.png') }}">
+                                    <img class="s-close" alt="" src="{{ URL::asset('bikearena/img/icon-img/menu-close.png') }}">
                                 </button>
                                 <div class="main-menu">
                                     <nav>
@@ -56,8 +53,7 @@
                                             <li><a href="#">shop</a>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                    <li><a href="{{ route('bikearena.product-details') }}">product
-                                                            details</a></li>
+                                                    <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
                                                     <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                     <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                     <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -96,8 +92,7 @@
                                 <ul>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt=""
-                                                             src="{{ URL::asset('bikearena/img/cart/cart-1.jpg') }}"></a>
+                                            <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-1.jpg') }}"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Gloriori GSX 250 R </a></h3>
@@ -110,8 +105,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt=""
-                                                             src="{{ URL::asset('bikearena/img/cart/cart-2.jpg') }}"></a>
+                                            <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-2.jpg') }}"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -124,8 +118,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt=""
-                                                             src="{{ URL::asset('bikearena/img/cart/cart-3.jpg') }}"></a>
+                                            <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-3.jpg') }}"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -164,8 +157,7 @@
                                     <li><a href="#">shop</a>
                                         <ul>
                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                            <li><a href="{{ route('bikearena.product-details') }}">product details</a>
-                                            </li>
+                                            <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
                                             <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                             <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                             <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -244,8 +236,7 @@
             </div>
         </div>
     </header>
-    <div class="breadcrumb-area pt-255 pb-170"
-         style="background-image: url({{ url('bikearena/img/banner/banner-4.jpg') }})">
+    <div class="breadcrumb-area pt-255 pb-170" style="background-image: url({{ url('bikearena/img/banner/banner-4.jpg') }})">
         <div class="container-fluid">
             <div class="breadcrumb-content text-center">
                 <h2>About Us</h2>
@@ -468,17 +459,12 @@
                                 <h3>Subscribe our newsletter</h3>
                             </div>
                             <div id="mc_embed_signup" class="subscribe-form">
-                                <form action="#" method="post" id="#" name="mc-embedded-subscribe-form" class="validate"
-                                      target="_blank" novalidate>
+                                <form action="#" method="post" id="#" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll" class="mc-form">
-                                        <input type="email" value="" name="EMAIL" class="email"
-                                               placeholder="Enter your email here..." required>
+                                        <input type="email" value="" name="EMAIL" class="email" placeholder="Enter your email here..." required>
                                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                        <div class="mc-news" aria-hidden="true"><input type="text"
-                                                                                       name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
-                                                                                       tabindex="-1" value=""></div>
-                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
-                                                                  id="mc-embedded-subscribe" class="button"></div>
+                                        <div class="mc-news" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                                     </div>
                                 </form>
                             </div>
@@ -606,18 +592,17 @@
     </footer>
 </div>
 
-
 <!-- all js here -->
-<script src="{{ URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/popper.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/bootstrap.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/isotope.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/imagesloaded.pkgd.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/jquery.counterup.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/waypoints.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/popper.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/waypoints.min.js') }}"></script>
 
-<script src="{{ URL::asset('bikearena/js/owl.carousel.min.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/plugins.js') }}"></script>
-<script src="{{ URL::asset('bikearena/js/main.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/plugins.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/main.js') }}"></script>
 </body>
 </html>
