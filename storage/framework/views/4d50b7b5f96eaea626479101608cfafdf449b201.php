@@ -1231,7 +1231,7 @@
                             <div class="row">
                                 <div class="col-lg-5">
                                     <div class="testimonial-img pl-75">
-                                        <img alt="image" src="bikearena/img/team/testimonial-1.jpg">
+                                        <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/testimonial-1.jpg')); ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
@@ -1251,7 +1251,7 @@
                             <div class="row">
                                 <div class="col-lg-5 col-md-12 col-12">
                                     <div class="testimonial-img pl-75">
-                                        <img alt="image" src="bikearena/img/team/testimonial-2.png">
+                                        <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/testimonial-2.png')); ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12 col-12">

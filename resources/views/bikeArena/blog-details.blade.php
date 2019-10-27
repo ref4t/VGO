@@ -25,223 +25,225 @@
         <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <header>
-                <div class="header-area transparent-bar ptb-55">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <div class="logo-small-device">
-                                    <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
-                                </div>
+    <div class="wrapper">
+        <header>
+            <div class="header-area transparent-bar ptb-55">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-4">
+                            <div class="logo-small-device">
+                                <a href="{{ route('bikearena.index') }}"><img alt="" src="{{ URL::asset('bikearena/img/logo/logo.png') }}"></a>
                             </div>
-                            <div class="col-lg-8 col-md-8 col-8">
-                                <div class="header-contact-menu-wrapper pl-45">
-                                    <div class="header-contact">
-                                        <p>WANT TO TALK WITH US  +01254 265 987</p>
-                                    </div>
-                                    <div class="menu-wrapper text-center">
-                                        <button class="menu-toggle">
-                                            <img class="s-open" alt="" src="assets/img/icon-img/menu.png">
-                                            <img class="s-close" alt="" src="assets/img/icon-img/menu-close.png">
-                                        </button>
-                                        <div class="main-menu">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="index.html">home</a></li>
-                                                    <li class="active"><a href="about-us.html">about us </a></li>
-                                                    <li><a href="#">shop</a>
-                                                        <ul>
-                                                            <li><a href="shop.html">shop</a></li>
-                                                            <li><a href="product-details.html">product details</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="cart.html">cart</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">pages</a>
-                                                        <ul>
-                                                            <li><a href="about-us.html">about us</a></li>
-                                                            <li><a href="cart.html">cart page</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="login-register.html">login</a></li>
-                                                            <li><a href="contact.html">contact</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">blog</a>
-                                                        <ul>
-                                                            <li><a href="blog.html">blog</a></li>
-                                                            <li><a href="blog-details.html">blog details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="contact.html">contact us</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-8">
+                            <div class="header-contact-menu-wrapper pl-45">
+                                <div class="header-contact">
+                                    <p>WANT TO TALK WITH US +01254 265 987</p>
                                 </div>
-                                <div class="header-cart cart-small-device">
-                                    <button class="icon-cart">
-                                        <i class="ti-shopping-cart"></i>
-                                        <span class="count-style">02</span>
-                                        <span class="count-price-add">$295.95</span>
+                                <div class="menu-wrapper text-center">
+                                    <button class="menu-toggle">
+                                        <img class="s-open" alt="" src="{{ URL::asset('bikearena/img/icon-img/menu.png') }}">
+                                        <img class="s-close" alt="" src="{{ URL::asset('bikearena/img/icon-img/menu-close.png') }}">
                                     </button>
-                                    <div class="shopping-cart-content">
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Gloriori GSX 250 R </a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span>Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-total">
-                                            <h4>total: <span>$550.00</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-btn">
-                                            <a class="btn-style cr-btn" href="#">checkout</a>
-                                        </div>
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="{{ route('bikearena.index') }}">home</a></li>
+                                                <li class="active"><a href="{{ route('bikearena.about') }}">about us </a>
+                                                </li>
+                                                <li><a href="#">shop</a>
+                                                    <ul>
+                                                        <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
+                                                        <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
+                                                        <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
+                                                        <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
+                                                        <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">pages</a>
+                                                    <ul>
+                                                        <li><a href="{{ route('bikearena.about') }}">about us</a></li>
+                                                        <li><a href="{{ route('bikearena.cart') }}">cart page</a></li>
+                                                        <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
+                                                        <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
+                                                        <li><a href="{{ route('bikearena.login-register') }}">login</a></li>
+                                                        <li><a href="{{ route('bikearena.contact') }}">contact</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">blog</a>
+                                                    <ul>
+                                                        <li><a href="{{ route('bikearena.blog') }}">blog</a></li>
+                                                        <li><a href="{{ route('bikearena.blog-details') }}">blog details</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{{ route('bikearena.contact') }}">contact us</a></li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mobile-menu-area col-12">
-                                <div class="mobile-menu">
-                                    <nav id="mobile-menu-active">
-                                        <ul class="menu-overflow">
-                                            <li><a href="index.html">HOME</a></li>
-                                            <li><a href="#">pages</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">about us</a></li>
-                                                    <li><a href="cart.html">cart page</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="login-register.html">login</a></li>
-                                                    <li><a href="contact.html">contact</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">shop</a>
-                                                <ul>
-                                                    <li><a href="shop.html">shop</a></li>
-                                                    <li><a href="product-details.html">product details</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="cart.html">cart</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">BLOG</a>
-                                                <ul>
-                                                    <li><a href="blog.html">blog page</a></li>
-                                                    <li><a href="blog-details.html">blog details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html"> Contact us</a></li>
-                                        </ul>
-                                    </nav>
+                            <div class="header-cart cart-small-device">
+                                <button class="icon-cart">
+                                    <i class="ti-shopping-cart"></i>
+                                    <span class="count-style">02</span>
+                                    <span class="count-price-add">$295.95</span>
+                                </button>
+                                <div class="shopping-cart-content">
+                                    <ul>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-1.jpg') }}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                                <span>Price: $275</span>
+                                                <span>Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-2.jpg') }}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Demonissi Gori</a></h3>
+                                                <span>Price: $275</span>
+                                                <span class="qty">Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-3.jpg') }}"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Demonissi Gori</a></h3>
+                                                <span>Price: $275</span>
+                                                <span class="qty">Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-total">
+                                        <h4>total: <span>$550.00</span></h4>
+                                    </div>
+                                    <div class="shopping-cart-btn">
+                                        <a class="btn-style cr-btn" href="{{ route('bikearena.checkout') }}">checkout</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header-cart-wrapper">
-                        <div class="header-cart">
-                            <button class="icon-cart">
-                                <i class="ti-shopping-cart"></i>
-                                <span class="count-style">02</span>
-                                <span class="count-price-add">$295.95</span>
-                            </button>
-                            <div class="shopping-cart-content">
-                                <ul>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Gloriori GSX 250 R </a></h3>
-                                            <span>Price: $275</span>
-                                            <span>Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Demonissi Gori</a></h3>
-                                            <span>Price: $275</span>
-                                            <span class="qty">Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Demonissi Gori</a></h3>
-                                            <span>Price: $275</span>
-                                            <span class="qty">Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shopping-cart-total">
-                                    <h4>total: <span>$550.00</span></h4>
-                                </div>
-                                <div class="shopping-cart-btn">
-                                    <a class="btn-style cr-btn" href="#">checkout</a>
-                                </div>
+                        <div class="mobile-menu-area col-12">
+                            <div class="mobile-menu">
+                                <nav id="mobile-menu-active">
+                                    <ul class="menu-overflow">
+                                        <li><a href="{{ route('bikearena.index') }}">HOME</a></li>
+                                        <li><a href="#">pages</a>
+                                            <ul>
+                                                <li><a href="{{ route('bikearena.about') }}">about us</a></li>
+                                                <li><a href="{{ route('bikearena.cart') }}">cart page</a></li>
+                                                <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
+                                                <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
+                                                <li><a href="{{ route('bikearena.login-register') }}">login</a></li>
+                                                <li><a href="{{ route('bikearena.contact') }}">contact</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">shop</a>
+                                            <ul>
+                                                <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
+                                                <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
+                                                <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
+                                                <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
+                                                <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">BLOG</a>
+                                            <ul>
+                                                <li><a href="{{ route('bikearena.blog') }}">blog page</a></li>
+                                                <li><a href="{{ route('bikearena.blog-details') }}">blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ route('bikearena.contact') }}"> Contact us</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg)">
+                <div class="header-cart-wrapper">
+                    <div class="header-cart">
+                        <button class="icon-cart">
+                            <i class="ti-shopping-cart"></i>
+                            <span class="count-style">02</span>
+                            <span class="count-price-add">$295.95</span>
+                        </button>
+                        <div class="shopping-cart-content">
+                            <ul>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-1.jpg') }}"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                        <span>Price: $275</span>
+                                        <span>Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-2.jpg') }}"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Demonissi Gori</a></h3>
+                                        <span>Price: $275</span>
+                                        <span class="qty">Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/cart/cart-3.jpg') }}"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Demonissi Gori</a></h3>
+                                        <span>Price: $275</span>
+                                        <span class="qty">Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="shopping-cart-total">
+                                <h4>total: <span>$550.00</span></h4>
+                            </div>
+                            <div class="shopping-cart-btn">
+                                <a class="btn-style cr-btn" href="{{ route('bikearena.checkout') }}">checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="breadcrumb-area pt-255 pb-170" style="background-image: url({{ url('bikearena/img/banner/banner-4.jpg') }})">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
                         <h2>blog details</h2>
                         <ul>
                             <li>
-                                <a href="#">home</a>
+                                <a href="{{ route('bikearena.index') }}">home</a>
                             </li>
                             <li>blog details</li>
                         </ul>
@@ -355,7 +357,7 @@
                                     <div class="best-seller">
                                         <div class="single-best-seller">
                                             <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-12.jpg" alt=""></a>
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-12.jpg') }}" alt=""></a>
                                             </div>
                                             <div class="best-seller-text">
                                                 <h3><a href="#">Minimal White Shoes</a></h3>
@@ -364,7 +366,7 @@
                                         </div>
                                         <div class="single-best-seller">
                                             <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-13.jpg" alt=""></a>
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-13.jpg') }}" alt=""></a>
                                             </div>
                                             <div class="best-seller-text">
                                                 <h3><a href="#">Minimal White Shoes</a></h3>
@@ -373,7 +375,7 @@
                                         </div>
                                         <div class="single-best-seller">
                                             <div class="best-seller-img">
-                                                <a href="#"><img src="assets/img/product/product-14.jpg" alt=""></a>
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-14.jpg') }}" alt=""></a>
                                             </div>
                                             <div class="best-seller-text">
                                                 <h3><a href="#">Minimal White Shoes</a></h3>
@@ -387,7 +389,7 @@
                         <div class="col-lg-8">
                             <div class="blog-details-wrapper res-mrg-top">
                                 <div class="blog-img mb-30">
-                                    <img src="assets/img/blog/blog-hm-4.jpg" alt="image">
+                                    <img src="{{ URL::asset('bikearena/img/blog/blog-hm-4.jpg') }}" alt="image">
                                     <div class="blog-date">
                                         <h4>24 February, 2018</h4>
                                     </div>
@@ -435,27 +437,27 @@
                                     <h4 class="blog-dec-title">comments : 02</h4>
                                     <div class="single-comment-wrapper mt-35">
                                         <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment1.png" alt="">
+                                            <img src="{{ URL::asset('bikearena/img/blog/blog-comment1.png') }}" alt="">
                                         </div>
                                         <div class="blog-comment-content">
                                             <h4>Anthony Stephens</h4>
                                             <span>October 14, 2018 </span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam, </p>
                                             <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
+                                                <a href="{{ route('bikearena.blog-details') }}">read more</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="single-comment-wrapper mt-50 ml-125">
                                         <div class="blog-comment-img">
-                                            <img src="assets/img/blog/blog-comment2.png" alt="">
+                                            <img src="{{ URL::asset('bikearena/img/blog/blog-comment2.png') }}" alt="">
                                         </div>
                                         <div class="blog-comment-content">
                                             <h4>Anthony Stephens</h4>
                                             <span>October 14, 2018 </span>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua.  </p>
                                             <div class="blog-details-btn">
-                                                <a href="blog-details.html">read more</a>
+                                                <a href="{{ route('bikearena.blog-details') }}">read more</a>
                                             </div>
                                         </div>
                                     </div>
@@ -493,8 +495,8 @@
                     <div class="newsletter-wrapper-all theme-bg-2">
                         <div class="row">
                             <div class="col-lg-5 col-12 col-md-12">
-                                <div class="newsletter-img bg-img" style="background-image: url(assets/img/banner/newsletter-bg.png)">
-                                    <img alt="image" src="assets/img/team/newsletter-img.png">
+                                <div class="newsletter-img bg-img" style="background-image: url({{ url('bikearena/img/banner/newsletter-bg.png') }})">
+                                    <img alt="image" src="{{ URL::asset('bikearena/img/team/newsletter-img.png') }}">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-12 col-md-12">
@@ -525,8 +527,8 @@
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
-                                        <a href="index.html">
-                                            <img src="assets/img/logo/2.png" alt="">
+                                        <a href="{{ route('bikearena.index') }}">
+                                            <img src="{{ URL::asset('bikearena/img/logo/2.png') }}" alt="">
                                         </a>
                                     </div>
                                     <div class="footer-about">
@@ -545,13 +547,13 @@
                                     </div>
                                     <div class="quick-links">
                                         <ul>
-                                            <li><a href="about-us.html">About us</a></li>
+                                            <li><a href="{{ route('bikearena.about') }}">About us</a></li>
                                             <li><a href="#">Service</a></li>
                                             <li><a href="#">Inventory</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="blog-sidebar.html">Blog</a></li>
+                                            <li><a href="{{ route('bikearena.shop') }}">Shop</a></li>
+                                            <li><a href="{{ route('bikearena.blog') }}">Blog</a></li>
                                             <li><a href="#">Conditions</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{{ route('bikearena.contact') }}">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -563,16 +565,13 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                     </div>
                                 </div>
@@ -625,7 +624,7 @@
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="footer-payment-method">
-                                    <a href="#"><img alt="" src="assets/img/icon-img/payment.png"></a>
+                                    <a href="#"><img alt="" src="{{ URL::asset('bikearena/img/icon-img/payment.png') }}"></a>
                                 </div>
                             </div>
                         </div>
@@ -634,23 +633,17 @@
             </footer>
         </div>
 
-
-
-
-
-
-
 		<!-- all js here -->
-        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-        <script src="assets/js/popper.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
+    <script src="{{ URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/popper.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/waypoints.min.js') }}"></script>
 
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
+    <script src="{{ URL::asset('bikearena/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/plugins.js') }}"></script>
+    <script src="{{ URL::asset('bikearena/js/main.js') }}"></script>
     </body>
 </html>

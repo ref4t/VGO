@@ -363,7 +363,7 @@
                     <div class="row">
                         <div class="col-lg-5 col-md-12 col-12">
                             <div class="testimonial-img pl-75">
-                                <img alt="image" src="{{ URL::asset('bikearena/img/team/testimonial-2.jpg') }}">
+                                <img alt="image" src="{{ URL::asset('bikearena/img/team/testimonial-2.png') }}">
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-12 col-12">

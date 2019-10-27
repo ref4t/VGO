@@ -7,7 +7,7 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(URL::asset('bikearena/img/favicon.png')); ?>">
 
 		<!-- all css here -->
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
@@ -24,223 +24,223 @@
         <script src="<?php echo e(URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js')); ?>"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <header>
-                <div class="header-area transparent-bar ptb-55">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <div class="logo-small-device">
-                                    <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
-                                </div>
+    <div class="wrapper">
+        <header>
+            <div class="header-area transparent-bar ptb-55">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-4">
+                            <div class="logo-small-device">
+                                <a href="<?php echo e(route('bikearena.index')); ?>"><img alt="" src="<?php echo e(URL::asset('bikearena/img/logo/logo.png')); ?>"></a>
                             </div>
-                            <div class="col-lg-8 col-md-8 col-8">
-                                <div class="header-contact-menu-wrapper pl-45">
-                                    <div class="header-contact">
-                                        <p>WANT TO TALK WITH US  +01254 265 987</p>
-                                    </div>
-                                    <div class="menu-wrapper text-center">
-                                        <button class="menu-toggle">
-                                            <img class="s-open" alt="" src="assets/img/icon-img/menu.png">
-                                            <img class="s-close" alt="" src="assets/img/icon-img/menu-close.png">
-                                        </button>
-                                        <div class="main-menu">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="index.html">home</a></li>
-                                                    <li class="active"><a href="about-us.html">about us </a></li>
-                                                    <li><a href="#">shop</a>
-                                                        <ul>
-                                                            <li><a href="shop.html">shop</a></li>
-                                                            <li><a href="product-details.html">product details</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="cart.html">cart</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">pages</a>
-                                                        <ul>
-                                                            <li><a href="about-us.html">about us</a></li>
-                                                            <li><a href="cart.html">cart page</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="login-register.html">login</a></li>
-                                                            <li><a href="contact.html">contact</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">blog</a>
-                                                        <ul>
-                                                            <li><a href="blog.html">blog</a></li>
-                                                            <li><a href="blog-details.html">blog details</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="contact.html">contact us</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-8">
+                            <div class="header-contact-menu-wrapper pl-45">
+                                <div class="header-contact">
+                                    <p>WANT TO TALK WITH US +01254 265 987</p>
                                 </div>
-                                <div class="header-cart cart-small-device">
-                                    <button class="icon-cart">
-                                        <i class="ti-shopping-cart"></i>
-                                        <span class="count-style">02</span>
-                                        <span class="count-price-add">$295.95</span>
+                                <div class="menu-wrapper text-center">
+                                    <button class="menu-toggle">
+                                        <img class="s-open" alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/menu.png')); ?>">
+                                        <img class="s-close" alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/menu-close.png')); ?>">
                                     </button>
-                                    <div class="shopping-cart-content">
-                                        <ul>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Gloriori GSX 250 R </a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span>Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <div class="shopping-cart-total">
-                                            <h4>total: <span>$550.00</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-btn">
-                                            <a class="btn-style cr-btn" href="#">checkout</a>
-                                        </div>
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="<?php echo e(route('bikearena.index')); ?>">home</a></li>
+                                                <li class="active"><a href="<?php echo e(route('bikearena.about')); ?>">about us </a></li>
+                                                <li><a href="#">shop</a>
+                                                    <ul>
+                                                        <li><a href="<?php echo e(route('bikearena.shop')); ?>">shop</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.product-details')); ?>">product details</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">pages</a>
+                                                    <ul>
+                                                        <li><a href="<?php echo e(route('bikearena.about')); ?>">about us</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart page</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.login-register')); ?>">login</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">blog</a>
+                                                    <ul>
+                                                        <li><a href="<?php echo e(route('bikearena.blog')); ?>">blog</a></li>
+                                                        <li><a href="<?php echo e(route('bikearena.blog-details')); ?>">blog details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact us</a></li>
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mobile-menu-area col-12">
-                                <div class="mobile-menu">
-                                    <nav id="mobile-menu-active">
-                                        <ul class="menu-overflow">
-                                            <li><a href="index.html">HOME</a></li>
-                                            <li><a href="#">pages</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">about us</a></li>
-                                                    <li><a href="cart.html">cart page</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="login-register.html">login</a></li>
-                                                    <li><a href="contact.html">contact</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">shop</a>
-                                                <ul>
-                                                    <li><a href="shop.html">shop</a></li>
-                                                    <li><a href="product-details.html">product details</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="cart.html">cart</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">BLOG</a>
-                                                <ul>
-                                                    <li><a href="blog.html">blog page</a></li>
-                                                    <li><a href="blog-details.html">blog details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html"> Contact us</a></li>
-                                        </ul>
-                                    </nav>
+                            <div class="header-cart cart-small-device">
+                                <button class="icon-cart">
+                                    <i class="ti-shopping-cart"></i>
+                                    <span class="count-style">02</span>
+                                    <span class="count-price-add">$295.95</span>
+                                </button>
+                                <div class="shopping-cart-content">
+                                    <ul>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-1.jpg')); ?>"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                                <span>Price: $275</span>
+                                                <span>Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-2.jpg')); ?>"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Demonissi Gori</a></h3>
+                                                <span>Price: $275</span>
+                                                <span class="qty">Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="single-shopping-cart">
+                                            <div class="shopping-cart-img">
+                                                <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-3.jpg')); ?>"></a>
+                                            </div>
+                                            <div class="shopping-cart-title">
+                                                <h3><a href="#">Demonissi Gori</a></h3>
+                                                <span>Price: $275</span>
+                                                <span class="qty">Qty: 01</span>
+                                            </div>
+                                            <div class="shopping-cart-delete">
+                                                <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="shopping-cart-total">
+                                        <h4>total: <span>$550.00</span></h4>
+                                    </div>
+                                    <div class="shopping-cart-btn">
+                                        <a class="btn-style cr-btn" href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header-cart-wrapper">
-                        <div class="header-cart">
-                            <button class="icon-cart">
-                                <i class="ti-shopping-cart"></i>
-                                <span class="count-style">02</span>
-                                <span class="count-price-add">$295.95</span>
-                            </button>
-                            <div class="shopping-cart-content">
-                                <ul>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Gloriori GSX 250 R </a></h3>
-                                            <span>Price: $275</span>
-                                            <span>Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Demonissi Gori</a></h3>
-                                            <span>Price: $275</span>
-                                            <span class="qty">Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                    <li class="single-shopping-cart">
-                                        <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                        </div>
-                                        <div class="shopping-cart-title">
-                                            <h3><a href="#">Demonissi Gori</a></h3>
-                                            <span>Price: $275</span>
-                                            <span class="qty">Qty: 01</span>
-                                        </div>
-                                        <div class="shopping-cart-delete">
-                                            <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="shopping-cart-total">
-                                    <h4>total: <span>$550.00</span></h4>
-                                </div>
-                                <div class="shopping-cart-btn">
-                                    <a class="btn-style cr-btn" href="#">checkout</a>
-                                </div>
+                        <div class="mobile-menu-area col-12">
+                            <div class="mobile-menu">
+                                <nav id="mobile-menu-active">
+                                    <ul class="menu-overflow">
+                                        <li><a href="<?php echo e(route('bikearena.index')); ?>">HOME</a></li>
+                                        <li><a href="#">pages</a>
+                                            <ul>
+                                                <li><a href="<?php echo e(route('bikearena.about')); ?>">about us</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart page</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.login-register')); ?>">login</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">shop</a>
+                                            <ul>
+                                                <li><a href="<?php echo e(route('bikearena.shop')); ?>">shop</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.product-details')); ?>">product details</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">BLOG</a>
+                                            <ul>
+                                                <li><a href="<?php echo e(route('bikearena.blog')); ?>">blog page</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.blog-details')); ?>">blog details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="<?php echo e(route('bikearena.contact')); ?>"> Contact us</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
-            <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg)">
+                <div class="header-cart-wrapper">
+                    <div class="header-cart">
+                        <button class="icon-cart">
+                            <i class="ti-shopping-cart"></i>
+                            <span class="count-style">02</span>
+                            <span class="count-price-add">$295.95</span>
+                        </button>
+                        <div class="shopping-cart-content">
+                            <ul>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-1.jpg')); ?>"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Gloriori GSX 250 R </a></h3>
+                                        <span>Price: $275</span>
+                                        <span>Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-2.jpg')); ?>"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Demonissi Gori</a></h3>
+                                        <span>Price: $275</span>
+                                        <span class="qty">Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                                <li class="single-shopping-cart">
+                                    <div class="shopping-cart-img">
+                                        <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-3.jpg')); ?>"></a>
+                                    </div>
+                                    <div class="shopping-cart-title">
+                                        <h3><a href="#">Demonissi Gori</a></h3>
+                                        <span>Price: $275</span>
+                                        <span class="qty">Qty: 01</span>
+                                    </div>
+                                    <div class="shopping-cart-delete">
+                                        <a href="#"><i class="icofont icofont-ui-delete"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="shopping-cart-total">
+                                <h4>total: <span>$550.00</span></h4>
+                            </div>
+                            <div class="shopping-cart-btn">
+                                <a class="btn-style cr-btn" href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(<?php echo e(url('bikearena/img/banner/banner-4.jpg')); ?>)">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
                         <h2>Cart page</h2>
                         <ul>
                             <li>
-                                <a href="#">home</a>
+                                <a href="<?php echo e(route('bikearena.index')); ?>">home</a>
                             </li>
                             <li>Cart page</li>
                         </ul>
@@ -266,7 +266,7 @@
                                     <tbody>
                                         <tr>
                                             <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
+                                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/cart/4.jpg')); ?>" alt=""></a>
                                             </td>
                                             <td class="product-name">
                                                 <a href="#">Gloriori GSX 250 R</a>
@@ -282,7 +282,7 @@
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/5.jpg" alt=""></a>
+                                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/cart/5.jpg')); ?>" alt=""></a>
                                             </td>
                                             <td class="product-name">
                                                 <a href="#">Klager GSX 250 R</a>
@@ -298,7 +298,7 @@
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/6.jpg" alt=""></a>
+                                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/cart/6.jpg')); ?>" alt=""></a>
                                             </td>
                                             <td class="product-name">
                                                 <a href="#">Matrio Max</a>
@@ -314,7 +314,7 @@
                                         </tr>
                                         <tr>
                                             <td class="product-thumbnail">
-                                                <a href="#"><img src="assets/img/cart/7.jpg" alt=""></a>
+                                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/cart/7.jpg')); ?>" alt=""></a>
                                             </td>
                                             <td class="product-name">
                                                 <a href="#">Demonissi Gori</a>
@@ -346,7 +346,7 @@
                                         <button class="btn-style cr-btn"><span>update</span></button>
                                     </div>
                                     <div class="update-cart">
-                                        <a class="btn-style cr-btn" href="#">
+                                        <a class="btn-style cr-btn" href="<?php echo e(route('bikearena.checkout')); ?>">
                                             <span>checkout</span>
                                         </a>
                                     </div>
@@ -401,8 +401,8 @@
                     <div class="newsletter-wrapper-all theme-bg-2">
                         <div class="row">
                             <div class="col-lg-5 col-12 col-md-12">
-                                <div class="newsletter-img bg-img" style="background-image: url(assets/img/banner/newsletter-bg.png)">
-                                    <img alt="image" src="assets/img/team/newsletter-img.png">
+                                <div class="newsletter-img bg-img" style="background-image: url(<?php echo e(url('bikearena/img/banner/newsletter-bg.png')); ?>)">
+                                    <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/newsletter-img.png')); ?>">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-12 col-md-12">
@@ -433,8 +433,8 @@
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
-                                        <a href="index.html">
-                                            <img src="assets/img/logo/2.png" alt="">
+                                        <a href="<?php echo e(route('bikearena.index')); ?>">
+                                            <img src="<?php echo e(URL::asset('bikearena/img/logo/2.png')); ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="footer-about">
@@ -453,13 +453,15 @@
                                     </div>
                                     <div class="quick-links">
                                         <ul>
-                                            <li><a href="about-us.html">About us</a></li>
-                                            <li><a href="#">Service</a></li>
-                                            <li><a href="#">Inventory</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="blog-sidebar.html">Blog</a></li>
-                                            <li><a href="#">Conditions</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <ul>
+                                                <li><a href="<?php echo e(route('bikearena.about')); ?>">About us</a></li>
+                                                <li><a href="#">Service</a></li>
+                                                <li><a href="#">Inventory</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.shop')); ?>">Shop</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.blog')); ?>">Blog</a></li>
+                                                <li><a href="#">Conditions</a></li>
+                                                <li><a href="<?php echo e(route('bikearena.contact')); ?>">Contact</a></li>
+                                            </ul>
                                         </ul>
                                     </div>
                                 </div>
@@ -471,16 +473,13 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                     </div>
                                 </div>
@@ -533,7 +532,7 @@
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="footer-payment-method">
-                                    <a href="#"><img alt="" src="assets/img/icon-img/payment.png"></a>
+                                    <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/payment.png')); ?>"></a>
                                 </div>
                             </div>
                         </div>
@@ -542,27 +541,17 @@
             </footer>
         </div>
 
-
-
-
-
-
-
-
-
-
-
 		<!-- all js here -->
-        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-        <script src="assets/js/popper.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/isotope.pkgd.min.js"></script>
-        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/waypoints.min.js"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/popper.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/bootstrap.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/isotope.pkgd.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/imagesloaded.pkgd.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/jquery.counterup.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/waypoints.min.js')); ?>"></script>
 
-        <script src="assets/js/owl.carousel.min.js"></script>
-        <script src="assets/js/plugins.js"></script>
-        <script src="assets/js/main.js"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/owl.carousel.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/plugins.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('bikearena/js/main.js')); ?>"></script>
     </body>
 </html>
