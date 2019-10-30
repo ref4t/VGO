@@ -46,12 +46,12 @@
 			<td>Cooling System</td>
 			<td>Starting Method</td>
 			<td>ABS</td>
-			
+
 		</tr>
 
 		@foreach($bikeinfo as $data)
 		<tr>
-			
+
 			<td>{{$data->name}}</td>
 			<td>{{$data->brand}}</td>
 			<td>{{$data->price}}</td>
@@ -89,34 +89,23 @@
 			<td>{{$data->startingmethod}}</td>
 			<td>{{$data->abs}}</td>
 			<td><a href="editbike/{{$data->id}}">edit</button><a></td>
-			
+
 		</tr>
 		@endforeach
 	</table>
 </div>
+
+<div id="search">
+    <tablesearch></tablesearch>
+</div>
+
+<script src="{{ asset('js/app.js') }}"></script>
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-<style>
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #FD9680
-}
-</style>
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+
 @stop
