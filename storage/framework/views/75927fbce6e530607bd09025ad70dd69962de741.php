@@ -7,8 +7,8 @@
         <meta name="description" content="Live Preview Of Oswan eCommerce HTML5 Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="bikearena/img/favicon.png">
-		
+        <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(URL::asset('bikearena/img/favicon.png')); ?>">
+
 		<!-- all css here -->
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/bootstrap.min.css')); ?>">
         <link rel="stylesheet" href="<?php echo e(URL::asset('bikearena/css/animate.css')); ?>">
@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-4">
                                 <div class="logo-small-device">
-                                    <a href="index.html"><img alt="" src="bikearena/img/logo/logo.png"></a>
+                                    <a href="<?php echo e(route('bikearena.index')); ?>"><img alt="" src="<?php echo e(URL::asset('bikearena/img/logo/logo.png')); ?>"></a>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-8 col-8">
@@ -42,40 +42,40 @@
                                     </div>
                                     <div class="menu-wrapper text-center">
                                         <button class="menu-toggle">
-                                            <img class="s-open" alt="" src="bikearena/img/icon-img/menu.png">
-                                            <img class="s-close" alt="" src="bikearena/img/icon-img/menu-close.png">
+                                            <img class="s-open" alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/menu.png')); ?>">
+                                            <img class="s-close" alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/menu-close.png')); ?>">
                                         </button>
                                         <div class="main-menu">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="index.html">home</a></li>
-                                                    <li class="active"><a href="about-us.html">about us </a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.index')); ?>">home</a></li>
+                                                    <li class="active"><a href="<?php echo e(route('bikearena.about')); ?>">about us </a></li>
                                                     <li><a href="#">shop</a>
                                                         <ul>
-                                                            <li><a href="shop.html">shop</a></li>
-                                                            <li><a href="product-details.html">product details</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="cart.html">cart</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.shop')); ?>">shop</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.product-details')); ?>">product details</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><a href="#">pages</a>
                                                         <ul>
-                                                            <li><a href="about-us.html">about us</a></li>
-                                                            <li><a href="cart.html">cart page</a></li>
-                                                            <li><a href="checkout.html">checkout</a></li>
-                                                            <li><a href="wishlist.html">wishlist</a></li>
-                                                            <li><a href="login-register.html">login</a></li>
-                                                            <li><a href="contact.html">contact</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.about')); ?>">about us</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart page</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.login-register')); ?>">login</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><a href="#">blog</a>
                                                         <ul>
-                                                            <li><a href="blog.html">blog</a></li>
-                                                            <li><a href="blog-details.html">blog details</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.blog')); ?>">blog</a></li>
+                                                            <li><a href="<?php echo e(route('bikearena.blog-details')); ?>">blog details</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li><a href="contact.html">contact us</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact us</a></li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -91,7 +91,7 @@
                                         <ul>
                                             <li class="single-shopping-cart">
                                                 <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-1.jpg"></a>
+                                                    <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-1.jpg')); ?>"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h3><a href="#">Gloriori GSX 250 R </a></h3>
@@ -104,7 +104,7 @@
                                             </li>
                                             <li class="single-shopping-cart">
                                                 <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-2.jpg"></a>
+                                                    <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-2.jpg')); ?>"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h3><a href="#">Demonissi Gori</a></h3>
@@ -117,7 +117,7 @@
                                             </li>
                                             <li class="single-shopping-cart">
                                                 <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="bikearena/img/cart/cart-3.jpg"></a>
+                                                    <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-3.jpg')); ?>"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h3><a href="#">Demonissi Gori</a></h3>
@@ -133,7 +133,7 @@
                                             <h4>total: <span>$550.00</span></h4>
                                         </div>
                                         <div class="shopping-cart-btn">
-                                            <a class="btn-style cr-btn" href="#">checkout</a>
+                                            <a class="btn-style cr-btn" href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -142,35 +142,35 @@
                                 <div class="mobile-menu">
                                     <nav id="mobile-menu-active">
                                         <ul class="menu-overflow">
-                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.index')); ?>">HOME</a></li>
                                             <li><a href="#">pages</a>
                                                 <ul>
-                                                    <li><a href="about-us.html">about us</a></li>
-                                                    <li><a href="cart.html">cart page</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="login-register.html">login</a></li>
-                                                    <li><a href="contact.html">contact</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.about')); ?>">about us</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart page</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.login-register')); ?>">login</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.contact')); ?>">contact</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">shop</a>
                                                 <ul>
-                                                    <li><a href="shop.html">shop</a></li>
-                                                    <li><a href="product-details.html">product details</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="cart.html">cart</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.shop')); ?>">shop</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.product-details')); ?>">product details</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.wishlist')); ?>">wishlist</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.cart')); ?>">cart</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">BLOG</a>
                                                 <ul>
-                                                    <li><a href="blog.html">blog page</a></li>
-                                                    <li><a href="blog-details.html">blog details</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.blog')); ?>">blog page</a></li>
+                                                    <li><a href="<?php echo e(route('bikearena.blog-details')); ?>">blog details</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html"> Contact us</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.contact')); ?>"> Contact us</a></li>
                                         </ul>
-                                    </nav>							
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                                 <ul>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="bikearea/img/cart/cart-1.jpg"></a>
+                                            <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-1.jpg')); ?>"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Gloriori GSX 250 R </a></h3>
@@ -199,7 +199,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="bikearena/img/cart/cart-2.jpg"></a>
+                                            <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-2.jpg')); ?>"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -212,7 +212,7 @@
                                     </li>
                                     <li class="single-shopping-cart">
                                         <div class="shopping-cart-img">
-                                            <a href="#"><img alt="" src="bikearena/img/cart/cart-3.jpg"></a>
+                                            <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/cart/cart-3.jpg')); ?>"></a>
                                         </div>
                                         <div class="shopping-cart-title">
                                             <h3><a href="#">Demonissi Gori</a></h3>
@@ -228,7 +228,7 @@
                                     <h4>total: <span>$550.00</span></h4>
                                 </div>
                                 <div class="shopping-cart-btn">
-                                    <a class="btn-style cr-btn" href="#">checkout</a>
+                                    <a class="btn-style cr-btn" href="<?php echo e(route('bikearena.checkout')); ?>">checkout</a>
                                 </div>
                             </div>
                         </div>
@@ -237,43 +237,43 @@
             </header>
             <div class="slider-area">
                 <div class="slider-active owl-carousel">
-                    <div class="single-slider slider-1" style="background-image: url(bikearena/img/slider/slider-bg.jpg)">
+                    <div class="single-slider slider-1" style="background-image: url(<?php echo e(url('bikearena/img/slider/slider-bg.jpg')); ?>)">
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="bikearena/img/slider/bike-1.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/slider/bike-1.png')); ?>" alt="slider images">
                                 </div>
                                 <div class="slider-text-img">
                                     <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
-                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/icon-img/bike.png')); ?>" alt="slider images">
                                 </div>
                                 <h2 class="animated">MOTORCYCLE</h2>
                             </div>
                         </div>
                     </div>
-                    <div class="single-slider slider-1" style="background-image: url(bikearena/img/slider/slider-bg.jpg)">
+                    <div class="single-slider slider-1" style="background-image: url(<?php echo e(url('bikearena/img/slider/slider-bg.jpg')); ?>)">
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="bikearena/img/slider/bike-2.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/slider/bike-2.png')); ?>" alt="slider images">
                                 </div>
                                 <div class="slider-text-img">
                                     <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
-                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/icon-img/bike.png')); ?>" alt="slider images">
                                 </div>
                                 <h2 class="animated">MOTORCYCLE</h2>
                             </div>
                         </div>
                     </div>
-                    <div class="single-slider slider-1" style="background-image: url(bikearena/img/slider/slider-bg.jpg)">
+                    <div class="single-slider slider-1" style="background-image: url(<?php echo e(url('bikearena/img/slider/slider-bg.jpg')); ?>)">
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="bikearena/img/slider/bike-1.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/slider/bike-1.png')); ?>" alt="slider images">
                                 </div>
                                 <div class="slider-text-img">
                                     <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
-                                    <img class="animated" src="bikearena/img/icon-img/bike.png" alt="slider images">
+                                    <img class="animated" src="<?php echo e(URL::asset('bikearena/img/icon-img/bike.png')); ?>" alt="slider images">
                                 </div>
                                 <h2 class="animated">MOTORCYCLE</h2>
                             </div>
@@ -329,7 +329,7 @@
                         </div>
                         <div class="col-lg-6 col-md-12">
                             <div class="overview-img">
-                                <img class="tilter" src="bikearena/img/banner/banner-1.png" alt="">
+                                <img class="tilter" src="<?php echo e(URL::asset('bikearena/img/banner/banner-1.png')); ?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="row">
                         <div class="col-md-4 col-lg-4">
                             <div class="banner-wrapper mb-30">
-                                <a href="#"><img src="bikearena/img/banner/banner-1.jpg" alt="image"></a>
+                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/banner/banner-1.jpg')); ?>" alt="image"></a>
                                 <div class="banner-content">
                                     <h2>BUY NEW BIKE</h2>
                                 </div>
@@ -348,7 +348,7 @@
                         </div>
                         <div class="col-md-4 col-lg-4">
                             <div class="banner-wrapper mb-30">
-                                <a href="#"><img src="bikearena/img/banner/banner-2.jpg" alt="image"></a>
+                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/banner/banner-2.jpg')); ?>" alt="image"></a>
                                 <div class="banner-content">
                                     <h2>SELL YOUR BIKE</h2>
                                 </div>
@@ -356,7 +356,7 @@
                         </div>
                         <div class="col-md-4 col-lg-4">
                             <div class="banner-wrapper mb-30">
-                                <a href="#"><img src="bikearena/img/banner/banner-3.jpg" alt="image"></a>
+                                <a href="#"><img src="<?php echo e(URL::asset('bikearena/img/banner/banner-3.jpg')); ?>" alt="image"></a>
                                 <div class="banner-content">
                                     <h2>FIND SPARE PARTS</h2>
                                 </div>
@@ -385,8 +385,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-1.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-1.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -409,7 +409,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Gloriori GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Gloriori GSX 250 R</a></h4>
                                                     <span>6600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -420,8 +420,8 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-4.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-4.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -444,7 +444,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Demonissi Gori</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Demonissi Gori</a></h4>
                                                     <span>6700 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -457,8 +457,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-2.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -481,7 +481,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -492,8 +492,8 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-5.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -516,7 +516,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -529,8 +529,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-3.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-3.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -553,7 +553,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Matrio Max</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Matrio Max</a></h4>
                                                     <span>4600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -564,8 +564,8 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-6.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-6.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -588,7 +588,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Rigoniss Z 1000</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Rigoniss Z 1000</a></h4>
                                                     <span>8000 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -601,8 +601,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-2.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -625,7 +625,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -636,8 +636,8 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-5.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -660,7 +660,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -677,8 +677,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-6.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-6.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -701,7 +701,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Gloriori GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Gloriori GSX 250 R</a></h4>
                                                     <span>6600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -712,8 +712,8 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-5.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -736,7 +736,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Demonissi Gori</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Demonissi Gori</a></h4>
                                                     <span>6700 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -749,8 +749,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-4.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-4.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -773,7 +773,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -784,8 +784,8 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-3.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-3.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -808,7 +808,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -821,8 +821,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-2.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -845,7 +845,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Matrio Max</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Matrio Max</a></h4>
                                                     <span>4600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -856,8 +856,8 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-1.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-1.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -880,7 +880,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Rigoniss Z 1000</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Rigoniss Z 1000</a></h4>
                                                     <span>8000 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -893,8 +893,8 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-2.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-2.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -917,7 +917,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -928,8 +928,8 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="product-details.html">
-                                                <img src="bikearena/img/product/product-5.jpg" alt="">
+                                            <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                                <img src="<?php echo e(URL::asset('bikearena/img/product/product-5.jpg')); ?>" alt="">
                                             </a>
                                             <div class="product-item-dec">
                                                 <ul>
@@ -952,7 +952,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="product-details.html">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -967,14 +967,14 @@
                     </div>
                 </div>
             </div>
-            <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(bikearena/img/banner/banner-4.jpg)">
+            <div class="latest-product-area pt-205 pb-145 bg-img" style="background-image: url(<?php echo e(url('bikearena/img/banner/banner-4.jpg')); ?>)">
                 <div class="container-fluid">
                     <div class="latest-product-slider owl-carousel">
                         <div class="single-latest-product slider-animated-2">
                             <div class="row">
                                 <div class="col-lg-7 col-md-12 col-12">
                                     <div class="latest-product-img">
-                                        <img class="animated" src="bikearena/img/banner/banner-2.png" alt="image">
+                                        <img class="animated" src="<?php echo e(URL::asset('bikearena/img/banner/banner-2.png')); ?>" alt="image">
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12 col-12">
@@ -996,7 +996,7 @@
                             <div class="row">
                                 <div class="col-lg-7 col-col-12 col-12">
                                     <div class="latest-product-img">
-                                        <img class="animated" src="bikearena/img/banner/banner-3.png" alt="image">
+                                        <img class="animated" src="<?php echo e(URL::asset('bikearena/img/banner/banner-3.png')); ?>" alt="image">
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-col-12 col-12">
@@ -1028,7 +1028,7 @@
                             <div class="product-wrapper">
                                 <div class="product-img">
                                     <a href="#">
-                                        <img src="bikearena/img/product/product-7.jpg" alt="">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-7.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1044,15 +1044,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $120</span>
-                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-8.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-8.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1068,15 +1068,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $180</span>
-                                            <h4><a href="product-details.html">Reckles Jacket</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Reckles Jacket</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-9.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-9.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1092,15 +1092,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $25</span>
-                                            <h4><a href="product-details.html">Softy Original Glove</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Softy Original Glove</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-10.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-10.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1116,15 +1116,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $140</span>
-                                            <h4><a href="product-details.html">Flicky Traco Boot</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Flicky Traco Boot</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-11.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-11.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1140,15 +1140,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $150</span>
-                                            <h4><a href="product-details.html">Flicky Traco Boot</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Flicky Traco Boot</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-7.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-7.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1164,15 +1164,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $150</span>
-                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-8.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-8.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1188,15 +1188,15 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $160</span>
-                                            <h4><a href="product-details.html">Reckles Jacket</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Reckles Jacket</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="product-details.html">
-                                        <img src="bikearena/img/product/product-9.jpg" alt="">
+                                    <a href="<?php echo e(route('bikearena.product-details')); ?>">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/product/product-9.jpg')); ?>" alt="">
                                     </a>
                                     <div class="product-action">
                                         <a class="action-plus-2" title="Add To Cart" href="#">
@@ -1212,7 +1212,7 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $120</span>
-                                            <h4><a href="product-details.html">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="<?php echo e(route('bikearena.product-details')); ?>">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -1231,7 +1231,7 @@
                             <div class="row">
                                 <div class="col-lg-5">
                                     <div class="testimonial-img pl-75">
-                                        <img alt="image" src="bikearena/img/team/testimonial-1.jpg">
+                                        <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/testimonial-1.jpg')); ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-7">
@@ -1251,7 +1251,7 @@
                             <div class="row">
                                 <div class="col-lg-5 col-md-12 col-12">
                                     <div class="testimonial-img pl-75">
-                                        <img alt="image" src="bikearena/img/team/testimonial-2.png">
+                                        <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/testimonial-2.png')); ?>">
                                     </div>
                                 </div>
                                 <div class="col-lg-7 col-md-12 col-12">
@@ -1280,7 +1280,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-hm-wrapper mb-40">
                                 <div class="blog-img">
-                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-1.jpg" alt="image"></a>
+                                    <a href="<?php echo e(route('bikearena.blog-details')); ?>"><img src="<?php echo e(URL::asset('bikearena/img/blog/blog-hm-1.jpg')); ?>" alt="image"></a>
                                     <div class="blog-date">
                                         <h4>24 February, 2018</h4>
                                     </div>
@@ -1293,7 +1293,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-hm-content">
-                                    <h3><a href="blog-details.html">Sports Motorbike for play in desert </a></h3>
+                                    <h3><a href="<?php echo e(route('bikearena.blog-details')); ?>">Sports Motorbike for play in desert </a></h3>
                                     <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
                                 </div>
                             </div>
@@ -1301,7 +1301,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-hm-wrapper mb-40">
                                 <div class="blog-img">
-                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-2.jpg" alt="image"></a>
+                                    <a href="<?php echo e(route('bikearena.blog-details')); ?>"><img src="<?php echo e(URL::asset('bikearena/img/blog/blog-hm-2.jpg')); ?>" alt="image"></a>
                                     <div class="blog-date">
                                         <h4>22 February, 2018</h4>
                                     </div>
@@ -1314,7 +1314,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-hm-content">
-                                    <h3><a href="blog-details.html">Motorbike Racing at October</a></h3>
+                                    <h3><a href="<?php echo e(route('bikearena.blog-details')); ?>">Motorbike Racing at October</a></h3>
                                     <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
                                 </div>
                             </div>
@@ -1322,7 +1322,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="blog-hm-wrapper mb-40">
                                 <div class="blog-img">
-                                    <a href="blog-details.html"><img src="bikearena/img/blog/blog-hm-3.jpg" alt="image"></a>
+                                    <a href="<?php echo e(route('bikearena.blog-details')); ?>"><img src="<?php echo e(URL::asset('bikearena/img/blog/blog-hm-3.jpg')); ?>" alt="image"></a>
                                     <div class="blog-date">
                                         <h4>20 February, 2018</h4>
                                     </div>
@@ -1335,7 +1335,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-hm-content">
-                                    <h3><a href="blog-details.html">Latest Motorbike Release this Year </a></h3>
+                                    <h3><a href="<?php echo e(route('bikearena.blog-details')); ?>">Latest Motorbike Release this Year </a></h3>
                                     <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest qulity of motorcycle soucan sell here your motorcycle it quo </p>
                                 </div>
                             </div>
@@ -1348,8 +1348,8 @@
                     <div class="newsletter-wrapper-all theme-bg-2">
                         <div class="row">
                             <div class="col-lg-5 col-12 col-md-12">
-                                <div class="newsletter-img bg-img" style="background-image: url(bikearena/img/banner/newsletter-bg.png)">
-                                    <img alt="image" src="bikearena/img/team/newsletter-img.png">
+                                <div class="newsletter-img bg-img" style="background-image: url(<?php echo e(url('bikearena/img/banner/newsletter-bg.png')); ?>)">
+                                    <img alt="image" src="<?php echo e(URL::asset('bikearena/img/team/newsletter-img.png')); ?>">
                                 </div>
                             </div>
                             <div class="col-lg-7 col-12 col-md-12">
@@ -1380,8 +1380,8 @@
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
-                                        <a href="index.html">
-                                            <img src="bikearena/img/logo/2.png" alt="">
+                                        <a href="<?php echo e(route('bikearena.index')); ?>">
+                                            <img src="<?php echo e(URL::asset('bikearena/img/logo/2.png')); ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="footer-about">
@@ -1400,13 +1400,13 @@
                                     </div>
                                     <div class="quick-links">
                                         <ul>
-                                            <li><a href="about-us.html">About us</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.about')); ?>">About us</a></li>
                                             <li><a href="#">Service</a></li>
                                             <li><a href="#">Inventory</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="blog-sidebar.html">Blog</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.shop')); ?>">Shop</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.blog')); ?>">Blog</a></li>
                                             <li><a href="#">Conditions</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="<?php echo e(route('bikearena.contact')); ?>">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1418,15 +1418,15 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
 10 min ago</p>
                                         </div>
                                     </div>
@@ -1480,7 +1480,7 @@
                             </div>
                             <div class="col-md-4 col-12">
                                 <div class="footer-payment-method">
-                                    <a href="#"><img alt="" src="bikearena/img/icon-img/payment.png"></a>
+                                    <a href="#"><img alt="" src="<?php echo e(URL::asset('bikearena/img/icon-img/payment.png')); ?>"></a>
                                 </div>
                             </div>
                         </div>
@@ -1499,25 +1499,25 @@
                                 <div class="quick-view-learg-img">
                                     <div class="quick-view-tab-content tab-content">
                                         <div class="tab-pane active show fade" id="modal1" role="tabpanel">
-                                            <img src="bikearena/img/quick-view/l1.jpg" alt="">
+                                            <img src="<?php echo e(URL::asset('bikearena/img/quick-view/l1.jpg')); ?>" alt="">
                                         </div>
                                         <div class="tab-pane fade" id="modal2" role="tabpanel">
-                                            <img src="bikearena/img/quick-view/l2.jpg" alt="">
+                                            <img src="<?php echo e(URL::asset('bikearena/img/quick-view/l2.jpg')); ?>" alt="">
                                         </div>
                                         <div class="tab-pane fade" id="modal3" role="tabpanel">
-                                            <img src="bikearena/img/quick-view/l3.jpg" alt="">
+                                            <img src="<?php echo e(URL::asset('bikearena/img/quick-view/l3.jpg')); ?>" alt="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="quick-view-list nav" role="tablist">
                                     <a class="active" href="#modal1" data-toggle="tab" role="tab">
-                                        <img src="bikearena/img/quick-view/s1.jpg" alt="">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/quick-view/s1.jpg')); ?>" alt="">
                                     </a>
                                     <a href="#modal2" data-toggle="tab" role="tab">
-                                        <img src="bikearena/img/quick-view/s2.jpg" alt="">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/quick-view/s2.jpg')); ?>" alt="">
                                     </a>
                                     <a href="#modal3" data-toggle="tab" role="tab">
-                                        <img src="bikearena/img/quick-view/s3.jpg" alt="">
+                                        <img src="<?php echo e(URL::asset('bikearena/img/quick-view/s3.jpg')); ?>" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -1575,28 +1575,18 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-		
-		
-		
-		
-		
-		
-		
-		
+
 		<!-- all js here -->
-        <script src="bikearena/js/vendor/jquery-1.12.0.min.js"></script>
-        <script src="bikearena/js/popper.js"></script>
-        <script src="bikearena/js/bootstrap.min.js"></script>
-        <script src="bikearena/js/isotope.pkgd.min.js"></script>
-        <script src="bikearena/js/imagesloaded.pkgd.min.js"></script>
-        <script src="bikearena/js/jquery.counterup.min.js"></script>
-        <script src="bikearena/js/waypoints.min.js"></script>
-        
-        <script src="bikearena/js/owl.carousel.min.js"></script>
-        <script src="bikearena/js/plugins.js"></script>
-        <script src="bikearena/js/main.js"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/popper.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/bootstrap.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/isotope.pkgd.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/imagesloaded.pkgd.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/jquery.counterup.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/waypoints.min.js')); ?>"></script>
+
+        <script src="<?php echo e(URL::asset('bikearena/js/owl.carousel.min.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/plugins.js')); ?>"></script>
+        <script src="<?php echo e(URL::asset('bikearena/js/main.js')); ?>"></script>
     </body>
 </html>
