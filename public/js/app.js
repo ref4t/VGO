@@ -1807,7 +1807,7 @@ __webpack_require__.r(__webpack_exports__);
     // .then(function (response){
     //     this.items = response.body.bikeinfo;
     // })
-    axios.get('viewbikes/getItems').then(function (response) {
+    axios.get('/getItems').then(function (response) {
       return _this.items = response.data;
     });
   }
@@ -83499,8 +83499,8 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Imran\Documents\GitHub\VGO\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Imran\Documents\GitHub\VGO\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\Vgo S\laravel - Copy\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\Vgo S\laravel - Copy\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

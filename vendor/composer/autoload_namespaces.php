@@ -8,8 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Xethron\\MigrationsGenerator' => array($vendorDir . '/xethron/migrations-generator/src'),
     'Way\\Generators' => array($vendorDir . '/xethron/laravel-4-generators/src'),
-    'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
+    'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
-    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
 );

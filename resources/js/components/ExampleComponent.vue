@@ -110,7 +110,7 @@
             // .then(function (response){
             //     this.items = response.body.bikeinfo;
             // })
-            axios.get('viewbikes/getItems')
+            axios.get('/getItems')
             .then(response => this.items = response.data);
         }
     }

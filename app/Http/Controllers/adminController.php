@@ -36,9 +36,10 @@ class adminController extends Controller
         // return response()->json(['bikeinfo'=>$bikes]);
     }
 
-    public function viewbikesitems()
+    public function viewbikesitems(Request $request)
     {
-        return bikes::all();
+        $bikesTable= bikes::all();
+        return response()->json($bikesTable);
     }
 
     public function addbike(){

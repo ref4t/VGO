@@ -20,6 +20,20 @@
       0 => 'JeroenNoten\\LaravelAdminLte\\ServiceProvider',
     ),
   ),
+  'laravel/nexmo-notification-channel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Illuminate\\Notifications\\NexmoChannelServiceProvider',
+    ),
+  ),
+  'laravel/slack-notification-channel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Illuminate\\Notifications\\SlackChannelServiceProvider',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 
