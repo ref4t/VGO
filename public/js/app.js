@@ -1759,47 +1759,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-var toLower = function toLower(text) {
-  return text.toString().toLowerCase();
-};
-
-var searchByName = function searchByName(items, term) {
-  if (term) {
-    return items.filter(function (item) {
-      return toLower(item.name).includes(toLower(term));
-    });
-  }
-
-  return items;
-};
-
+// const toLower = text => {
+//     return text.toString().toLowerCase()
+// }
+// const searchByName = (items, term) => {
+//     if (term) {
+//         return items.filter(item => toLower(item.name).includes(toLower(term)))
+//     }
+//     return items
+// }
 /* harmony default export */ __webpack_exports__["default"] = ({
+  // data:() => ({
+  //     search: null,
+  //     searched: [],
+  //     users: [
+  //         {
+  //             id: 1,
+  //             name: "Shawna Dubbin",
+  //             email: "sdubbin0@geocities.com",
+  //             gender: "Male",
+  //             title: "Assistant Media Planner"
+  //         },
+  //         {
+  //             id: 2,
+  //             name: "Odette Demageard",
+  //             email: "odemageard1@spotify.com",
+  //             gender: "Female",
+  //             title: "Account Coordinator"
+  //         }
+  //     ]
+  // }),
   data: function data() {
     return {
-      search: null,
-      searched: [],
-      users: [{
-        id: 1,
-        name: "Shawna Dubbin",
-        email: "sdubbin0@geocities.com",
-        gender: "Male",
-        title: "Assistant Media Planner"
-      }, {
-        id: 2,
-        name: "Odette Demageard",
-        email: "odemageard1@spotify.com",
-        gender: "Female",
-        title: "Account Coordinator"
-      }]
+      items: []
     };
   },
-  methods: {
-    searchOnTable: function searchOnTable() {
-      this.searched = searchByName(this.users, this.search);
-    }
-  },
+  // methods: {
+  //     searchOnTable () {
+  //         this.searched = searchByName(this.users, this.search)
+  //     }
+  // },
   created: function created() {
-    this.searched = this.users;
+    var _this = this;
+
+    // this.searched = this.users
+    // this.$http.get("http://localhost:8000/api/getItems")
+    // .then(function (response){
+    //     this.items = response.body.bikeinfo;
+    // })
+    axios.get('viewbikes/getItems').then(function (response) {
+      return _this.items = response.data;
+    });
   }
 });
 
@@ -37779,6 +37789,19 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-axios/dist/vue-axios.min.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vue-axios/dist/vue-axios.min.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(o){return typeof o}:function(o){return o&&"function"==typeof Symbol&&o.constructor===Symbol&&o!==Symbol.prototype?"symbol":typeof o};!function(){function o(e,t){if(!o.installed){if(o.installed=!0,!t)return void console.error("You have to install axios");e.axios=t,Object.defineProperties(e.prototype,{axios:{get:function(){return t}},$http:{get:function(){return t}}})}}"object"==( false?undefined:_typeof(exports))?module.exports=o: true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function(){return o}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):undefined}();
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&scoped=true& ***!
@@ -37796,17 +37819,17 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    [
-      _c(
-        "md-table",
-        {
-          attrs: {
-            "md-sort": "name",
-            "md-sort-order": "asc",
-            "md-card": "",
-            "md-fixed-header": ""
-          },
-          scopedSlots: _vm._u([
+    _vm._l(_vm.items, function(item) {
+      return _c("md-table", {
+        key: item,
+        attrs: {
+          "md-sort": "name",
+          "md-sort-order": "asc",
+          "md-card": "",
+          "md-fixed-header": ""
+        },
+        scopedSlots: _vm._u(
+          [
             {
               key: "md-table-row",
               fn: function(ref) {
@@ -38199,75 +38222,12 @@ var render = function() {
                 )
               }
             }
-          ]),
-          model: {
-            value: _vm.searched,
-            callback: function($$v) {
-              _vm.searched = $$v
-            },
-            expression: "searched"
-          }
-        },
-        [
-          _c(
-            "md-table-toolbar",
-            [
-              _c("div", { staticClass: "md-toolbar-section-start" }, [
-                _c("h1", { staticClass: "md-title" }, [_vm._v("Users")])
-              ]),
-              _vm._v(" "),
-              _c(
-                "md-field",
-                {
-                  staticClass: "md-toolbar-section-end",
-                  attrs: { "md-clearable": "" }
-                },
-                [
-                  _c("md-input", {
-                    attrs: { placeholder: "Search by name..." },
-                    on: { input: _vm.searchOnTable },
-                    model: {
-                      value: _vm.search,
-                      callback: function($$v) {
-                        _vm.search = $$v
-                      },
-                      expression: "search"
-                    }
-                  })
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "md-table-empty-state",
-            {
-              attrs: {
-                "md-label": "No users found",
-                "md-description":
-                  "No user found for this '" +
-                  _vm.search +
-                  "' query. Try a different search term or create a new user."
-              }
-            },
-            [
-              _c(
-                "md-button",
-                {
-                  staticClass: "md-primary md-raised",
-                  on: { click: _vm.newUser }
-                },
-                [_vm._v("Create New User")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
+          ],
+          null,
+          true
+        )
+      })
+    }),
     1
   )
 }
@@ -83300,9 +83260,15 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.min.js");
+/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_axios__WEBPACK_IMPORTED_MODULE_1__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -83328,6 +83294,10 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+
+
+
+Vue.use(vue_axios__WEBPACK_IMPORTED_MODULE_1___default.a, axios__WEBPACK_IMPORTED_MODULE_0___default.a);
 
 /***/ }),
 

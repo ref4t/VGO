@@ -23,22 +23,29 @@ class adminController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {	
-    	
+    {
+
         return view('admin.dashboard');
     }
 
-     public function viewbikes()
-    {   
+    public function viewbikes()
+    {
         $bikes=bikes::all();
-        return view('admin.viewbikes')->with('bikeinfo',$bikes);
+        // return view('admin.viewbikes')->with('bikeinfo',$bikes);
+        return view('admin.viewbikes');
+        // return response()->json(['bikeinfo'=>$bikes]);
+    }
+
+    public function viewbikesitems()
+    {
+        return bikes::all();
     }
 
     public function addbike(){
     	return view('admin.addbike');
     }
     public function editbike(Request $request,$id){
-   
+
         $bikes=bikes::find($id);
         return view('admin.editbike')->with('bikes',$bikes);
     }
