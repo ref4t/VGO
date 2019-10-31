@@ -15,6 +15,10 @@
 
 Auth::routes();
 
+Route::get('viewbikes/getItems',[
+    'uses' => 'adminController@viewbikesitems'
+]);
+
 Route::get('/admin', 'adminController@index')->name('admin.dashboard');
 Route::get('/admin/viewbikes', 'adminController@viewbikes')->name('admin.viewbikes');
 
