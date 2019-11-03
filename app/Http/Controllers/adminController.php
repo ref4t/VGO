@@ -30,21 +30,22 @@ class adminController extends Controller
 
     public function viewbikes()
     {
-        $bikes=bikes::all();
+        // $bikes=bikes::all();
         // return view('admin.viewbikes')->with('bikeinfo',$bikes);
         return view('admin.viewbikes');
         // return response()->json(['bikeinfo'=>$bikes]);
     }
 
-    public function viewbikesitems(Request $request)
+    public function viewbikesitems()
     {
-        $bikesTable= bikes::all();
-        return response()->json($bikesTable);
+        return bikes::all();
     }
 
-    public function addbike(){
+    public function addbike()
+    {
     	return view('admin.addbike');
     }
+
     public function editbike(Request $request,$id){
 
         $bikes=bikes::find($id);

@@ -1,0 +1,20 @@
+.lb-lg {
+    font-size: 16px;
+}
+
+.lb-md {
+    font-size: 14px;
+}
+
+.form-control {
+    border-color: #A9BBC4;
+    height: 25px;
+}
+
+.panel {
+    border-color: black;
+}
+
+.well {
+    background-color: #DFF2F6;
+}

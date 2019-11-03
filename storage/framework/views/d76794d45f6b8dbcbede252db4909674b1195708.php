@@ -8,6 +8,8 @@
 
 
 <div id="search">
+        <?php echo e(@csrf_field()); ?>
+
     <tablesearch></tablesearch>
 </div>
 
