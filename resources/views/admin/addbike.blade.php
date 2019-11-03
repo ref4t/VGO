@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Add Bikes')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Add Bikes</h1>
 @stop
 
 @section('content')
@@ -15,19 +15,19 @@
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label lb-lg">Bike Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control input-sm" required>
+                        <input type="text" name="name" class="form-control input-sm" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="brand" class="col-sm-2 col-form-label lb-lg">Brand</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control input-sm" required>
+                        <input type="text" name="brand" class="form-control input-sm" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="price" class="col-sm-2 col-form-label lb-lg">Price</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control input-sm" required>
+                        <input type="text" name="price" class="form-control input-sm" required>
                     </div>
                     <label for="status" class="col-sm-2 col-form-label lb-lg">Status</label>
                     <div class="col-sm-3">
@@ -73,6 +73,10 @@
                         <div class="col-sm-3">
                             <input type="text" name="noofgears" class="form-control input-sm" required>
                         </div>
+                        <label for="top speed" class="col-sm-2 col-form-label lb-md">Top Speed</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="topspeed" class="form-control input-sm" required>
+                        </div>
                     </div>
                     <div class="form-group row">
                         <label for="coolingsystem" class="col-sm-2 col-form-label lb-md">Cooling System</label>
@@ -84,21 +88,11 @@
                                 <option value="water cooled">Water Cooled</option>
                             </select>
                         </div>
-                        <label for="enginekillswitch" class="col-sm-2 col-form-label lb-md">Engine Kill Switch</label>
+                        <label for="engine oil capacity" class="col-sm-2 col-form-label lb-md">Engine Oil Capacity</label>
                         <div class="col-sm-3">
-                            <select class="form-control input-sm" name="killswitch">
-                                <option value="not available">Not Available</option>
-                                <option value="available">Available</option>
-                            </select>
+                            <input type="text" name="eoilcap" class="form-control input-sm" required>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel col-sm-10">
-        <br>
-            <div class="well well-sm">
-                <div class="panel-body">
                     <div class="form-group row">
                         <label for="carburet" class="col-sm-2 col-form-label lb-md">Carburettor</label>
                         <div class="col-sm-3">
@@ -114,19 +108,9 @@
                         <div class="col-sm-3">
                             <input type="text" name="compression" class="form-control input-sm" required>
                         </div>
-                        <label for="engine oil capacity" class="col-sm-2 col-form-label lb-md">Engine Oil Capacity</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="eoilcap" class="form-control input-sm" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label for="chassis type" class="col-sm-2 col-form-label lb-md">Chassis Type</label>
                         <div class="col-sm-3">
                             <input type="text" name="chassistype" class="form-control input-sm" required>
-                        </div>
-                        <label for="top speed" class="col-sm-2 col-form-label lb-md">Top Speed</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="topspeed" class="form-control input-sm" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -324,15 +308,11 @@
         </div>
     </form>
 </div>
-
-
-
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-    <link rel="stylesheet" href="{{ URL::asset('vendor/adminlte/css/addbike.css') }}"
-    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+    <link rel="stylesheet" href="{{ URL::asset('vendor/adminlte/css/addbike.css') }}">
 @stop
 
 @section('js')
