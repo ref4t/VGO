@@ -7,129 +7,312 @@
 @stop
 
 @section('content')
-<form method="post"  }}" >
-	{{@csrf_field()}}
-    <table>
-    	<tr>
-            <td><h2>Bike Name</h2> <input type="text" name="name" value="{{$bikes->name}}" required></td>
-            <td><h2>Brand</h2> <input type="text" name="brand" value="{{$bikes->brand}}" required></td>
-    		<td><h2>Price</h2> <input type="text" name="price" value="{{$bikes->price}}" required></td>
-            <td><h2>Status</h2><select name="status" value="{{$bikes->status}}" >
-                    <option value="none"  >None</option>
-                    <option value="mostpopular"  >Most Populer</option>
-                    <option value="newarrival">New Arrival</option>
-                    <option value="upcoming">Upcoming</option>
-                </select></td>
-    	</tr>
-    	<tr>
-    		<td><h3>Engine</h3></td>
-    		<td> Type <input type="text" name="etype" value="{{$bikes->etype}}" required></td>
-    		<td> Displacement <input type="text" name="edisplacement" value="{{$bikes->edisplacement}}" required></td>
-    		<td> Max Power <input type="text" name="emaxpower" value="{{$bikes->emaxpower}}" required></td>
-    		<td> Max Torque <input type="text" name="emaxtorque" value="{{$bikes->emaxtorque}}" required></td>
-            <td>No. of Gears<input type="text" name="noofgears" value="{{$bikes->noofgears}}" required></td>
-             <td>Cooling System <select name="coolingsystem" value="{{$bikes->coolingsystem}}">
-                    <option value="Not Available">Not Available</option>
-                    <option value="air cooled">Air Cooled</option>
-                    <option value="oil cooled">Oil Cooled</option>
-                    <option value="water cooled">Water Cooled</option>
-                </select></td>
-    </tr><tr>
-            <td>Starting Method <select name="startingmethod" value="{{$bikes->startingmethod}}">
-                    <option value="Self ignition Only">Self </option>
-                    <option value="Self and Kick ignition">Self And kick</option>
-                    <option value="Kick ignition only">Kick</option>
-                    <option value="Clutch Ingnition">Clutch</option>
-                </select></td>
-          
-            
-            <td>Carburettor <input type="text" name="carburettor" value="{{$bikes->carburettor}}" required /></td>          
-            <td>Bore X Stroke <input type="text" name="borestroke" value="{{$bikes->borestroke}}" required /></td>         
-            <td>Compression Ratio<input type="text" name="compression" value="{{$bikes->compression}}" required /></td>         
-            <td>Engine Oil Capacity<input type="text" name="eoilcap" value="{{$bikes->eoilcap}}" required /></td>     
-             <td> Engine Kill Switch <select name="killswitch" value="{{$bikes->killswitch}}">
-                    <option value="Not Available">Not Available</option>
-                    <option value="Available">Available</option>
-
-                </select></td>
-            <td>Chassis Type <input type="text" name="chassistype" value="{{$bikes->chassistype}}" required></td> 
-            <td> Engine Kill Switch <select name="killswitch" value="{{$bikes->killswitch}}">
-                    <option value="Not Available">Not Available</option>
-                    <option value="Available">Available</option>
-
-                </select></td>     
-        </tr>	
-    	<tr>
-    		<td><h3>Suspension</h3></td>
-    		<td> Front <input type="text" name="sfront" value="{{$bikes->sfront}}" required></td>
-    		<td> Rear <input type="text" name="srear" value="{{$bikes->srear}}" required></td>
-    		
-    			
-    	</tr>
-    	<tr>
-    		<td><h3>Brakes</h3></td>
-    		<td> Front <input type="text" name="bfront" value="{{$bikes->bfront}}" required></td>
-    		<td> Rear <input type="text" name="brear" value="{{$bikes->brear}}" required></td>
-    		  <td>ABS System <select name="abs" value="{{$bikes->abs}}">
-                    <option value="Not Available">Not Available</option>
-                    <option value="ABS Channel Given but not installed">ABS Channel Given but not installed</option>
-                    <option value="Single Channel">Single Channel</option>
-                    <option value="Dual Channel">Dual Channel</option>
-                    <option value="CBS Available">CBS</option>
-
-                </select></td>
-    			
-    	</tr>
-		<tr>
-    		<td><h3>Tyres</h3></td>
-    		<td> Front <input type="text" name="tfront" value="{{$bikes->tfront}}" required></td>
-    		<td> Rear <input type="text" name="trear" value="{{$bikes->trear}}" required></td>
-    		
-    			
-    	</tr>
-    	<tr>
-    		<td><h3> Fuel </h3></td>
-    		<td> Capacity <input type="text" name="fuelcap" value="{{$bikes->fuelcap}}" required></td>
-            <td>Milage by company <input type="text" name="milagecompany" value="{{$bikes->milagecompany}}" required></td>
-            <td>Milage by users <input type="text" name="milageusers" value="{{$bikes->milageusers}}" required></td>	
-    	</tr>
-    	<tr>
-    		<td><h3>Electricals</h3></td>
-    		<td> System <input type="text" name="esystem" value="{{$bikes->esystem}}" required></td>
-    		<td> Head Lamp <input type="text" name="headlamp" value="{{$bikes->headlamp}}" required></td>
-                <td> Pass Light <select name="passlight" value="passlight">
-                    <option value="Not Available">Not Available</option>
-                    <option value="Available">Available</option>
-
-                </select></td>
-    			
-    	</tr>
-    	<tr>
-    		<td><h3>Dimesions</h3></td>
-    		<td> Length(mm) <input type="text" name="dlength" value="{{$bikes->dlength}}" required></td>
-    		<td> Ground Clearence (mm) <input type="text" name="dgroundclear" value="{{$bikes->dgroundclear}}" required></td>
-    		<td> Height (mm) <input type="text" name="dheight" value="{{$bikes->dheight}}" required></td>
-    		<td> Width (mm) <input type="text" name="dwidth" value="{{$bikes->dwidth}}" required></td>
-    		<td> Wheelbase (mm) <input type="text" name="dwheelbase" value="{{$bikes->dwheelbase}}" required></td>
-    		<td> Kerb Weight (kg) <input type="text" name="dkerbweight" value="{{$bikes->dkerbweight}}" required></td>
-    		
-    			
-    	</tr>
-        <tr>
-            <td><h3>Others</h3></td>
-            <td> Top Speed <input type="text" name="topspeed" value="{{$bikes->topspeed}}" required></td>
- 
- 
- 
-    </table>
-    <p>
-    <input type="submit" >
-</p>
-</form>
+<div class="container">
+    <form method="post" action="{{ route('admin.storebike') }}">
+        {{ @csrf_field() }}
+        <div class="panel panel-body col-sm-10">
+            <div class="well well-sm">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label lb-lg">Bike Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="name" class="form-control input-sm" value="{{$bikes->name}}" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="brand" class="col-sm-2 col-form-label lb-lg">Brand</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="brand" class="form-control input-sm" value="{{$bikes->brand}}" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="price" class="col-sm-2 col-form-label lb-lg">Price</label>
+                    <div class="col-sm-3">
+                        <input type="text" name="price" class="form-control input-sm" value="{{$bikes->price}}" required>
+                    </div>
+                    <label for="status" class="col-sm-2 col-form-label lb-lg">Status</label>
+                    <div class="col-sm-3">
+                        <select class="form-control input-sm" name="status" value="{{$bikes->status}}">
+                            <option value="none">None</option>
+                            <option value="mostpopular">Most Populer</option>
+                            <option value="newarrival">New Arrival</option>
+                            <option value="upcoming">Upcoming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-10">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="engine" class="col-form-label lb-lg">Engine</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="type" class="col-sm-2 col-form-label lb-md">Type</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="etype" class="form-control input-sm" value="{{$bikes->etype}}" required>
+                        </div>
+                        <label for="displacement" class="col-sm-2 col-form-label lb-md">Displacement</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="edisplacement" class="form-control input-sm" value="{{$bikes->edisplacement}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="maxpower" class="col-sm-2 col-form-label lb-md">Max Power</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="emaxpower" class="form-control input-sm" value="{{$bikes->emaxpower}}" required>
+                        </div>
+                        <label for="displacement" class="col-sm-2 col-form-label lb-md">Max Torque</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="emaxtorque" class="form-control input-sm" value="{{$bikes->emaxtorque}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="gears" class="col-sm-2 col-form-label lb-md">No. of Gears</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="noofgears" class="form-control input-sm" value="{{$bikes->noofgears}}" required>
+                        </div>
+                        <label for="top speed" class="col-sm-2 col-form-label lb-md">Top Speed</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="topspeed" class="form-control input-sm" value="{{$bikes->topspeed}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="coolingsystem" class="col-sm-2 col-form-label lb-md">Cooling System</label>
+                        <div class="col-sm-3">
+                            <select class="form-control input-sm" name="coolingsystem" value="{{$bikes->coolingsystem}}">
+                                <option value="not available">Not Available</option>
+                                <option value="air cooled">Air Cooled</option>
+                                <option value="oil cooled">Oil Cooled</option>
+                                <option value="water cooled">Water Cooled</option>
+                            </select>
+                        </div>
+                        <label for="engine oil capacity" class="col-sm-2 col-form-label lb-md">Engine Oil Capacity</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="eoilcap" class="form-control input-sm" value="{{$bikes->eoilcap}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="carburet" class="col-sm-2 col-form-label lb-md">Carburettor</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="carburettor" class="form-control input-sm" value="{{$bikes->carburettor}}" required>
+                        </div>
+                        <label for="Stroke" class="col-sm-2 col-form-label lb-md">Bore X Stroke</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="borestroke" class="form-control input-sm" value="{{$bikes->borestroke}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="compression ratio" class="col-sm-2 col-form-label lb-md">Compression Ratio</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="compression" class="form-control input-sm" value="{{$bikes->compression}}" required>
+                        </div>
+                        <label for="chassis type" class="col-sm-2 col-form-label lb-md">Chassis Type</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="chassistype" class="form-control input-sm" value="{{$bikes->chassistype}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="starting method" class="col-sm-2 col-form-label lb-md">Starting Method</label>
+                        <div class="col-sm-3">
+                            <select class="form-control input-sm" name="startingmethod" value="{{$bikes->startingmethod}}">
+                                <option value="self ignition only">Self</option>
+                                <option value="self and kick ignition">Self And kick</option>
+                                <option value="kick ignition only">Kick</option>
+                                <option value="clutch ignition">Clutch</option>
+                            </select>
+                        </div>
+                        <label for="enginekillswitch" class="col-sm-2 col-form-label lb-md">Engine Kill Switch</label>
+                        <div class="col-sm-3">
+                            <select class="form-control input-sm" name="killswitch" value="{{$bikes->killswitch}}">
+                                <option value="not available">Not Available</option>
+                                <option value="available">Available</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-5">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="suspension" class="col-form-label lb-lg">Suspension</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="sfront" class="form-control input-sm" value="{{$bikes->sfront}}" required>
+                        </div>
+                        <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="srear" class="form-control input-sm" value="{{$bikes->srear}}" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-5">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="tyres" class="col-form-label lb-lg">Tyres</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="tfront" class="form-control input-sm" value="{{$bikes->tfront}}" required>
+                        </div>
+                        <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="trear" class="form-control input-sm" value="{{$bikes->trear}}" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-5">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="brakes" class="col-form-label lb-lg">Brakes</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="front" class="col-sm-3 col-form-label lb-md">Front</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="bfront" class="form-control input-sm" value="{{$bikes->bfront}}" required>
+                        </div>
+                        <label for="rear" class="col-sm-3 col-form-label lb-md">Rear</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="brear" class="form-control input-sm" value="{{$bikes->brear}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="abs system" class="col-sm-3 col-form-label lb-md">ABS System</label>
+                        <div class="col-sm-5">
+                            <select class="form-control input-sm" name="abs" value="{{$bikes->abs}}">
+                                <option value="not available">Not Available</option>
+                                <option value="abs channel given but not installed">ABS Channel Given but not installed</option>
+                                <option value="single channel">Single Channel</option>
+                                <option value="dual channel">Dual Channel</option>
+                                <option value="cbs available">CBS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-5">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="electricals" class="col-form-label lb-lg">Electricals</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="system" class="col-sm-3 col-form-label lb-md">System</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="esystem" class="form-control input-sm" value="{{$bikes->esystem}}" required>
+                        </div>
+                        <label for="head lamp" class="col-sm-3 col-form-label lb-md">Head Lamp</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="headlamp" class="form-control input-sm" value="{{ $bikes->headlamp }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pass light" class="col-sm-3 col-form-label lb-md">Pass Light</label>
+                        <div class="col-sm-5">
+                            <select class="form-control input-sm" name="passlight" value="{{ $bikes->passlight }}">
+                                <option value="not available">Not Available</option>
+                                <option value="Available">Available</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-10">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="fuel" class="col-form-label lb-lg">Fuel</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="fuel capacity" class="col-sm-2 col-form-label lb-md">Fuel Capacity</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="fuelcap" class="form-control input-sm" value="{{$bikes->fuelcap}}" required>
+                        </div>
+                        <label for="milage by company" class="col-sm-2 col-form-label lb-md">Milage by company</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="milagecompany" class="form-control input-sm" value="{{$bikes->milagecompany}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="milage by users" class="col-sm-2 col-form-label lb-md">Milage by users</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="milageusers" class="form-control input-sm" value="{{$bikes->milageusers}}" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-10">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="dimesions" class="col-form-label lb-lg">Dimesions</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="length" class="col-sm-2 col-form-label lb-md">Length (mm)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dlength" class="form-control input-sm" value="{{$bikes->dlength}}" required>
+                        </div>
+                        <label for="ground clearence" class="col-sm-2 col-form-label lb-md">Ground Clearence (mm)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dgroundclear" class="form-control input-sm" value="{{$bikes->dgroundclear}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="height" class="col-sm-2 col-form-label lb-md">Height (mm)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dheight" class="form-control input-sm" value="{{$bikes->dheight}}" required>
+                        </div>
+                        <label for="width" class="col-sm-2 col-form-label lb-md">Width (mm)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dwidth" class="form-control input-sm" value="{{$bikes->dwidth}}" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="wheelbase" class="col-sm-2 col-form-label lb-md">Wheelbase (mm)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dwheelbase" class="form-control input-sm" value="{{$bikes->dwheelbase}}" required>
+                        </div>
+                        <label for="kerb weight" class="col-sm-2 col-form-label lb-md">Kerb Weight (kg)</label>
+                        <div class="col-sm-3">
+                            <input type="text" name="dkerbweight" class="form-control input-sm" value="{{$bikes->dkerbweight}}" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div align="center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="{{ URL::asset('vendor/adminlte/css/addbike.css') }}">
 @stop
 
 @section('js')

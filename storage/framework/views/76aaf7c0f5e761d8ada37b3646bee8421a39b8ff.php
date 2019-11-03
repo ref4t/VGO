@@ -48,7 +48,7 @@
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
-                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <a href="#" class="sidebar-toggle fa5" data-toggle="push-menu" role="button">
                     <span class="sr-only"><?php echo e(trans('adminlte::adminlte.toggle_navigation')); ?></span>
                 </a>
             <?php endif; ?>
@@ -79,6 +79,14 @@
                                 </form>
                             <?php endif; ?>
                         </li>
+                        <?php if(config('adminlte.right_sidebar') and (config('adminlte.layout') != 'top-nav')): ?>
+                        <!-- Control Sidebar Toggle Button -->
+                            <li>
+                                <a href="#" data-toggle="control-sidebar" <?php if(!config('adminlte.right_sidebar_slide')): ?> data-controlsidebar-slide="false" <?php endif; ?>>
+                                    <i class="<?php echo e(config('adminlte.right_sidebar_icon')); ?>"></i>
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <?php if(config('adminlte.layout') == 'top-nav'): ?>
@@ -128,6 +136,21 @@
             <?php endif; ?>
         </div>
         <!-- /.content-wrapper -->
+
+        <?php if (! empty(trim($__env->yieldContent('footer')))): ?>
+        <footer class="main-footer">
+            <?php echo $__env->yieldContent('footer'); ?>
+        </footer>
+        <?php endif; ?>
+
+        <?php if(config('adminlte.right_sidebar') and (config('adminlte.layout') != 'top-nav')): ?>
+            <aside class="control-sidebar control-sidebar-<?php echo e(config('adminlte.right_sidebar_theme')); ?>">
+                <?php echo $__env->yieldContent('right-sidebar'); ?>
+            </aside>
+            <!-- /.control-sidebar -->
+            <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+            <div class="control-sidebar-bg"></div>
+        <?php endif; ?>
 
     </div>
     <!-- ./wrapper -->
