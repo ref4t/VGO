@@ -149,7 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel col-sm-10">
+        <div class="panel col-sm-5">
         <br>
             <div class="well well-sm">
                 <div class="panel-header">
@@ -158,18 +158,38 @@
                 <div class="panel-body">
                     <div class="form-group row">
                         <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <input type="text" name="sfront" class="form-control input-sm" required>
                         </div>
                         <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
-                        <div class="col-sm-3">
+                        <div class="col-sm-4">
                             <input type="text" name="srear" class="form-control input-sm" required>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel col-sm-10">
+        <div class="panel col-sm-5">
+        <br>
+            <div class="well well-sm">
+                <div class="panel-header">
+                    <label for="tyres" class="col-form-label lb-lg">Tyres</label>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="tfront" class="form-control input-sm" required>
+                        </div>
+                        <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="trear" class="form-control input-sm" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel col-sm-5">
         <br>
             <div class="well well-sm">
                 <div class="panel-header">
@@ -177,18 +197,18 @@
                 </div>
                 <div class="panel-body">
                     <div class="form-group row">
-                        <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
+                        <label for="front" class="col-sm-3 col-form-label lb-md">Front</label>
                         <div class="col-sm-3">
                             <input type="text" name="bfront" class="form-control input-sm" required>
                         </div>
-                        <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
+                        <label for="rear" class="col-sm-3 col-form-label lb-md">Rear</label>
                         <div class="col-sm-3">
                             <input type="text" name="brear" class="form-control input-sm" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="abs system" class="col-sm-2 col-form-label lb-md">ABS System</label>
-                        <div class="col-sm-3">
+                        <label for="abs system" class="col-sm-3 col-form-label lb-md">ABS System</label>
+                        <div class="col-sm-5">
                             <select class="form-control input-sm" name="abs">
                                 <option value="not available">Not Available</option>
                                 <option value="abs channel given but not installed">ABS Channel Given but not installed</option>
@@ -201,21 +221,30 @@
                 </div>
             </div>
         </div>
-        <div class="panel col-sm-10">
+        <div class="panel col-sm-5">
         <br>
             <div class="well well-sm">
                 <div class="panel-header">
-                    <label for="tyres" class="col-form-label lb-lg">Tyres</label>
+                    <label for="electricals" class="col-form-label lb-lg">Electricals</label>
                 </div>
                 <div class="panel-body">
                     <div class="form-group row">
-                        <label for="front" class="col-sm-2 col-form-label lb-md">Front</label>
+                        <label for="system" class="col-sm-3 col-form-label lb-md">System</label>
                         <div class="col-sm-3">
-                            <input type="text" name="tfront" class="form-control input-sm" required>
+                            <input type="text" name="esystem" class="form-control input-sm" required>
                         </div>
-                        <label for="rear" class="col-sm-2 col-form-label lb-md">Rear</label>
+                        <label for="head lamp" class="col-sm-3 col-form-label lb-md">Head Lamp</label>
                         <div class="col-sm-3">
-                            <input type="text" name="trear" class="form-control input-sm" required>
+                            <input type="text" name="head lamp" class="form-control input-sm" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pass light" class="col-sm-3 col-form-label lb-md">Pass Light</label>
+                        <div class="col-sm-5">
+                            <select class="form-control input-sm" name="passlight">
+                                <option value="not available">Not Available</option>
+                                <option value="Available">Available</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -242,35 +271,6 @@
                         <label for="milage by users" class="col-sm-2 col-form-label lb-md">Milage by users</label>
                         <div class="col-sm-3">
                             <input type="text" name="milageusers" class="form-control input-sm" required>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel col-sm-10">
-        <br>
-            <div class="well well-sm">
-                <div class="panel-header">
-                    <label for="electricals" class="col-form-label lb-lg">Electricals</label>
-                </div>
-                <div class="panel-body">
-                    <div class="form-group row">
-                        <label for="system" class="col-sm-2 col-form-label lb-md">System</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="esystem" class="form-control input-sm" required>
-                        </div>
-                        <label for="head lamp" class="col-sm-2 col-form-label lb-md">Head Lamp</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="head lamp" class="form-control input-sm" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="pass light" class="col-sm-2 col-form-label lb-md">Pass Light</label>
-                        <div class="col-sm-3">
-                            <select class="form-control input-sm" name="passlight">
-                                <option value="not available">Not Available</option>
-                                <option value="Available">Available</option>
-                            </select>
                         </div>
                     </div>
                 </div>
