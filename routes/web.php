@@ -42,4 +42,4 @@ Route::get('bike-Arena/product-details','FrontEnd\BikeArenaController@productdet
 Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikearena.shop');
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
 Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
-
+$this->get('users/data-table', 'adminController@getUsersForDataTable')->name('users.table');

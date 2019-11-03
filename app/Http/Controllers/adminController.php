@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UsersResource;
 use Illuminate\Http\Request;
 use App\bikes;
+use App\User;
 
 class adminController extends Controller
 {
@@ -49,5 +51,15 @@ class adminController extends Controller
 
         $bikes=bikes::find($id);
         return view('admin.editbike')->with('bikes',$bikes);
+    }
+    // public function editbike(Request $request,$id){
+
+    //     $bikes=bikes::find($id);
+    //     return view('admin.editbike')->with('bikes',$bikes);
+    // }
+    public function getUsersForDataTable(Request $request)
+    {
+        $users = User::all();
+        return UsersResource::collection($users);
     }
 }

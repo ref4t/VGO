@@ -127,8 +127,8 @@ return [
         ],
         'ACCOUNT SETTINGS',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'text' => 'Users',
+            'url'  => 'users/data-table',
             'icon' => 'user',
         ],
         [
