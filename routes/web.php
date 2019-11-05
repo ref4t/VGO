@@ -43,3 +43,9 @@ Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikeare
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
 Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
 $this->get('users/data-table', 'adminController@getUsersForDataTable')->name('users.table');
+
+Route::get('admin/view-parts','partsController@index')->name('parts.view');
+Route::get('admin/add-parts','partsController@create')->name('parts.add');
+
+Route::get('admin/view-blog','blogController@index')->name('blog.view');
+Route::get('admin/add-blog','blogController@create')->name('blog.add');

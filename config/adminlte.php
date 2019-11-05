@@ -159,7 +159,26 @@ return [
             'submenu' => [
                 [
                     'text' => 'Blog List',
-                    'url'  => 'admin/blog',
+                    'url'  => 'admin/view-blog',
+                ],
+                [
+                    'text' => 'Add BLog',
+                    'url'  => 'admin/add-blog',
+                ],
+               
+            ],
+        ],
+        [
+            'text'    => 'Parts',
+            'icon'    => 'fas fa-cogs',
+            'submenu' => [
+                [
+                    'text' => 'Parts List',
+                    'url'  => 'admin/view-parts',
+                ],
+                [
+                    'text' => 'Add Parts',
+                    'url'  => 'admin/add-parts',
                 ],
                
             ],
