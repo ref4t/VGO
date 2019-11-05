@@ -13,7 +13,13 @@ class Parts extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('parts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('part_name');
+            $table->string('part_brand');
+            $table->string('part_description');
+            $table->timestamps();
+        });
     }
 
     /**
