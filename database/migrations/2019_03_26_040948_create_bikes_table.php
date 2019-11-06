@@ -17,7 +17,7 @@ class CreateBikesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('brand');
-            $table->string('');
+            $table->string('price');
             $table->string('etype');
             $table->string('edisplacement');
             $table->string('emaxpower');

@@ -48,4 +48,5 @@ Route::get('admin/view-parts','partsController@index')->name('parts.view');
 Route::get('admin/add-parts','partsController@create')->name('parts.add');
 
 Route::get('admin/view-blog','blogController@index')->name('blog.view');
-Route::get('admin/add-blog','blogController@create')->name('blog.add');
+Route::get('admin/add-blog','blogController@create')->name('blog.index');
+Route::post('admin/add-blog','blogController@store')->name('blog.store');
