@@ -52,3 +52,9 @@ Route::post('/admin/edit-parts/{id}','partsController@updatepart')->name('part.u
 
 Route::get('admin/view-blog','blogController@index')->name('blog.view');
 Route::get('admin/add-blog','blogController@create')->name('blog.add');
+
+Route::get('admin/view-bike-brand','bikesController@showBikeBrands')->name('bikeBrands.view');
+Route::get('admin/add-bike-brand','bikesController@addBikesBrand')->name('bikeBrands.add');
+Route::post('admin/add-bike-brand','bikesController@storeBikesBrand')->name('bikeBrands.store');
+Route::get('/admin/edit-bike-brand/{id}','bikesController@editBikesBrand')->name('bikeBrands.edit');
+Route::post('/admin/edit-bike-brand/{id}','bikesController@updateBikesBrand')->name('bikeBrands.update');

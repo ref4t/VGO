@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\bikes;
+use App\bikeBrands;
 
 class bikesController extends Controller
 {
@@ -69,9 +70,41 @@ class bikesController extends Controller
   		return $data;
     }
 
-    public function brands(Request $request, $brand){
-    	$data = bikes::where('brand',$brand)->get();
-    	return view('bikearena.brands')->with('data',$data);
-    }
-    
+    // public function brands(Request $request, $brand){
+    // 	$data = bikes::where('brand',$brand)->get();
+    // 	return view('bikearena.brands')->with('data',$data);
+	// }
+	public function showBikeBrands(){
+		$data= bikeBrands::all();
+		return view('admin.showBrands')->with('brands',$data);
+	}
+	public function addBikesBrand(){
+		
+		return view('admin.addBrands');
+	}
+	public function storeBikesBrand(Request $request){
+		$brand = new bikeBrands;
+		$brand->brand_name=$request->brand_name;
+		if($request->hasfile('brand_image')){
+            $file = $request->file('brand_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/brands',$filename);
+            $brand->brand_image=$filename;
+        }
+        else{
+            return $request;
+            $brand->$image='';
+		}
+		$brand->save();
+		return redirect()->route('bikeBrands.view');
+	}
+    public function editBikeBrands($id){
+		$data= bikeBrands::find($id)->first();
+		return view('admin.showBrands')->with('brands',$data);
+	}
+	public function updateBikeBrands(){
+		$data= bikeBrands::all();
+		return view('admin.showBrands')->with('brands',$data);
+	}
 }

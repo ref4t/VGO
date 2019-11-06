@@ -6,6 +6,7 @@ use App\Http\Resources\UsersResource;
 use Illuminate\Http\Request;
 use App\bikes;
 use App\User;
+use App\bikeBrands;
 
 class adminController extends Controller
 {
@@ -32,9 +33,9 @@ class adminController extends Controller
 
     public function viewbikes()
     {
-        // $bikes=bikes::all();
-        // return view('admin.viewbikes')->with('bikeinfo',$bikes);
-        return view('admin.viewbikes');
+         $bikes=bikes::all();
+        return view('admin.viewbikes')->with('bikeinfo',$bikes);
+       // return view('admin.viewbikes');
         // return response()->json(['bikeinfo'=>$bikes]);
     }
 
@@ -45,7 +46,8 @@ class adminController extends Controller
 
     public function addbike()
     {
-    	return view('admin.addbike');
+        $brands=bikeBrands::all();
+    	return view('admin.addbike')->with('brands',$brands);
     }
 
     public function editbike(Request $request,$id){
