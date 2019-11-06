@@ -12,9 +12,10 @@ class partsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function viewpart()
     {
-        //
+        $parts=parts::all();
+        return view('parts.view')->with('parts',$parts);
     }
 
     /**
@@ -22,9 +23,9 @@ class partsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addpart()
     {
-        //
+        return view('parts.add');
     }
 
     /**
@@ -33,9 +34,28 @@ class partsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeparts(Request $request)
     {
-        //
+        $parts = new parts;
+        $parts->part_name = $request->part_name;
+        $parts->part_brand = $request->part_brand;
+        $parts->part_price = $request->part_price;
+       
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/parts',$filename);
+            $parts->image=$filename;
+        }
+        else{
+            return $request;
+            $parts->$image='';
+        }
+        $parts->part_description = $request->part_description;
+        $parts->save();
+
+		return redirect()->route('parts.view');
     }
 
     /**
@@ -55,9 +75,10 @@ class partsController extends Controller
      * @param  \App\parts  $parts
      * @return \Illuminate\Http\Response
      */
-    public function edit(parts $parts)
+    public function editpart(Request $request, $id)
     {
-        //
+        $parts=parts::find($id);
+        return view('parts.edit')->with('parts',$parts);
     }
 
     /**
@@ -67,9 +88,27 @@ class partsController extends Controller
      * @param  \App\parts  $parts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, parts $parts)
+    public function updatepart(Request $request,$id)
     {
-        //
+        $parts=parts::find($id);
+        $parts->part_name = $request->part_name;
+        $parts->part_brand = $request->part_brand;
+        $parts->part_price = $request->part_price;
+        
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/parts',$filename);
+            $parts->image=$filename;
+        }
+        // else{
+        //     $parts->part_name=$parts->part_name;
+        // }
+        
+        $parts->part_description = $request->part_description;
+        $parts->save();
+        return redirect()->route('parts.view');
     }
 
     /**
