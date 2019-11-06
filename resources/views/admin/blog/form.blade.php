@@ -8,8 +8,8 @@
 
 @section('content')
 <div class="container">
-    <form method="post" action="{{ route('blog.store') }}">
-        {{ @csrf_field() }}
+    <form method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+        @csrf
         <div class="panel panel-body col-sm-10">
             <div class="well well-sm">
                 <div class="form-group row">
@@ -44,21 +44,12 @@
                         <input type="text" name="time_to_read" class="form-control input-sm" >
                     </div>
                 </div>
+                
                 <div class="form-group row">
-                  <label for="price" class="col-sm-2 col-form-label lb-lg">Date</label>
-                  <div class="col-sm-5">
-                      <input type="date" name="date" required>
+                  <label for="image" class="col-sm-2 col-form-label lb-lg">Part Image</label>
+                  <div class="col-sm-6">
+                      <input type="file" name="photo" class="form-control" required>
                   </div>
-                </div>
-                <div class="form-group row">
-                  <label for="price" class="col-sm-2 col-form-label lb-lg">Blog Publish Date</label>
-                  <div class="col-sm-5">
-                      <input type="date" name="publish_date" required>
-                  </div>
-                </div>
-                <div class="form-group row">
-                    <label for="photo" class="col-sm-2 col-form-label lb-md">Image</label>
-                    <input type="photo" name="photo" value="">
                 </div>
             </div>
         </div>
@@ -71,18 +62,18 @@
                 <div class="panel-body">
                     <div class="form-group row">
                         <div class="form-group">
-                          <label for="blog_short_description">blog_short_description</label>
-                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                          <label for="blog_short_description">Blog Short Description</label>
+                          <textarea class="form-control" rows="5" id="comment" name="blog_short_description"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="form-group">
-                          <label for="blog_short_description">blog_description</label>
-                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                          <label for="blog_short_description">Blog Description</label>
+                          <textarea class="form-control" rows="5" id="comment" name="blog_description"></textarea>
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success btn_style pull-left">Save</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </div>
     </form>

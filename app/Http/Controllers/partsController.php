@@ -40,7 +40,7 @@ class partsController extends Controller
         $parts->part_name = $request->part_name;
         $parts->part_brand = $request->part_brand;
         $parts->part_price = $request->part_price;
-       
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
@@ -94,7 +94,7 @@ class partsController extends Controller
         $parts->part_name = $request->part_name;
         $parts->part_brand = $request->part_brand;
         $parts->part_price = $request->part_price;
-        
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
@@ -105,7 +105,7 @@ class partsController extends Controller
         // else{
         //     $parts->part_name=$parts->part_name;
         // }
-        
+
         $parts->part_description = $request->part_description;
         $parts->save();
         return redirect()->route('parts.view');
