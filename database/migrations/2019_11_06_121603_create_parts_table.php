@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Parts extends Migration
+class CreatePartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -17,7 +17,9 @@ class Parts extends Migration
             $table->increments('id');
             $table->string('part_name');
             $table->string('part_brand');
-            $table->string('part_description');
+            $table->string('part_price')->after('part_brand');
+            $table->mediumText('image')->nullable();
+            $table->largeText('part_description')->change();
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class Parts extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('parts');
     }
 }

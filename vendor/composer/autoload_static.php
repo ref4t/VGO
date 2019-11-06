@@ -852,6 +852,8 @@ class ComposerStaticInit9e4320fddf81c60e754e8f6729333d56
         'Doctrine\\DBAL\\Types\\TimeImmutableType' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeImmutableType.php',
         'Doctrine\\DBAL\\Types\\TimeType' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php',
         'Doctrine\\DBAL\\Types\\Type' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php',
+        'Doctrine\\DBAL\\Types\\TypeRegistry' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php',
+        'Doctrine\\DBAL\\Types\\Types' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/Types.php',
         'Doctrine\\DBAL\\Types\\VarDateTimeImmutableType' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeImmutableType.php',
         'Doctrine\\DBAL\\Types\\VarDateTimeType' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php',
         'Doctrine\\DBAL\\Version' => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL/Version.php',

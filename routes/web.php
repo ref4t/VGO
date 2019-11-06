@@ -48,6 +48,7 @@ Route::get('admin/view-parts','partsController@viewpart')->name('parts.view');
 Route::get('admin/add-parts','partsController@addpart')->name('parts.add');
 Route::post('admin/add-parts','partsController@storeparts')->name('parts.store');
 Route::get('/admin/edit-parts/{id}','partsController@editpart')->name('part.edit');
+Route::post('/admin/edit-parts/{id}','partsController@updatepart')->name('part.update');
 
 Route::get('admin/view-blog','blogController@index')->name('blog.view');
 Route::get('admin/add-blog','blogController@create')->name('blog.add');

@@ -8,26 +8,38 @@
 
 @section('content')
     <div class="container">
-        <form method="post" action="{{ route('parts.store') }}">
+        <form method="post" action="{{ route('parts.store') }}" enctype="multipart/form-data">
          @csrf
             <div class="panel panel-body col-sm-10">
                 <div class="well well-sm">
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label lb-lg">Parts Name</label>
+                        <label for="part_name" class="col-sm-2 col-form-label lb-lg">Parts Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" required>
+                            <input type="text" name="part_name" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="brand" class="col-sm-2 col-form-label lb-lg">Brand Name</label>
+                        <label for="part_brand" class="col-sm-2 col-form-label lb-lg">Brand Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="brand" class="form-control" required>
+                            <input type="text" name="part_brand" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="price" class="col-sm-2 col-form-label lb-lg">Description</label>
+                        <label for="part_price" class="col-sm-2 col-form-label lb-lg">Price</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="part_price" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="image" class="col-sm-2 col-form-label lb-lg">Part Image</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="image" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="part_description" class="col-sm-2 col-form-label lb-lg">Description</label>
                         <div class="col-sm-8">
-                            <textarea type="text" name="description" class="form-control" rows="5" required></textarea>
+                            <textarea type="text" name="part_description" class="form-control" rows="5" required></textarea>
                         </div>
                     </div>
                 </div>

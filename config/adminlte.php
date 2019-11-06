@@ -173,6 +173,14 @@ return [
             'icon'    => 'fas fa-cogs',
             'submenu' => [
                 [
+                    'text' => 'Parts Category List',
+                    'url'  => 'admin/view-parts-category',
+                ],
+                [
+                    'text' => 'Add Parts Category',
+                    'url'  => 'admin/add-parts-category',
+                ],
+                [
                     'text' => 'Parts List',
                     'url'  => 'admin/view-parts',
                 ],

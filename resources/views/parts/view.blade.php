@@ -15,6 +15,8 @@
           <th>Id</th>
           <th>Parts Name</th>
           <th>Brand Name</th>
+          <th>Price</th>
+          <th>Image</th>
           <th>Description</th>
           <th>Edit</th>
         </tr>
@@ -25,6 +27,8 @@
               <td>{{ $data->id }}</td>
               <td>{{ $data->part_name }}</td>
               <td>{{ $data->part_brand }}</td>
+              <td>{{ $data->part_price }}</td>
+              <td><img src="/images/parts/{{ $data->image }}" alt="image" style="width:10%;height:10%;"></td>
               <td>{{ $data->part_description }}</td>
               <td><a href="edit-parts/{{ $data->id }}">Edit</a></td>
             </tr>

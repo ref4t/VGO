@@ -365,6 +365,8 @@ return array(
     'Doctrine\\DBAL\\Types\\TimeImmutableType' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeImmutableType.php',
     'Doctrine\\DBAL\\Types\\TimeType' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TimeType.php',
     'Doctrine\\DBAL\\Types\\Type' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php',
+    'Doctrine\\DBAL\\Types\\TypeRegistry' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php',
+    'Doctrine\\DBAL\\Types\\Types' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/Types.php',
     'Doctrine\\DBAL\\Types\\VarDateTimeImmutableType' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeImmutableType.php',
     'Doctrine\\DBAL\\Types\\VarDateTimeType' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Types/VarDateTimeType.php',
     'Doctrine\\DBAL\\Version' => $vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL/Version.php',
