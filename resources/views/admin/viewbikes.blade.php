@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-{{-- <div style="overflow-x:auto;">
+ <div style="overflow-x:auto;">
     	<table border="1">
 		<tr>
 			<td>Bike Name</td>
@@ -93,17 +93,15 @@
 		</tr>
 		@endforeach
 	</table>
-</div> --}}
-
-<div id="search">
-    <tablesearch></tablesearch>
 </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
+
+
+
 @stop
 
 @section('css')
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')

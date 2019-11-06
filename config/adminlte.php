@@ -115,14 +115,14 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'View Bikes',
-            'url'         => 'admin/viewbikes',
+            'text'        => 'Demo',
+            'url'         => '',
             'icon'        => 'motorcycle',
            
         ],
         [
-            'text' => 'AddBike ',
-            'url' => 'admin/addbike',
+            'text' => 'Analytics ',
+            'url' => '',
             'icon' => 'motorcycle',
         ],
         'ACCOUNT SETTINGS',
@@ -137,26 +137,38 @@ return [
             'icon' => 'lock',
         ],
         [
-            'text'    => 'Bike Arena index',
-            'icon'    => 'share',
-            'submenu' => [
+            'text'    => 'Bike Arena',
+            'icon'    => 'fas fa-motorcycle',
+            'submenu' =>
+            [
                 [
-                    'text' => 'Most Popular',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
+                    'text'    => 'View Bike Brands',
+                    'url'     => 'admin/view-bike-brand',
                     
-                    ],
                 ],
+                [
+                    'text'    => 'Add Bike Brands',
+                    'url'     => 'admin/add-bike-brand',
+                    
+                ],
+                [
+                    'text' => 'AddBike',
+                    'url'  => 'admin/addbike',
+                ],
+                [
+                    'text'    => 'View Bikes',
+                    'url'     => 'admin/viewbikes',
+                    
+                ],
+            ],
                 
            
         ],
         [
             'text'    => 'Blog',
             'icon'    => 'fas fa-blog',
-            'submenu' => [
+            'submenu' => 
+            [
                 [
                     'text' => 'Blog List',
                     'url'  => 'admin/view-blog',
