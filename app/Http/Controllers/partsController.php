@@ -12,9 +12,10 @@ class partsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function viewpart()
     {
-        //
+        $parts=parts::all();
+        return view('parts.view')->with('parts',$parts);
     }
 
     /**
@@ -22,9 +23,9 @@ class partsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function addpart()
     {
-        //
+        return view('parts.add');
     }
 
     /**
@@ -33,9 +34,16 @@ class partsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function storeparts(Request $request)
     {
-        //
+        $parts = new parts;
+        $parts->part_name = $request->name;
+        $parts->part_brand = $request->brand;
+        $parts->part_description = $request->description;
+
+        $parts->save();
+
+		return redirect()->route('parts.view');
     }
 
     /**
@@ -55,9 +63,10 @@ class partsController extends Controller
      * @param  \App\parts  $parts
      * @return \Illuminate\Http\Response
      */
-    public function edit(parts $parts)
+    public function editpart(Request $request, $id)
     {
-        //
+        $parts=parts::find($id);
+        return view('parts.edit')->with('parts',$parts);
     }
 
     /**
@@ -67,9 +76,9 @@ class partsController extends Controller
      * @param  \App\parts  $parts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, parts $parts)
+    public function updatepart(Request $request, parts $parts)
     {
-        //
+
     }
 
     /**
