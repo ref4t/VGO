@@ -55,7 +55,11 @@ class adminController extends Controller
         $bikes=bikes::find($id);
         return view('admin.editbike')->with('bikes',$bikes);
     }
+    // public function editbike(Request $request,$id){
 
+    //     $bikes=bikes::find($id);
+    //     return view('admin.editbike')->with('bikes',$bikes);
+    // }
     public function getUsersForDataTable(Request $request)
     {
         $users = User::all();
