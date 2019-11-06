@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\parts;
+use App\category;
 use Illuminate\Http\Request;
 
 class partsController extends Controller
@@ -120,5 +121,69 @@ class partsController extends Controller
     public function destroy(parts $parts)
     {
         //
+    }
+
+    public function addpartcategory()
+    {
+        return view('parts.addcategory');
+    }
+
+    public function storepartscategory(Request $request)
+    {
+        $parts = new parts;
+        $parts->part_name = $request->part_name;
+        $parts->part_brand = $request->part_brand;
+        $parts->part_price = $request->part_price;
+       
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/parts',$filename);
+            $parts->image=$filename;
+        }
+        else{
+            return $request;
+            $parts->$image='';
+        }
+        $parts->part_description = $request->part_description;
+        $parts->save();
+
+		return redirect()->route('parts.viewcategory');
+    }
+
+    public function viewpartcategory()
+    {
+        $parts=parts::all();
+        return view('parts.viewcategory')->with('parts',$parts);
+    }
+
+    public function editpartcategory(Request $request, $id)
+    {
+        $parts=parts::find($id);
+        return view('parts.editcategory')->with('parts',$parts);
+    }
+
+    public function updatepartcategory(Request $request,$id)
+    {
+        $parts=parts::find($id);
+        $parts->part_name = $request->part_name;
+        $parts->part_brand = $request->part_brand;
+        $parts->part_price = $request->part_price;
+        
+        if($request->hasfile('image')){
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/parts',$filename);
+            $parts->image=$filename;
+        }
+        // else{
+        //     $parts->part_name=$parts->part_name;
+        // }
+        
+        $parts->part_description = $request->part_description;
+        $parts->save();
+        return redirect()->route('parts.viewcategory');
     }
 }

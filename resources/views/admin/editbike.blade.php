@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container">
-    <form method="post" action="{{ route('admin.storebike') }}">
+    <form method="post" action="{{ route('admin.updatebike',$bikes->id) }}">
         {{ @csrf_field() }}
         <div class="panel panel-body col-sm-10">
             <div class="well well-sm">

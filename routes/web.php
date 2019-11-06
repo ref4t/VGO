@@ -50,6 +50,17 @@ Route::post('admin/add-parts','partsController@storeparts')->name('parts.store')
 Route::get('/admin/edit-parts/{id}','partsController@editpart')->name('part.edit');
 Route::post('/admin/edit-parts/{id}','partsController@updatepart')->name('part.update');
 
+Route::get('admin/view-parts-category','partsController@viewpartcategory')->name('parts.viewcategory');
+Route::get('admin/add-parts-category','partsController@addpartcategory')->name('parts.addcategory');
+Route::post('admin/add-parts-category','partsController@storepartscategory')->name('parts.storecategory');
+Route::get('/admin/edit-parts-category/{id}','partsController@editpartcategory')->name('part.editcategory');
+Route::post('/admin/edit-parts-category/{id}','partsController@updatepartcategory')->name('part.updatecategory');
+
 Route::get('admin/view-blog','blogController@index')->name('blog.view');
-Route::get('admin/add-blog','blogController@create')->name('blog.index');
-Route::post('admin/add-blog','blogController@store')->name('blog.store');
+Route::get('admin/add-blog','blogController@create')->name('blog.add');
+
+Route::get('admin/view-bike-brand','bikesController@showBikeBrands')->name('bikeBrands.view');
+Route::get('admin/add-bike-brand','bikesController@addBikesBrand')->name('bikeBrands.add');
+Route::post('admin/add-bike-brand','bikesController@storeBikesBrand')->name('bikeBrands.store');
+Route::get('/admin/edit-bike-brand/{id}','bikesController@editBikesBrand')->name('bikeBrands.edit');
+Route::post('/admin/edit-bike-brand/{id}','bikesController@updateBikesBrand')->name('bikeBrands.update');
