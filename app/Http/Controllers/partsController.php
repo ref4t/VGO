@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\parts;
-use App\category;
+use App\Model\parts;
+use App\Model\parts_category;
 use Illuminate\Http\Request;
 
 class partsController extends Controller
@@ -41,7 +41,7 @@ class partsController extends Controller
         $parts->part_name = $request->part_name;
         $parts->part_brand = $request->part_brand;
         $parts->part_price = $request->part_price;
-       
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
@@ -95,7 +95,7 @@ class partsController extends Controller
         $parts->part_name = $request->part_name;
         $parts->part_brand = $request->part_brand;
         $parts->part_price = $request->part_price;
-        
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
@@ -106,7 +106,7 @@ class partsController extends Controller
         // else{
         //     $parts->part_name=$parts->part_name;
         // }
-        
+
         $parts->part_description = $request->part_description;
         $parts->save();
         return redirect()->route('parts.view');
@@ -130,60 +130,52 @@ class partsController extends Controller
 
     public function storepartscategory(Request $request)
     {
-        $parts = new parts;
-        $parts->part_name = $request->part_name;
-        $parts->part_brand = $request->part_brand;
-        $parts->part_price = $request->part_price;
-       
+        $parts_category = new parts_category;
+        $parts_category->category_name = $request->category_name;
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/parts',$filename);
-            $parts->image=$filename;
+            $file->move('images/parts_category',$filename);
+            $parts_category->image=$filename;
         }
         else{
             return $request;
-            $parts->$image='';
+            $parts_category->$image='';
         }
-        $parts->part_description = $request->part_description;
-        $parts->save();
+
+        $parts_category->save();
 
 		return redirect()->route('parts.viewcategory');
     }
 
     public function viewpartcategory()
     {
-        $parts=parts::all();
-        return view('parts.viewcategory')->with('parts',$parts);
+        $parts_category=parts_category::all();
+        return view('parts.viewcategory')->with('parts_category',$parts_category);
     }
 
     public function editpartcategory(Request $request, $id)
     {
-        $parts=parts::find($id);
-        return view('parts.editcategory')->with('parts',$parts);
+        $parts_category=parts_category::find($id);
+        return view('parts.editcategory')->with('parts_category',$parts_category);
     }
 
     public function updatepartcategory(Request $request,$id)
     {
-        $parts=parts::find($id);
-        $parts->part_name = $request->part_name;
-        $parts->part_brand = $request->part_brand;
-        $parts->part_price = $request->part_price;
-        
+        $parts_category=parts_category::find($id);
+        $parts_category->category_name = $request->category_name;
+
         if($request->hasfile('image')){
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time().'.'.$extension;
-            $file->move('images/parts',$filename);
-            $parts->image=$filename;
+            $file->move('images/parts_category',$filename);
+            $parts_category->image=$filename;
         }
-        // else{
-        //     $parts->part_name=$parts->part_name;
-        // }
-        
-        $parts->part_description = $request->part_description;
-        $parts->save();
+
+        $parts_category->save();
         return redirect()->route('parts.viewcategory');
     }
 }

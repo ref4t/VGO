@@ -14,8 +14,7 @@ class AddColumnParts extends Migration
     public function up()
     {
         Schema::table('parts', function (Blueprint $table) {
-            $table->string('part_price')->after('part_brand');
-            $table->longText('part_description')->change();
+            //
         });
     }
 
@@ -27,7 +26,7 @@ class AddColumnParts extends Migration
     public function down()
     {
         Schema::table('parts', function (Blueprint $table) {
-            //
+            $table->string('parts_category')->after('part_name');
         });
     }
 }

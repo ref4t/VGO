@@ -17,9 +17,9 @@ class CreatePartsTable extends Migration
             $table->increments('id');
             $table->string('part_name');
             $table->string('part_brand');
-            $table->string('part_price')->after('part_brand');
+            $table->string('part_price');
             $table->mediumText('image')->nullable();
-            $table->largeText('part_description')->change();
+            $table->longText('part_description');
             $table->timestamps();
         });
     }
