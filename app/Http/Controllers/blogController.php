@@ -47,82 +47,34 @@ class blogController extends Controller
      */
     public function store(Request $request)
     {
-      $input = $request->all();
+      $url = str_replace(' ','-',$request->slug);
 
-      $input['date'] = dateConvertFormtoDB($request->date);
-      $input['publish_date'] = dateConvertFormtoDB($request->publish_date);
-      $input['created_by'] = Auth::user()->id;
+      $blog = new Blog;
 
-      $imageData=$request->file('photo');
-      if($imageData){
+      $blog->blog_title = $request->blog_title;
+      $blog->slug = $url;
+      $blog->author_name = $request->author_name;
+      $blog->location = $request->location;
+      $blog->blog_short_description = $request->blog_short_description;
+      $blog->blog_description = $request->blog_description;
+      $blog->status = 0;
 
-          $photo_home_page = md5(str_random(30).time().'_'.$request->file('photo')).'.'.$request->file('photo')->getClientOriginalExtension();
-          Image::make($request->file('photo'))->resize(500, 620)->save(public_path(ImageFilePath::$blogHomePagePhoto) . $photo_home_page);
-          $input['blog_home_page_photo'] = $photo_home_page;
-
-          $blog_list_photo = md5(str_random(30).time().'_'.$request->file('photo')).'.'.$request->file('photo')->getClientOriginalExtension();
-          Image::make($request->file('photo'))->resize(300, 175)->save(public_path(ImageFilePath::$blogListPhoto) . $blog_list_photo);
-          $input['blog_list_photo'] =  $blog_list_photo;
-
-          $profile_photo = md5(str_random(30).time().'_'.$request->file('photo')).'.'.$request->file('photo')->getClientOriginalExtension();
-          Image::make($request->file('photo'))->resize(685, 400)->save(public_path(ImageFilePath::$blogProfilePhoto) . $profile_photo);
-          $input['profile_photo'] = $profile_photo;
+      if($request->hasfile('photo')){
+          $file = $request->file('photo');
+          $extension = $file->getClientOriginalExtension();
+          $filename = time().'.'.$extension;
+          $file->move('images/blog',$filename);
+          $blog->profile_photo=$filename;
+      }
+      else{
+          return $request;
+          $parts->$image='';
       }
 
+      $blog->save();
 
-      $blog_description = $request->get('blog_description');
+      return redirect()->route('blog.view');
 
-      $dom = new DOMDocument();
-
-      $dom->loadHtml($blog_description, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-
-      $images = $dom->getElementsByTagName('img');
-
-      foreach($images as $k => $img){
-
-          $src = $img->getAttribute('src');
-
-         if(preg_match('/data:image/', $src)){
-
-              preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
-              $mimetype = $groups['mime'];
-
-              $filename = uniqid();
-              $filepath = "/uploads/blog_photo/blog_text_photo/$filename.$mimetype";
-
-              $image = Image::make($src)
-              ->encode($mimetype, 100)
-              ->save(public_path($filepath));
-
-              $new_src = asset($filepath);
-              $img->removeAttribute('src');
-              $img->setAttribute('src', $new_src);
-
-              }
-          }
-
-        $input['blog_description'] =  $dom->saveHTML();
-
-      try {
-          DB::beginTransaction();
-
-           $data = Blog::create($input);
-
-
-          DB::commit();
-          $bug = 0;
-      } catch (\Exception $e) {
-          DB::rollback();
-          $bug = $e->errorInfo[1];
-      }
-
-      if ($bug == 0) {
-          return redirect()->route('blog.edit', $data->id)->with('successMsg', 'Blog Data successfully saved !');
-      } elseif ($bug == 1062) {
-          return redirect('blog')->with('errorMsg', 'Blog is Found Duplicate !');
-      } else {
-          return redirect()->back()->with('errorMsg', 'Something Error Found !, Please try again.');
-      }
     }
 
     /**
