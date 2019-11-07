@@ -26,7 +26,8 @@ class partsController extends Controller
      */
     public function addpart()
     {
-        return view('parts.add');
+        $parts_category=parts_category::all();
+        return view('parts.add')->with('parts_category',$parts_category);
     }
 
     /**
