@@ -58,6 +58,7 @@ Route::post('/admin/edit-parts-category/{id}','partsController@updatepartcategor
 
 Route::get('admin/view-blog','blogController@index')->name('blog.view');
 Route::get('admin/add-blog','blogController@create')->name('blog.add');
+Route::post('admin/add-blog','blogController@store')->name('blog.store');
 
 Route::get('admin/view-bike-brand','bikesController@showBikeBrands')->name('bikeBrands.view');
 Route::get('admin/add-bike-brand','bikesController@addBikesBrand')->name('bikeBrands.add');
