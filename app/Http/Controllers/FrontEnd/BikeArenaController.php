@@ -5,8 +5,10 @@ namespace App\Http\Controllers\FrontEnd;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Model\bikes;
 use App\bikeBrands;
 use App\Model\parts_category;
+use App\Model\parts;
 
 class BikeArenaController extends Controller
 {
@@ -18,8 +20,8 @@ class BikeArenaController extends Controller
     }
     public function viewBrand($name)
     {
-        $brands=bikeBrands::where('brand_name',$name)->get();
-        return view('bikeArena.brand-details')->with('brands',$brands);
+        $bikes=bikes::where('brand',$name)->get();
+        return view('bikeArena.brand-details')->with('bikes',$bikes);
     }
     public function allBrand()
     {
@@ -28,8 +30,8 @@ class BikeArenaController extends Controller
     }
     public function viewParts($name)
     {
-        $parts_category=parts_category::where('category_name',$name)->get();
-        return view('bikeArena.part-details')->with('parts_category',$parts_category);
+        $parts=parts::where('part_category',$name)->get();
+        return view('bikeArena.part-details')->with('parts',$parts);
     }
     public function allParts()
     {
@@ -63,6 +65,10 @@ class BikeArenaController extends Controller
     public function loginregister()
     {
         return view('bikeArena.login-register');
+    }
+    public function productdetails()
+    {
+        return view('bikeArena.product-details');
     }
     public function brandDetails()
     {

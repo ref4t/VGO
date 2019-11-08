@@ -66,7 +66,7 @@
                                                     {{-- <li><a href="#">shop</a>
                                                         <ul>
                                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                            <li><a href="{{ route('bikeArena.brand-details') }}">product details</a></li>
+                                                            <li><a href="{{ route('bikeArena.product-details') }}">product details</a></li>
                                                             <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                             <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                             <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -398,7 +398,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-1.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -422,7 +422,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Gloriori GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Gloriori GSX 250 R</a></h4>
                                                     <span>6600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -433,7 +433,7 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-4.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -457,7 +457,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Demonissi Gori</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Demonissi Gori</a></h4>
                                                     <span>6700 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -470,7 +470,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-2.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -494,7 +494,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -505,7 +505,7 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-5.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -529,7 +529,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -542,7 +542,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-3.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -566,7 +566,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Matrio Max</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Matrio Max</a></h4>
                                                     <span>4600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -577,7 +577,7 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-6.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -601,7 +601,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Rigoniss Z 1000</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Rigoniss Z 1000</a></h4>
                                                     <span>8000 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -614,7 +614,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-2.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -638,7 +638,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -649,7 +649,7 @@
                                     </div>
                                     <div class="product-wrapper">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-5.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -673,7 +673,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -690,7 +690,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-6.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -714,7 +714,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Gloriori GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Gloriori GSX 250 R</a></h4>
                                                     <span>6600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -725,7 +725,7 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-5.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -749,7 +749,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Demonissi Gori</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Demonissi Gori</a></h4>
                                                     <span>6700 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -762,7 +762,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-4.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -786,7 +786,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -797,7 +797,7 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-3.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -821,7 +821,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -834,7 +834,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-2.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -858,7 +858,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Matrio Max</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Matrio Max</a></h4>
                                                     <span>4600 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -869,7 +869,7 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-1.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -893,7 +893,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Rigoniss Z 1000</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Rigoniss Z 1000</a></h4>
                                                     <span>8000 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -906,7 +906,7 @@
                                 <div class="product-wrapper-bundle">
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-2.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -930,7 +930,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Klager GSX 250 R</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Klager GSX 250 R</a></h4>
                                                     <span>5500 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -941,7 +941,7 @@
                                     </div>
                                     <div class="product-wrapper mb-30">
                                         <div class="product-img">
-                                            <a href="{{ route('bikeArena.brand-details') }}">
+                                            <a href="{{ route('bikeArena.product-details') }}">
                                                 <img src="{{ URL::asset('bikearena/img/product/product-5.jpg') }}" alt="">
                                             </a>
                                             <div class="product-item-dec">
@@ -965,7 +965,7 @@
                                             </div>
                                             <div class="product-content-wrapper">
                                                 <div class="product-title-spreed">
-                                                    <h4><a href="{{ route('bikeArena.brand-details') }}">Maxclon ZPE 54</a></h4>
+                                                    <h4><a href="{{ route('bikeArena.product-details') }}">Maxclon ZPE 54</a></h4>
                                                     <span>3300 RPM</span>
                                                 </div>
                                                 <div class="product-price">
@@ -1057,14 +1057,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $120</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1081,14 +1081,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $180</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Reckles Jacket</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1105,14 +1105,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $25</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Softy Original Glove</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Softy Original Glove</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-10.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1129,14 +1129,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $140</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Flicky Traco Boot</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-11.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1153,14 +1153,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $150</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Flicky Traco Boot</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-7.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1177,14 +1177,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $150</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1201,14 +1201,14 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $160</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Reckles Jacket</a></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-wrapper">
                                 <div class="product-img">
-                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                    <a href="{{ route('bikeArena.product-details') }}">
                                         <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
                                     </a>
                                     <div class="product-action">
@@ -1225,7 +1225,7 @@
                                     <div class="product-content-wrapper-2">
                                         <div class="product-title-price-2 text-center">
                                             <span>Price: $120</span>
-                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Aerion Carbon Helmet</a></h4>
+                                            <h4><a href="{{ route('bikeArena.product-details') }}">Aerion Carbon Helmet</a></h4>
                                         </div>
                                     </div>
                                 </div>

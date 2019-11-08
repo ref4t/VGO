@@ -42,9 +42,9 @@ Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikeare
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
 //Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
 
+Route::get('bike-Arena/product-details','FrontEnd\BikeArenaController@productdetails')->name('bikeArena.product-details');
 Route::get('bike-Arena/brand-details','FrontEnd\BikeArenaController@brandDetails')->name('bikeArena.brand-details');
 Route::get('bike-Arena/part-details','FrontEnd\BikeArenaController@partDetails')->name('bikeArena.part-details');
-
 
 Route::get('bike-Arena/brand-details/{name}','FrontEnd\BikeArenaController@viewBrand')->name('bikeArena.viewBrands');
 Route::get('bike-Arena/brands/','FrontEnd\BikeArenaController@allBrand')->name('bikeArena.allBrands');

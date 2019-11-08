@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/chosen.min.css') }}">
-        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/easyzoom.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('bikearena/css/jquery-ui.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/meanmenu.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/themify-icons.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/icofont.css') }}">
@@ -26,6 +26,7 @@
     </head>
     <body>
         <div class="wrapper">
+            <!-- header start -->
             <header>
                 <div class="header-area transparent-bar ptb-55">
                     <div class="container">
@@ -236,161 +237,722 @@
             <div class="breadcrumb-area pt-255 pb-170" style="background-image: url({{ url('bikearena/img/banner/banner-4.jpg') }})">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
-                        <h2>brand details </h2>
+                        <h2>Shop Page</h2>
                         <ul>
                             <li>
                                 <a href="{{ route('bikearena.index') }}">home</a>
                             </li>
-                            <li>brand details </li>
+                            <li>Shop page</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="product-details-area fluid-padding-3 ptb-130">
+            <div class="shop-wrapper fluid-padding-2 pt-120 pb-150">
                 <div class="container-fluid">
                     <div class="row">
-                        @foreach ($brands as $item)
+                        <div class="col-lg-3">
+                            <div class="product-sidebar-area pr-60">
+                                <div class="sidebar-widget pb-55">
+                                    <h3 class="sidebar-widget">Search Products</h3>
+                                    <div class="sidebar-search">
+                                        <form action="#">
+                                            <input type="text" placeholder="Search Products...">
+                                            <button><i class="ti-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget pb-50">
+                                    <h3 class="sidebar-widget">by categories</h3>
+                                    <div class="widget-categories">
+                                        <ul>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Bags</a></li>
+                                            <li><a href="#">Shoes</a></li>
+                                            <li><a href="#">Jewelry</a></li>
+                                            <li><a href="#">Accessories</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget mb-55">
+                                    <h3 class="sidebar-widget">by price</h3>
+                                    <div class="price_filter mr-60">
+                                        <div id="slider-range"></div>
+                                        <div class="price_slider_amount">
+                                            <div class="label-input">
+                                                <label>price : </label>
+                                                <input type="text" id="amount" name="price"  placeholder="Add Your Price" />
+                                            </div>
+                                            <button type="button">Filter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget mb-55">
+                                    <h3 class="sidebar-widget">by color</h3>
+                                    <div class="product-color">
+                                        <ul>
+                                            <li class="blue">b</li>
+                                            <li class="yellow">y</li>
+                                            <li class="gray">g</li>
+                                            <li class="puce">pu</li>
+                                            <li class="black">b</li>
+                                            <li class="pink">p</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget mb-45">
+                                    <h3 class="sidebar-widget">product tags</h3>
+                                    <div class="product-tags">
+                                        <ul>
+                                            <li><a href="#">Clothing</a></li>
+                                            <li><a href="#">Bag</a></li>
+                                            <li><a href="#">Women</a></li>
+                                            <li><a href="#">Tie</a></li>
+                                            <li><a href="#">Women</a></li>
+                                            <li><a href="#">Dress</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget mb-55">
+                                    <h3 class="sidebar-widget">compare</h3>
+                                    <div class="product-compare">
+                                        <ul>
+                                            <li><a href="#">Gloriori GSX 250 R <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
+                                            <li><a href="#">Klager GSX 250 R<span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
+                                            <li><a href="#">Maxclon ZPE 54 <span><i class="fa fa-trash-o" aria-hidden="true"></i></span></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="compare-text-btn">
+                                        <div class="compare-text">
+                                            <h5>Clear All</h5>
+                                        </div>
+                                        <div class="compare-btn">
+                                            <a href="#">Compare</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar-widget">
+                                    <h3 class="sidebar-widget">best seller</h3>
+                                    <div class="best-seller">
+                                        <div class="single-best-seller">
+                                            <div class="best-seller-img">
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-12.jpg') }}" alt=""></a>
+                                            </div>
+                                            <div class="best-seller-text">
+                                                <h3><a href="#">Minimal White Shoes</a></h3>
+                                                <span>$39.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="single-best-seller">
+                                            <div class="best-seller-img">
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-13.jpg') }}" alt=""></a>
+                                            </div>
+                                            <div class="best-seller-text">
+                                                <h3><a href="#">Minimal White Shoes</a></h3>
+                                                <span>$39.9</span>
+                                            </div>
+                                        </div>
+                                        <div class="single-best-seller">
+                                            <div class="best-seller-img">
+                                                <a href="#"><img src="{{ URL::asset('bikearena/img/product/product-14.jpg') }}" alt=""></a>
+                                            </div>
+                                            <div class="best-seller-text">
+                                                <h3><a href="#">Minimal White Shoes</a></h3>
+                                                <span>$39.9</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="shop-topbar-wrapper">
+                                <div class="grid-list-options">
+                                    <ul class="view-mode">
+                                        <li class="active"><a href="#product-grid" data-view="product-grid"><i class="ti-layout-grid2"></i></a></li>
+                                        <li><a href="#product-list" data-view="product-list"><i class="ti-view-list"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product-sorting">
+                                    <div class="shop-product-sorting nav">
+                                        <a class="active" data-toggle="tab" href="#new-product">NEW BIKES </a>
+                                        <a  data-toggle="tab" href="#use-product"> USED BIKES </a>
+                                        <a data-toggle="tab" href="#accessory-product">ACCESSORIES</a>
+                                    </div>
+                                    <div class="sorting sorting-bg-1">
+                                        <form>
+                                            <select class="select">
+                                                <option value="">Default softing </option>
+                                                <option value="">Sort by news</option>
+                                                <option value="">Sort by price</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-list-product-wrapper tab-content">
+                                <div id="new-product" class="product-grid product-view tab-pane active">
+                                    <div class="row">
+                                        @foreach ($bikes as $bikes)
 
-                        <div class="col-lg-6">
-                            <div class="product-details-img-content">
-                                <div class="product-details-tab mr-40">
-                                    <div class="product-details-large tab-content">
-                                        <div class="tab-pane active" id="pro-details1">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{{ URL::asset('bikearena/img/product-details/bl1.jpg') }}">
-                                                    <img src="{{ URL::asset('images/brands/'.$item->brand_image) }}" alt="">
-                                                </a>
+
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('images/parts/'.$bikes->image) }}" alt="">
+                                                    </a>
+                                                    {{-- <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>270 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div> --}}
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">{{$bikes->part_name}}</a></h4>
+
+                                                        </div>
+                                                        <div class="product-price">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{-- <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Gloriori GSX 250 R</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div> --}}
                                             </div>
                                         </div>
-                                        <div class="tab-pane" id="pro-details2">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{{ URL::asset('bikearena/img/product-details/bl2.jpg') }}">
-                                                    <img src="{{ URL::asset('bikearena/img/product-details/l2.jpg') }}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="pro-details3">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{{ URL::asset('bikearena/img/product-details/bl3.jpg') }}">
-                                                    <img src="{{ URL::asset('bikearena/img/product-details/l3.jpg') }}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="pro-details4">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{{ URL::asset('bikearena/img/product-details/bl4.jpg') }}">
-                                                    <img src="{{ URL::asset('bikearena/img/product-details/l4.jpg') }}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="pro-details5">
-                                            <div class="easyzoom easyzoom--overlay">
-                                                <a href="{{ URL::asset('bikearena/img/product-details/bl3.jpg') }}">
-                                                    <img src="{{ URL::asset('bikearena/img/product-details/l3.jpg') }}" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
-                                    <div class="product-details-small nav mt-12 product-dec-slider owl-carousel">
-                                        <a class="active" href="#pro-details1">
-                                            <img src="{{ URL::asset('bikearena/img/product-details/s1.jpg') }}" alt="">
-                                        </a>
-                                        <a href="#pro-details2">
-                                            <img src="{{ URL::asset('bikearena/img/product-details/s2.jpg') }}" alt="">
-                                        </a>
-                                        <a href="#pro-details3">
-                                            <img src="{{ URL::asset('bikearena/img/product-details/s3.jpg') }}" alt="">
-                                        </a>
-                                        <a href="#pro-details4">
-                                            <img src="{{ URL::asset('bikearena/img/product-details/s4.jpg') }}" alt="">
-                                        </a>
-                                        <a href="#pro-details5">
-                                            <img src="{{ URL::asset('bikearena/img/product-details/s3.jpg') }}" alt="">
-                                        </a>
+                                </div>
+                                <div id="accessory-product" class="product-grid product-view tab-pane">
+                                    <div class="row">
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-7.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>270 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>300 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>250 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-10.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>150 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-11.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>280 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-7.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>290 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>220 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>210 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-width col-md-6 col-xl-4 col-lg-6">
+                                            <div class="product-wrapper mb-35">
+                                                <div class="product-img">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('bikearena/img/product/product-10.jpg') }}" alt="">
+                                                    </a>
+                                                    <div class="product-item-dec">
+                                                        <ul>
+                                                            <li>2018</li>
+                                                            <li>MANUAL</li>
+                                                            <li>PETROL</li>
+                                                            <li>250 CC</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">
+                                                            <i class=" ti-shopping-cart"></i>
+                                                        </a>
+                                                        <a class="action-cart-2" title="Wishlist" href="#">
+                                                            <i class=" ti-heart"></i>
+                                                        </a>
+                                                        <a class="action-reload" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#">
+                                                            <i class=" ti-zoom-in"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-content-wrapper">
+                                                        <div class="product-title-spreed">
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
+                                                            <span>6600 RPM</span>
+                                                        </div>
+                                                        <div class="product-price">
+                                                            <span>$2549</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="product-list-details">
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
+                                                    <div class="quick-view-rating">
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                        <i class="fa fa-star reting-color"></i>
+                                                    </div>
+                                                    <div class="product-price">
+                                                        <span>$2549</span>
+                                                    </div>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                                    <div class="shop-list-cart">
+                                                        <a href="{{ route('bikearena.cart') }}"><i class="ti-shopping-cart"></i> Add to cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="product-details-content">
-                                <h2>{{ $item->brand_name }}</h2>
-                                <div class="quick-view-rating">
-                                    <i class="fa fa-star reting-color"></i>
-                                    <i class="fa fa-star reting-color"></i>
-                                    <i class="fa fa-star reting-color"></i>
-                                    <i class="fa fa-star reting-color"></i>
-                                    <i class="fa fa-star reting-color"></i>
-                                    <span> ( 01 Customer Review )</span>
-                                </div>
-                                <div class="product-price">
-                                    <span>$2549</span>
-                                </div>
-                                <div class="product-overview">
-                                    <h5 class="pd-sub-title">Product Overview</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita tion ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                                </div>
-                                <div class="product-color">
-                                    <h5 class="pd-sub-title">Product color</h5>
-                                    <ul>
-                                        <li class="red">b</li>
-                                        <li class="pink">p</li>
-                                        <li class="blue">b</li>
-                                        <li class="sky2">b</li>
-                                        <li class="green">y</li>
-                                        <li class="purple2">g</li>
-                                    </ul>
-                                </div>
-                                <div class="quickview-plus-minus">
-                                    <div class="cart-plus-minus">
-                                        <input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
-                                    </div>
-                                    <div class="quickview-btn-cart">
-                                        <a class="btn-style cr-btn" href="#"><span>add to cart</span></a>
-                                    </div>
-                                    <div class="quickview-btn-wishlist">
-                                        <a class="btn-hover cr-btn" href="#"><span><i class="icofont icofont-heart-alt"></i></span></a>
-                                    </div>
-                                </div>
-                                <div class="product-categories">
-                                    <h5 class="pd-sub-title">Categories</h5>
-                                    <ul>
-                                        <li>
-                                            <a href="#">fashion ,</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">electronics ,</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">toys ,</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">food ,</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">jewellery </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="product-share">
-                                    <h5 class="pd-sub-title">Share</h5>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> <i class="icofont icofont-social-instagram"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="paginations text-center mt-20">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li class="active"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        @endforeach
                     </div>
                 </div>
             </div>
@@ -535,6 +1097,93 @@
                     </div>
                 </div>
             </footer>
+            <!-- modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="icofont icofont-close" aria-hidden="true"></span>
+                </button>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="qwick-view-left">
+                                <div class="quick-view-learg-img">
+                                    <div class="quick-view-tab-content tab-content">
+                                        <div class="tab-pane active show fade" id="modal1" role="tabpanel">
+                                            <img src="{{ URL::asset('bikearena/img/quick-view/l1.jpg') }}" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="modal2" role="tabpanel">
+                                            <img src="{{ URL::asset('bikearena/img/quick-view/l2.jpg') }}" alt="">
+                                        </div>
+                                        <div class="tab-pane fade" id="modal3" role="tabpanel">
+                                            <img src="{{ URL::asset('bikearena/img/quick-view/l3.jpg') }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quick-view-list nav" role="tablist">
+                                    <a class="active" href="#modal1" data-toggle="tab" role="tab">
+                                        <img src="{{ URL::asset('bikearena/img/quick-view/s1.jpg') }}" alt="">
+                                    </a>
+                                    <a href="#modal2" data-toggle="tab" role="tab">
+                                        <img src="{{ URL::asset('bikearena/img/quick-view/s2.jpg') }}" alt="">
+                                    </a>
+                                    <a href="#modal3" data-toggle="tab" role="tab">
+                                        <img src="{{ URL::asset('bikearena/img/quick-view/s3.jpg') }}" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="qwick-view-right">
+                                <div class="qwick-view-content">
+                                    <h3>Aeri Carbon Helmet</h3>
+                                    <div class="price">
+                                        <span class="new">$90.00</span>
+                                        <span class="old">$120.00  </span>
+                                    </div>
+                                    <div class="rating-number">
+                                        <div class="quick-view-rating">
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                            <i class="fa fa-star reting-color"></i>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
+                                    <div class="quick-view-select">
+                                        <div class="select-option-part">
+                                            <label>Size*</label>
+                                            <select class="select">
+                                                <option value="">- Please Select -</option>
+                                                <option value="">900</option>
+                                                <option value="">700</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-option-part">
+                                            <label>Color*</label>
+                                            <select class="select">
+                                                <option value="">- Please Select -</option>
+                                                <option value="">orange</option>
+                                                <option value="">pink</option>
+                                                <option value="">yellow</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="quickview-plus-minus">
+                                        <div class="cart-plus-minus">
+											<input type="text" value="02" name="qtybutton" class="cart-plus-minus-box">
+										</div>
+                                        <div class="quickview-btn-cart">
+                                            <a class="btn-style" href="#">add to cart</a>
+                                        </div>
+                                        <div class="quickview-btn-wishlist">
+                                            <a class="btn-hover" href="#"><i class="icofont icofont-heart-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 		<!-- all js here -->
