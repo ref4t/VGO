@@ -14,7 +14,7 @@ class BikeArenaController extends Controller
     {
         $brands=bikeBrands::select('brand_name')->get();
         $parts_category=parts_category::select('category_name')->get();
-        return view('bikeArena.index')->with('brands',$brands)->with('parts_category',$parts_category);
+        return view('bikeArena.index')->with(compact('brands','parts_category',$brands,$parts_category));
     }
     public function viewBrand($name)
     {
