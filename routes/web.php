@@ -38,13 +38,18 @@ Route::get('bike-Arena/cart','FrontEnd\BikeArenaController@cart')->name('bikeare
 Route::get('bike-Arena/checkout','FrontEnd\BikeArenaController@checkout')->name('bikearena.checkout');
 Route::get('bike-Arena/contact','FrontEnd\BikeArenaController@contact')->name('bikearena.contact');
 Route::get('bike-Arena/login-register','FrontEnd\BikeArenaController@loginregister')->name('bikearena.login-register');
-Route::get('bike-Arena/product-details','FrontEnd\BikeArenaController@productdetails')->name('bikearena.product-details');
 Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikearena.shop');
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
 //Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
 
-Route::get('bike-Arena/brands/{name}','FrontEnd\BikeArenaController@viewBrand')->name('bikeArena.viewBrands');
+Route::get('bike-Arena/brand-details','FrontEnd\BikeArenaController@brandDetails')->name('bikeArena.brand-details');
+Route::get('bike-Arena/part-details','FrontEnd\BikeArenaController@partDetails')->name('bikeArena.part-details');
+
+
+Route::get('bike-Arena/brand-details/{name}','FrontEnd\BikeArenaController@viewBrand')->name('bikeArena.viewBrands');
 Route::get('bike-Arena/brands/','FrontEnd\BikeArenaController@allBrand')->name('bikeArena.allBrands');
+Route::get('bike-Arena/part-details/{name}','FrontEnd\BikeArenaController@viewParts')->name('bikeArena.viewParts');
+Route::get('bike-Arena/parts/','FrontEnd\BikeArenaController@allParts')->name('bikeArena.allParts');
 //$this->get('users/data-table', 'adminController@getUsersForDataTable')->name('users.table');
 
 Route::get('admin/view-parts','partsController@viewpart')->name('parts.view');

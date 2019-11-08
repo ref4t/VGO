@@ -6,22 +6,35 @@ namespace App\Http\Controllers\FrontEnd;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\bikeBrands;
+use App\Model\parts_category;
 
 class BikeArenaController extends Controller
 {
     public function index()
-    {   $brands=bikeBrands::select('brand_name')->get();
-        return view('bikeArena.index')->with('brands',$brands);
+    {
+        $brands=bikeBrands::select('brand_name')->get();
+        $parts_category=parts_category::select('category_name')->get();
+        return view('bikeArena.index')->with('brands',$brands)->with('parts_category',$parts_category);
     }
     public function viewBrand($name)
-    {   
+    {
         $brands=bikeBrands::where('brand_name',$name)->get();
-        //return view('bikeArena.brands')->with('brands',$brands);
+        return view('bikeArena.brand-details')->with('brands',$brands);
     }
     public function allBrand()
-    {   
+    {
         $brands=bikeBrands::all();
         return view('bikeArena.brands')->with('brands',$brands);
+    }
+    public function viewParts($name)
+    {
+        $parts_category=parts_category::where('category_name',$name)->get();
+        return view('bikeArena.part-details')->with('parts_category',$parts_category);
+    }
+    public function allParts()
+    {
+        $parts_category=parts_category::all();
+        return view('bikeArena.parts')->with('parts_category',$parts_category);
     }
     public function about()
     {
@@ -51,9 +64,13 @@ class BikeArenaController extends Controller
     {
         return view('bikeArena.login-register');
     }
-    public function productdetails()
+    public function brandDetails()
     {
-        return view('bikeArena.product-details');
+        return view('bikeArena.brand-details');
+    }
+    public function partDetails()
+    {
+        return view('bikeArena.part-details');
     }
     public function shop()
     {

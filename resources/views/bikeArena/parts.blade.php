@@ -54,7 +54,6 @@
                                                     <li><a href="#">shop</a>
                                                         <ul>
                                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                            <li><a href="{{ route('bikeArena.brand-details') }}">product details</a></li>
                                                             <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                             <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                             <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -157,7 +156,6 @@
                                             <li><a href="#">shop</a>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                    <li><a href="{{ route('bikeArena.brand-details') }}">product details</a></li>
                                                     <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                     <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                     <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -394,14 +392,14 @@
                             <div class="grid-list-product-wrapper tab-content">
                                 <div id="new-product" class="product-grid product-view tab-pane active">
                                     <div class="row">
-                                        @foreach ($brands as $brands)
+                                        @foreach ($parts_category as $parts_category)
 
 
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
-                                                        <img src="{{ URL::asset('images/brands/'.$brands->brand_image) }}" alt="">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
+                                                        <img src="{{ URL::asset('images/parts_category/'.$parts_category->image) }}" alt="">
                                                     </a>
                                                     {{-- <div class="product-item-dec">
                                                         <ul>
@@ -424,7 +422,7 @@
                                                     </div> --}}
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">{{$brands->brand_name}}</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">{{$parts_category->category_name}}</a></h4>
 
                                                         </div>
                                                         <div class="product-price">
@@ -433,7 +431,7 @@
                                                     </div>
                                                 </div>
                                                 {{-- <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Gloriori GSX 250 R</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Gloriori GSX 250 R</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -459,7 +457,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-7.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -483,7 +481,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Aeri Carbon Helmet</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -492,7 +490,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Aeri Carbon Helmet</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -513,7 +511,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -537,7 +535,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -546,7 +544,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -567,7 +565,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -591,7 +589,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Softy Original Glove</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -600,7 +598,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Softy Original Glove</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -621,7 +619,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-10.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -645,7 +643,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -654,7 +652,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -675,7 +673,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-11.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -699,7 +697,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -708,7 +706,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -729,7 +727,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-7.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -753,7 +751,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Aeri Carbon Helmet</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -762,7 +760,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Aeri Carbon Helmet</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Aeri Carbon Helmet</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -783,7 +781,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-8.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -807,7 +805,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -816,7 +814,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Reckles Jacket</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Reckles Jacket</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -837,7 +835,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-9.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -861,7 +859,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Softy Original Glove</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -870,7 +868,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Softy Original Glove</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Softy Original Glove</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>
@@ -891,7 +889,7 @@
                                         <div class="product-width col-md-6 col-xl-4 col-lg-6">
                                             <div class="product-wrapper mb-35">
                                                 <div class="product-img">
-                                                    <a href="{{ route('bikeArena.brand-details') }}">
+                                                    <a href="{{ route('bikeArena.part-details') }}">
                                                         <img src="{{ URL::asset('bikearena/img/product/product-10.jpg') }}" alt="">
                                                     </a>
                                                     <div class="product-item-dec">
@@ -915,7 +913,7 @@
                                                     </div>
                                                     <div class="product-content-wrapper">
                                                         <div class="product-title-spreed">
-                                                            <h4><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h4>
+                                                            <h4><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h4>
                                                             <span>6600 RPM</span>
                                                         </div>
                                                         <div class="product-price">
@@ -924,7 +922,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-list-details">
-                                                    <h2><a href="{{ route('bikeArena.brand-details') }}">Flicky Traco Boot</a></h2>
+                                                    <h2><a href="{{ route('bikeArena.part-details') }}">Flicky Traco Boot</a></h2>
                                                     <div class="quick-view-rating">
                                                         <i class="fa fa-star reting-color"></i>
                                                         <i class="fa fa-star reting-color"></i>

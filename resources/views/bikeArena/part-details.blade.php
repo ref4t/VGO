@@ -53,7 +53,6 @@
                                                     <li><a href="#">shop</a>
                                                         <ul>
                                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                            <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
                                                             <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                             <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                             <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -156,7 +155,6 @@
                                             <li><a href="#">shop</a>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                    <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
                                                     <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                     <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                     <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -238,12 +236,12 @@
             <div class="breadcrumb-area pt-255 pb-170" style="background-image: url({{ url('bikearena/img/banner/banner-4.jpg') }})">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
-                        <h2>product details </h2>
+                        <h2>part details </h2>
                         <ul>
                             <li>
                                 <a href="{{ route('bikearena.index') }}">home</a>
                             </li>
-                            <li>product details </li>
+                            <li>part details </li>
                         </ul>
                     </div>
                 </div>
@@ -251,6 +249,8 @@
             <div class="product-details-area fluid-padding-3 ptb-130">
                 <div class="container-fluid">
                     <div class="row">
+                        @foreach ($parts_category as $item)
+
                         <div class="col-lg-6">
                             <div class="product-details-img-content">
                                 <div class="product-details-tab mr-40">
@@ -258,7 +258,7 @@
                                         <div class="tab-pane active" id="pro-details1">
                                             <div class="easyzoom easyzoom--overlay">
                                                 <a href="{{ URL::asset('bikearena/img/product-details/bl1.jpg') }}">
-                                                    <img src="{{ URL::asset('bikearena/img/product-details/l1.jpg') }}" alt="">
+                                                    <img src="{{ URL::asset('images/parts_category/'.$item->image) }}" alt="">
                                                 </a>
                                             </div>
                                         </div>
@@ -313,7 +313,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="product-details-content">
-                                <h2>Klager GSX 250 R</h2>
+                                <h2>{{ $item->category_name }}</h2>
                                 <div class="quick-view-rating">
                                     <i class="fa fa-star reting-color"></i>
                                     <i class="fa fa-star reting-color"></i>
@@ -390,6 +390,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
