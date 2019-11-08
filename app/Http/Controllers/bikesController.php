@@ -63,12 +63,12 @@ class bikesController extends Controller
     	return redirect()->route('admin.viewbikes');
     }
 
-    public function specification(Request $request,$name){
+    // public function specification(Request $request,$name){
 
-  		$data= bikes::where('name',$name)->get();
+  	// 	$data= bikes::where('name',$name)->get();
 
-  		return $data;
-    }
+  	// 	return $data;
+    // }
 
     // public function brands(Request $request, $brand){
     // 	$data = bikes::where('brand',$brand)->get();
@@ -99,12 +99,25 @@ class bikesController extends Controller
 		$brand->save();
 		return redirect()->route('bikeBrands.view');
 	}
-    public function editBikeBrands($id){
-		$data= bikeBrands::find($id)->first();
-		return view('admin.showBrands')->with('brands',$data);
+    public function editBikesBrand($id){
+		$data= bikeBrands::find($id);
+		return view('admin.editBrands')->with('brands',$data);
 	}
-	public function updateBikeBrands(){
-		$data= bikeBrands::all();
-		return view('admin.showBrands')->with('brands',$data);
+	public function updateBikesBrand(Request $request,$id){
+		$brand= bikeBrands::find($id);
+		$brand->brand_name=$request->brand_name;
+		if($request->hasfile('brand_image')){
+            $file = $request->file('brand_image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extension;
+            $file->move('images/brands',$filename);
+            $brand->brand_image=$filename;
+        }
+        else{
+            //return $request;
+            $brand->brand_image='';
+		}
+		$brand->save();
+		return redirect()->route('bikeBrands.view');
 	}
 }

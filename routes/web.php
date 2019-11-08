@@ -41,8 +41,11 @@ Route::get('bike-Arena/login-register','FrontEnd\BikeArenaController@loginregist
 Route::get('bike-Arena/product-details','FrontEnd\BikeArenaController@productdetails')->name('bikearena.product-details');
 Route::get('bike-Arena/shop','FrontEnd\BikeArenaController@shop')->name('bikearena.shop');
 Route::get('bike-Arena/wishlist','FrontEnd\BikeArenaController@wishlist')->name('bikearena.wishlist');
-Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
-$this->get('users/data-table', 'adminController@getUsersForDataTable')->name('users.table');
+//Route::get('/getItems','adminController@viewbikesitems')->name('viewbikes.table');
+
+Route::get('bike-Arena/brands/{name}','FrontEnd\BikeArenaController@viewBrand')->name('bikeArena.viewBrands');
+Route::get('bike-Arena/brands/','FrontEnd\BikeArenaController@allBrand')->name('bikeArena.allBrands');
+//$this->get('users/data-table', 'adminController@getUsersForDataTable')->name('users.table');
 
 Route::get('admin/view-parts','partsController@viewpart')->name('parts.view');
 Route::get('admin/add-parts','partsController@addpart')->name('parts.add');
@@ -63,5 +66,5 @@ Route::post('admin/add-blog','blogController@store')->name('blog.store');
 Route::get('admin/view-bike-brand','bikesController@showBikeBrands')->name('bikeBrands.view');
 Route::get('admin/add-bike-brand','bikesController@addBikesBrand')->name('bikeBrands.add');
 Route::post('admin/add-bike-brand','bikesController@storeBikesBrand')->name('bikeBrands.store');
-Route::get('/admin/edit-bike- /{id}','bikesController@editBikesBrand')->name('bikeBrands.edit');
+Route::get('/admin/edit-bike-brand/{id}','bikesController@editBikesBrand')->name('bikeBrands.edit');
 Route::post('/admin/edit-bike-brand/{id}','bikesController@updateBikesBrand')->name('bikeBrands.update');

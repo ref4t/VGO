@@ -49,8 +49,15 @@
                                             <nav>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.index') }}">home</a></li>
-                                                    <li class="active"><a href="{{ route('bikearena.about') }}">about us </a></li>
-                                                    <li><a href="#">shop</a>
+                                                <li><a href="{{route('bikeArena.allBrands')}}">Brands</a>
+                                                        <ul>
+                                                            @foreach ($brands as $item)
+                                                            <li><a href="{{route('bikeArena.viewBrands',$item->brand_name)}}">{{$item->brand_name}}</a></li>  
+                                                            @endforeach
+                                                            
+                                                        </ul>
+                                                    </li>
+                                                    {{-- <li><a href="#">shop</a>
                                                         <ul>
                                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
                                                             <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
@@ -74,7 +81,8 @@
                                                             <li><a href="{{ route('bikearena.blog') }}">blog</a></li>
                                                             <li><a href="{{ route('bikearena.blog-details') }}">blog details</a></li>
                                                         </ul>
-                                                    </li>
+                                                    </li> --}}
+                                                    <li class="active"><a href="{{ route('bikearena.about') }}">about us </a></li>
                                                     <li><a href="{{ route('bikearena.contact') }}">contact us</a></li>
                                                 </ul>
                                             </nav>

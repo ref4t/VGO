@@ -2,14 +2,26 @@
 
 namespace App\Http\Controllers\FrontEnd;
 
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\bikeBrands;
 
 class BikeArenaController extends Controller
 {
     public function index()
-    {
-        return view('bikeArena.index');
+    {   $brands=bikeBrands::select('brand_name')->get();
+        return view('bikeArena.index')->with('brands',$brands);
+    }
+    public function viewBrand($name)
+    {   
+        $brands=bikeBrands::where('brand_name',$name)->get();
+        //return view('bikeArena.brands')->with('brands',$brands);
+    }
+    public function allBrand()
+    {   
+        $brands=bikeBrands::all();
+        return view('bikeArena.brands')->with('brands',$brands);
     }
     public function about()
     {
