@@ -938,7 +938,7 @@ textarea:focus {
  .white-bg { background: #fff; }
  .black-bg { background: #061124 }
  .theme-bg { background: #001232 }
- .theme-bg-2 { background: #ffb52f }
+ .theme-bg-2 { background: #4fc1f0 }
  .gray-bg { background: #f0f1f5; }
  .blue-bg { background: #4FC1F0; }
  .default-bg { background: #50C1F0; }
@@ -1164,7 +1164,7 @@ textarea:focus {
 }
 
 .btn-style {
-  background-color: #ffb52f;
+  background-color: #4fc1f0;
   border-radius: 0;
   color: #ffffff;
   display: inline-block;
