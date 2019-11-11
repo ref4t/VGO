@@ -10,6 +10,12 @@
         <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('bikearena/img/favicon.png') }}">
 
         <!-- all css here -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+
 
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
