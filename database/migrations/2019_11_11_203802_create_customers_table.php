@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddColumnParts extends Migration
+class CreateCustomersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddColumnParts extends Migration
      */
     public function up()
     {
-        Schema::table('parts', function (Blueprint $table) {
-            //
+        Schema::create('customers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->string('repeat_password');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +29,6 @@ class AddColumnParts extends Migration
      */
     public function down()
     {
-        Schema::table('parts', function (Blueprint $table) {
-            $table->string('parts_category')->after('part_name');
-        });
+        Schema::dropIfExists('customers');
     }
 }

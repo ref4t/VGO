@@ -9,7 +9,8 @@
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('bikearena/img/favicon.png') }}">
 
-		<!-- all css here -->
+        <!-- all css here -->
+
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/animate.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/owl.carousel.min.css') }}">
@@ -21,7 +22,10 @@
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/bundle.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/style.css') }}">
         <link rel="stylesheet" href="{{ URL::asset('bikearena/css/responsive.css') }}">
+
+
         <script src="{{ URL::asset('bikearena/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+
     </head>
     <body>
         <div class="wrapper">
@@ -49,14 +53,14 @@
                                             <nav>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.index') }}">home</a></li>
-                                                    <li><a href="{{route('bikeArena.allBrands')}}">Brands</a>
+                                                    <li><a href="{{route('bikeArena.allBrands')}}">brands</a>
                                                         <ul>
                                                             @foreach ($brands as $item)
                                                             <li><a href="{{route('bikeArena.viewBrands',$item->brand_name)}}">{{$item->brand_name}}</a></li>
                                                             @endforeach
                                                         </ul>
                                                     </li>
-                                                    <li><a href="{{route('bikeArena.allParts')}}">Parts</a>
+                                                    <li><a href="{{route('bikeArena.allParts')}}">parts</a>
                                                         <ul>
                                                             @foreach ($parts_category as $item)
                                                             <li><a href="{{route('bikeArena.viewParts',$item->category_name)}}">{{$item->category_name}}</a></li>
@@ -90,6 +94,7 @@
                                                     </li> --}}
                                                     <li class="active"><a href="{{ route('bikearena.about') }}">about us </a></li>
                                                     <li><a href="{{ route('bikearena.contact') }}">contact us</a></li>
+                                                    <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login">login | register</button></li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -248,6 +253,9 @@
                     </div>
                 </div>
             </header>
+
+
+
             <div class="slider-area">
                 <div class="slider-active owl-carousel">
                     <div class="single-slider slider-1" style="background-image: url({{ url('bikearena/img/slider/slider-bg.jpg')}})">
@@ -1431,16 +1439,13 @@
                                     </div>
                                     <div class="food-widget-content pr-30">
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                         <div class="single-tweet">
-                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you
-10 min ago</p>
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 10 min ago</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1501,6 +1506,7 @@
                 </div>
             </footer>
             <!-- modal -->
+
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span class="icofont icofont-close" aria-hidden="true"></span>
@@ -1589,7 +1595,7 @@
             </div>
         </div>
 
-		<!-- all js here -->
+        <!-- all js here -->
         <script src="{{ URL::asset('bikearena/js/vendor/jquery-1.12.0.min.js') }}"></script>
         <script src="{{ URL::asset('bikearena/js/popper.js') }}"></script>
         <script src="{{ URL::asset('bikearena/js/bootstrap.min.js') }}"></script>
@@ -1601,5 +1607,114 @@
         <script src="{{ URL::asset('bikearena/js/owl.carousel.min.js') }}"></script>
         <script src="{{ URL::asset('bikearena/js/plugins.js') }}"></script>
         <script src="{{ URL::asset('bikearena/js/main.js') }}"></script>
+
+    <!--Modal: Login / Register Form-->
+    <form method="post" action="{{ route('bikearena.login') }}">
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
+          <!--Content-->
+          <div class="modal-content">
+
+            <!--Modal cascading tabs-->
+            <div class="modal-c-tabs">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                    Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                    Register</a>
+                </li>
+              </ul>
+
+              <!-- Tab panels -->
+              <div class="tab-content">
+                <!--Panel 7-->
+                <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+
+                  <!--Body-->
+                  <div class="modal-body mb-1">
+                    <div class="md-form form-sm mb-5">
+                      <i class="fas fa-envelope prefix"></i>
+                      <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                      <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                    </div>
+
+                    <div class="md-form form-sm mb-4">
+                      <i class="fas fa-lock prefix"></i>
+                      <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                      <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                    </div>
+                    <div class="text-center mt-2">
+                      <button type="submit" class="btn btn-info">Log in <i class="fas fa-sign-in ml-1"></i></button>
+                    </div>
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="options text-center text-md-right mt-1">
+                      <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
+                      <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                    </div>
+                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+                <!--/.Panel 7-->
+
+                <!--Panel 8-->
+                <div class="tab-pane fade" id="panel8" role="tabpanel">
+
+                  <!--Body-->
+                  <div class="modal-body">
+                    <div class="md-form form-sm mb-5">
+                      <i class="fas fa-envelope prefix"></i>
+                      <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                      <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                    </div>
+
+                    <div class="md-form form-sm mb-5">
+                      <i class="fas fa-lock prefix"></i>
+                      <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                      <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                    </div>
+
+                    <div class="md-form form-sm mb-4">
+                      <i class="fas fa-lock prefix"></i>
+                      <input type="repeat_password" id="modalLRInput14" class="form-control form-control-sm validate">
+                      <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                    </div>
+
+                    <div class="text-center form-sm mt-2">
+                      <button type="submit" class="btn btn-info">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+                    </div>
+
+                  </div>
+                  <!--Footer-->
+                  <div class="modal-footer">
+                    <div class="options text-right">
+                      <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                    </div>
+                    <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!--/.Panel 8-->
+              </div>
+
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+      </div>
+    </form>
+      <!--Modal: Login / Register Form-->
+
+      <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Launch
+          Modal LogIn/Register</a>
+      </div>
     </body>
+
 </html>

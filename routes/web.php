@@ -30,6 +30,7 @@ Route::post('/admin/editbike/{id}','bikesController@update')->name('admin.update
 
 Route::get('/vgo','HomeController@vgo')->name('index.vgo');
 
+Route::get('bike-Arena/login','FrontEnd\BikeArenaController@login')->name('bikearena.login');
 Route::get('bike-Arena','FrontEnd\BikeArenaController@index')->name('bikearena.index');
 Route::get('bike-Arena/about-us','FrontEnd\BikeArenaController@about')->name('bikearena.about');
 Route::get('bike-Arena/blog','FrontEnd\BikeArenaController@blog')->name('bikearena.blog');

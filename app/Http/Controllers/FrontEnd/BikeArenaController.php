@@ -2,20 +2,32 @@
 
 namespace App\Http\Controllers\FrontEnd;
 
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\bikes;
 use App\bikeBrands;
 use App\Model\parts_category;
 use App\Model\parts;
+use App\Model\customers;
 
 class BikeArenaController extends Controller
 {
+    public function login(Request $request)
+    {
+        // $customers = customers::create($request->all());
+        $email=$request->email;
+        $password=$request->password;
+
+        if(Auth::attempt(['email'=>$email,'password'=>$password]))
+        {
+            return redirect()->intended('bike-Arena');
+        }
+    }
     public function index()
     {
-        $brands=bikeBrands::select('brand_name')->get();
-        $parts_category=parts_category::select('category_name')->get();
+
+        $brands = bikeBrands::select('brand_name')->get();
+        $parts_category = parts_category::select('category_name')->get();
         return view('bikeArena.index')->with(compact('brands','parts_category',$brands,$parts_category));
     }
     public function viewBrand($name)
