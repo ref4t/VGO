@@ -21,8 +21,6 @@ class CreateBlogsTable extends Migration
             $table->string('location',191)->nullable();
             $table->text('blog_short_description');
             $table->text('blog_description')->nullable();
-            $table->string('blog_home_page_photo',191);
-            $table->string('blog_list_photo',191);
             $table->string('profile_photo',191);
             $table->tinyInteger('status')->default('1');
             $table->Integer('views')->default('0');
