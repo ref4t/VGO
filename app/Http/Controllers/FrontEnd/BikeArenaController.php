@@ -3,13 +3,53 @@
 namespace App\Http\Controllers\FrontEnd;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
+use App\Model\bikes;
+use App\bikeBrands;
+use App\Model\parts_category;
+use App\Model\parts;
+use App\Model\customers;
 
 class BikeArenaController extends Controller
 {
+    public function login(Request $request)
+    {
+        // $customers = customers::create($request->all());
+        $email=$request->email;
+        $password=$request->password;
+
+        if(Auth::attempt(['email'=>$email,'password'=>$password]))
+        {
+            return redirect()->intended('bike-Arena');
+        }
+    }
     public function index()
     {
-        return view('bikeArena.index');
+
+        $brands = bikeBrands::select('brand_name')->get();
+        $parts_category = parts_category::select('category_name')->get();
+        return view('bikeArena.index')->with(compact('brands','parts_category',$brands,$parts_category));
+    }
+    public function viewBrand($name)
+    {
+        $bikes=bikes::where('brand',$name)->get();
+        return view('bikeArena.brand-details')->with('bikes',$bikes);
+    }
+    public function allBrand()
+    {
+        $brands=bikeBrands::all();
+        return view('bikeArena.brands')->with('brands',$brands);
+    }
+    public function viewParts($name)
+    {
+        $parts=parts::where('part_category',$name)->get();
+        return view('bikeArena.part-details')->with('parts',$parts);
+    }
+    public function allParts()
+    {
+        $parts_category=parts_category::all();
+        return view('bikeArena.parts')->with('parts_category',$parts_category);
     }
     public function about()
     {
@@ -42,6 +82,14 @@ class BikeArenaController extends Controller
     public function productdetails()
     {
         return view('bikeArena.product-details');
+    }
+    public function brandDetails()
+    {
+        return view('bikeArena.brand-details');
+    }
+    public function partDetails()
+    {
+        return view('bikeArena.part-details');
     }
     public function shop()
     {

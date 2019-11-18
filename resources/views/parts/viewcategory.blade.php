@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Parts List')
+@section('title', 'Parts Category List')
 
 @section('content_header')
-    <h1>Parts List</h1>
+    <h1>Parts Category List</h1>
 @stop
 
 @section('content')
@@ -12,25 +12,19 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Parts Name</th>
-          <th>Brand Name</th>
-          <th>Price</th>
-          <th>Image</th>
-          <th>Description</th>
-          <th>Edit</th>
+          <th class="col-sm-2">Id</th>
+          <th class="col-sm-4">Part Category Name</th>
+          <th class="col-sm-4">Part Category Image</th>
+          <th class="col-sm-2">Edit</th>
         </tr>
       </thead>
       <tbody>
-          @foreach ($parts as $data)
+          @foreach ($parts_category as $data)
             <tr>
               <td>{{ $data->id }}</td>
-              <td>{{ $data->part_name }}</td>
-              <td>{{ $data->part_brand }}</td>
-              <td>{{ $data->part_price }}</td>
-              <td><img src="/images/parts/{{ $data->image }}" alt="image" style="width:10%;height:10%;"></td>
-              <td>{{ $data->part_description }}</td>
-              <td><a href="edit-parts/{{ $data->id }}">Edit</a></td>
+              <td>{{ $data->category_name }}</td>
+              <td><img src="/images/parts_category/{{ $data->image }}" alt="image" style="width:40%;height:10%;"></td>
+              <td><a href="edit-parts-category/{{ $data->id }}">Edit</a></td>
             </tr>
           @endforeach
       </tbody>

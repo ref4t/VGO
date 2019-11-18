@@ -89,7 +89,7 @@ body {
 .showcase {
   display: flex;
   flex-flow: row nowrap;
-  justify-: center;
+  justify: center;
   align-items: center;
 }
 .content{

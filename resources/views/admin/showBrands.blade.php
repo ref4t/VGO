@@ -22,7 +22,7 @@
 
 			<td>{{$data->brand_name}}</td>
 			<td>{{$data->brand_image}}</td>
-			<td><a href="editbike/{{$data->id}}">edit</button><a></td>
+			<td><a href="edit-bike-brand/{{$data->id}}">edit</button><a></td>
 
 		</tr>
 		@endforeach

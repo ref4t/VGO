@@ -53,7 +53,7 @@
                                                     <li><a href="#">shop</a>
                                                         <ul>
                                                             <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                            <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
+                                                            <li><a href="{{ route('bikeArena.product-details') }}">product details</a></li>
                                                             <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                             <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                             <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -156,7 +156,7 @@
                                             <li><a href="#">shop</a>
                                                 <ul>
                                                     <li><a href="{{ route('bikearena.shop') }}">shop</a></li>
-                                                    <li><a href="{{ route('bikearena.product-details') }}">product details</a></li>
+                                                    <li><a href="{{ route('bikeArena.product-details') }}">product details</a></li>
                                                     <li><a href="{{ route('bikearena.checkout') }}">checkout</a></li>
                                                     <li><a href="{{ route('bikearena.wishlist') }}">wishlist</a></li>
                                                     <li><a href="{{ route('bikearena.cart') }}">cart</a></li>
@@ -313,7 +313,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="product-details-content">
-                                <h2>Klager GSX 250 R</h2>
+                                <h2>Brand Name</h2>
                                 <div class="quick-view-rating">
                                     <i class="fa fa-star reting-color"></i>
                                     <i class="fa fa-star reting-color"></i>

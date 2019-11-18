@@ -3,21 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\bikes;
+
 class HomeController extends Controller
 {
-     public function index()
-    {   
-       
-        
-        
-            $mostpopular= bikes::where('status','mostpopular')->get();
-            return view('bikearena.index')->with('mostpopular',$mostpopular);
-        
-        
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    public function vgo(){
-    	return view('promote');
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
     }
 }

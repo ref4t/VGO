@@ -31,6 +31,16 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="part_category" class="col-sm-2 col-form-label lb-lg">Category Name</label>
+                        <div class="col-sm-10">
+                            <select class="form-control input-sm" name="part_category">
+                                @foreach ($parts_category as $parts_category)
+                                <option value="{{$parts_category->category_name}}">{{ $parts_category->category_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label for="image" class="col-sm-2 col-form-label lb-lg">Part Image</label>
                         <div class="col-sm-10">
                             <input type="file" name="image" class="form-control" required>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\UsersResource;
 use Illuminate\Http\Request;
-use App\bikes;
+use App\Model\bikes;
 use App\User;
 use App\bikeBrands;
 

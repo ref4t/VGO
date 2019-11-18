@@ -14,6 +14,7 @@
         <tr>
           <th>Id</th>
           <th>Parts Name</th>
+          <th>Category Name</th>
           <th>Brand Name</th>
           <th>Price</th>
           <th>Image</th>
@@ -26,6 +27,7 @@
             <tr>
               <td>{{ $data->id }}</td>
               <td>{{ $data->part_name }}</td>
+              <td>{{ $data->part_category }}</td>
               <td>{{ $data->part_brand }}</td>
               <td>{{ $data->part_price }}</td>
               <td><img src="/images/parts/{{ $data->image }}" alt="image" style="width:10%;height:10%;"></td>

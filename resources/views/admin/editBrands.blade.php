@@ -1,27 +1,27 @@
 @extends('adminlte::page')
 
-@section('title', 'Add Parts Category')
+@section('title', 'Add Parts')
 
 @section('content_header')
-    <h1>Add Parts Category</h1>
+    <h1>Add Parts</h1>
 @stop
 
 @section('content')
     <div class="container">
-        <form method="post" action="{{ route('parts.storecategory') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('bikeBrands.update',$brands->id) }}" enctype="multipart/form-data">
          @csrf
             <div class="panel panel-body col-sm-10">
                 <div class="well well-sm">
                     <div class="form-group row">
-                        <label for="part_name" class="col-sm-2 col-form-label lb-lg">Part Category Name</label>
+                        <label for="brand_name" class="col-sm-2 col-form-label lb-lg">Brand Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="category_name" class="form-control" required>
+                        <input type="text" name="brand_name" class="form-control" value="{{$brands->brand_name}}" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="image" class="col-sm-2 col-form-label lb-lg">Part Category Image</label>
+                        <label for="brand_image" class="col-sm-2 col-form-label lb-lg">Brand Image</label>
                         <div class="col-sm-10">
-                            <input type="file" name="image" class="form-control" required>
+                        <input type="file" name="brand_image" class="form-control" >
                         </div>
                     </div>
                 </div>

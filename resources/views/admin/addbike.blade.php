@@ -21,10 +21,9 @@
                 <div class="form-group row">
                     <label for="brand" class="col-sm-2 col-form-label lb-lg">Brand</label>
                     <div class="col-sm-10">
-                        {{-- <input type="text" name="brand" class="form-control input-sm" required> --}}
                         <select class="form-control input-sm" name="brand">
                             @foreach ($brands as $brands)
-                            <option value="{{$brands->brand_name}}">{{$brands->brand_name}}</option>  
+                            <option value="{{$brands->brand_name}}">{{$brands->brand_name}}</option>
                             @endforeach
                         </select>
                     </div>
